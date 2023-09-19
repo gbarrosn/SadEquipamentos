@@ -133,8 +133,12 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
         Campo_TomboMonitor1.setText(selecionadoUser.getTombamentoMonitor1() + "");
         Campo_SerieMonitor1.setText(selecionadoUser.getSerieMonitor1());
         Box_MarcaMonitor1.setSelectedItem(selecionadoUser.getMarcaMonitor1().getMarca());
-        jCheckBox1.setSelected(selecionadoUser.getAtivo());
 
+        if (selecionadoUser.getAtivo()) {
+            jCheckBox1.setSelected(false);
+        } else {
+            jCheckBox1.setSelected(true);
+        }
         this.selecionadoUser = selecionadoUser;
 
         /*
@@ -1182,12 +1186,7 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
 
             alterarUser.setEtiquetaSAD(jTextField_EtiquetaSad.getText());
 
-            if (!alterarUser.getAtivo()) {
-                jCheckBox1.setSelected(false);
-            }
-            else {
-                jCheckBox1.setSelected(true);
-            }
+
 
             //String campoObs = campoOBS.getText();
             //alterarUser.setObs(campoObs);
