@@ -1182,7 +1182,7 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
 
             alterarUser.setEtiquetaSAD(jTextField_EtiquetaSad.getText());
 
-            if (alterarUser.getAtivo()) {
+            if (!alterarUser.getAtivo()) {
                 jCheckBox1.setSelected(false);
             }
             else {
