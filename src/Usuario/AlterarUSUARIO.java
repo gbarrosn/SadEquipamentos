@@ -1613,7 +1613,6 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
     private javax.swing.JTextField campo_Garantia;
     private javax.swing.JCheckBox checkPossuiTermo;
     private javax.swing.JButton jButton2;
-    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
