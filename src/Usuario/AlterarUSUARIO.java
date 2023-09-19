@@ -1234,6 +1234,12 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
                 }
             }
 
+            if (jCheckBox1.isSelected()) {
+                alterarUser.setAtivo(false);
+            } else {
+                alterarUser.setAtivo(true);
+            }
+
             Fachada.getInstancia().alterarUsuario(alterarUser, selecionadoUser);
             JOptionPane.showMessageDialog(rootPane, "Usuário: " + alterarUser.getNome() + " alterado com sucesso!");
 

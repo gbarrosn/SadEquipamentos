@@ -101,7 +101,14 @@ public class VisualizarUsuario extends javax.swing.JFrame {
         Box_MarcaMonitor1.setSelectedItem(selecionadoUser.getMarcaMonitor().getMarca());
         Campo_TomboMonitor1.setText(selecionadoUser.getTombamentoMonitor1() + "");
         Campo_SerieMonitor1.setText(selecionadoUser.getSerieMonitor1());
-        
+
+        if (selecionadoUser.getAtivo()) {
+            jCheckBox1.setSelected(false);
+        }
+        if (!selecionadoUser.getAtivo()) {
+            jCheckBox1.setSelected(true);
+        }
+
         //campoOBS.setText(selecionadoUser.getObs());       
 
         //atribui valor a variável global selecionadoNota
