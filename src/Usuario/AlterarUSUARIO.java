@@ -1182,6 +1182,7 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
 
             alterarUser.setEtiquetaSAD(jTextField_EtiquetaSad.getText());
 
+            alterarUser.setAtivo(!jCheckBox1.isSelected());
             //String campoObs = campoOBS.getText();
             //alterarUser.setObs(campoObs);
             DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
