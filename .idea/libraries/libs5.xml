@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="libs5">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bin/libs/dynamicpdf-api-1.4.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/libs/mssql-jdbc-12.2.0.jre11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/libs/javax.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/libs/sqljdbc42.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/libs/mssql-jdbc-12.2.0.jre8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/libs/sqljdbc4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/libs/jaxb-api-2.2.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/libs/DynamicPDF.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/libs/itextpdf-5.4.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
