@@ -648,6 +648,7 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
         jLabel34 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
         Box_ModeloMonitor1 = new javax.swing.JComboBox();
+        jCheckBox1 = new javax.swing.JCheckBox();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -921,12 +922,6 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
         jLabel30.setText("            Monitor:");
         jLabel30.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 348, 150, 33));
-
-        Campo_TomboMonitor1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Campo_TomboMonitor1ActionPerformed(evt);
-            }
-        });
         getContentPane().add(Campo_TomboMonitor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(761, 387, 128, -1));
 
         jLabel31.setText("Modelo2:");
@@ -973,6 +968,14 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Box_ModeloMonitor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(554, 417, 152, -1));
+
+        jCheckBox1.setText("Inativar usuário");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, 140, -1));
 
         jMenu1.setText("Opções");
 
@@ -1532,6 +1535,10 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Campo_TomboMonitor1ActionPerformed
 
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1603,6 +1610,7 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
     private javax.swing.JTextField campo_Garantia;
     private javax.swing.JCheckBox checkPossuiTermo;
     private javax.swing.JButton jButton2;
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
