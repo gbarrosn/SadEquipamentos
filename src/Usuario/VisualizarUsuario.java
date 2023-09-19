@@ -600,6 +600,7 @@ public class VisualizarUsuario extends javax.swing.JFrame {
         jLabel33 = new javax.swing.JLabel();
         Box_ModeloMonitor1 = new javax.swing.JComboBox();
         jSeparator7 = new javax.swing.JSeparator();
+        jCheckBox1 = new javax.swing.JCheckBox();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -955,6 +956,9 @@ public class VisualizarUsuario extends javax.swing.JFrame {
         getContentPane().add(Box_ModeloMonitor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 391, 140, -1));
         getContentPane().add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 314, 887, -1));
 
+        jCheckBox1.setText("Usuáio inativo");
+        getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, -1, -1));
+
         jMenu1.setText("Opções");
 
         jMenuItem2.setText("Listar Usuários");
@@ -1119,6 +1123,7 @@ public class VisualizarUsuario extends javax.swing.JFrame {
     private javax.swing.JCheckBox checkPossuiTermo;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonAtivarAlterar;
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
