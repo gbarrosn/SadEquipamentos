@@ -32,8 +32,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import javax.imageio.ImageIO;
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
 /**
  *
@@ -64,6 +63,8 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
     private ArrayList<ProprietarioMonitor> allProprietariosMonitores1;
     private ArrayList<VersaoOffice> allVersaoOffice;
     private ArrayList<OS> allOs;
+    
+    private JCheckBox jCheckBox1;
 
     public AlterarUSUARIO() {
         initComponents();
@@ -132,6 +133,7 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
         Campo_TomboMonitor1.setText(selecionadoUser.getTombamentoMonitor1() + "");
         Campo_SerieMonitor1.setText(selecionadoUser.getSerieMonitor1());
         Box_MarcaMonitor1.setSelectedItem(selecionadoUser.getMarcaMonitor1().getMarca());
+        jCheckBox1.setSelected(selecionadoUser.getAtivo());
 
         this.selecionadoUser = selecionadoUser;
 
@@ -654,6 +656,7 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
+        jCheckBox1 = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
