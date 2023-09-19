@@ -1083,6 +1083,12 @@ public class ListarUSUARIO extends javax.swing.JFrame {
                 filtroUser.setTermo_responsabilidade(null);
             }
 
+            if (jCheckBox1.isSelected()) {
+                filtroUser.setAtivo(false);
+            } else {
+                filtroUser.setAtivo(true);
+            }
+
             //FACHADA
             //aqui na verdade
             listaDeUsuarios = Fachada.getInstancia().listarUsuario(filtroUser);
