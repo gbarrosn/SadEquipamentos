@@ -36,6 +36,11 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import com.cete.dynamicpdf.*;
+import com.cete.dynamicpdf.pageelements.Label;
+import com.cete.dynamicpdf.pageelements.PageNumberingLabel;
+import com.cete.dynamicpdf.pageelements.Row;
+import com.cete.dynamicpdf.pageelements.Table;
 
 /**
  *
