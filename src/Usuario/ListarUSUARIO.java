@@ -206,6 +206,7 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         ComboBoxModeloMonitor1 = new javax.swing.JComboBox();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         jCheckBox1 = new javax.swing.JCheckBox();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -294,38 +295,38 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         getContentPane().add(listarVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1071, 569, -1, 41));
 
         TodosUsuarios.setModel(new javax.swing.table.DefaultTableModel(
-                new Object [][] {
-                        {null, null, null, null, null, null, null, null, null},
-                        {null, null, null, null, null, null, null, null, null},
-                        {null, null, null, null, null, null, null, null, null},
-                        {null, null, null, null, null, null, null, null, null},
-                        {null, null, null, null, null, null, null, null, null},
-                        {null, null, null, null, null, null, null, null, null},
-                        {null, null, null, null, null, null, null, null, null},
-                        {null, null, null, null, null, null, null, null, null},
-                        {null, null, null, null, null, null, null, null, null},
-                        {null, null, null, null, null, null, null, null, null},
-                        {null, null, null, null, null, null, null, null, null},
-                        {null, null, null, null, null, null, null, null, null},
-                        {null, null, null, null, null, null, null, null, null},
-                        {null, null, null, null, null, null, null, null, null},
-                        {null, null, null, null, null, null, null, null, null},
-                        {null, null, null, null, null, null, null, null, null},
-                        {null, null, null, null, null, null, null, null, null},
-                        {null, null, null, null, null, null, null, null, null},
-                        {null, null, null, null, null, null, null, null, null},
-                        {null, null, null, null, null, null, null, null, null},
-                        {null, null, null, null, null, null, null, null, null}
-                },
-                new String [] {
-                        "Nome", "Pavimento", "Gerência", "Cargo", "Tombo Micro", "Host Name", "CMTECH", "Etiqueta SAD", "Proprietário"
-                }
+            new Object [][] {
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Nome", "Pavimento", "Gerência", "Cargo", "Tombo Micro", "Host Name", "CMTECH", "Etiqueta SAD", "Proprietário"
+            }
         ) {
             Class[] types = new Class [] {
-                    java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                    false, false, false, false, false, false, false, true, false
+                false, false, false, false, false, false, false, true, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -703,13 +704,12 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         jLabel27.setText("Monitor:");
         getContentPane().add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(735, 107, -1, -1));
 
-        jCheckBox1.setText("Buscar por equipamentos inativos");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 270, 240, 20));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Icons/file_format_pdf.png"))); // NOI18N
+        jButton2.setText("Gerar Termo");
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 260, 200, 40));
+
+        jCheckBox1.setText("Buscar inativos");
+        getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 270, 180, -1));
 
         jMenu1.setText("Arquivo");
 
@@ -1978,7 +1978,7 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         // TODO add your handling code here:
 
     }
-    //GEN-LAST:event_jCheckBox1ActionPerformed
+//GEN-LAST:event_jCheckBox1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2047,9 +2047,10 @@ public class ListarUSUARIO extends javax.swing.JFrame {
     private javax.swing.JTextField campo_SerieMicro;
     private javax.swing.JMenuItem exibirTermoOption;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButtonAlterarUsuario;
-    public static javax.swing.JButton jButtonListarFiltros;
+    protected static javax.swing.JButton jButtonListarFiltros;
     private javax.swing.JButton jButtonNovoCadastro;
     private javax.swing.JButton jButtonRemoverUsuário;
     private javax.swing.JButton jButtonVisualizarUsuario;
