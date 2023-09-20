@@ -379,7 +379,7 @@ public class DadosRelatorios extends ConectarSQL implements InterfaceRelatorios{
             return listaPavimento;
     }
 
-    public ArrayList<Usuario> listarUsuario(Usuario filtroUsuario) throws Exception {
+    public ArrayList<Usuario> dadosTermoUsuario(Usuario filtroUsuario) throws Exception {
 
         ArrayList<Usuario> listaUsuario = new ArrayList<Usuario>();
 
@@ -431,6 +431,8 @@ public class DadosRelatorios extends ConectarSQL implements InterfaceRelatorios{
                     modeloMonitor.setIdModelo(rs.getInt("id_modelo_monitor"));
                     modeloMonitor.setModelo(rs.getString("modelo_monitor"));
                     usuario.setModeloMonitor(modeloMonitor);
+                    usuario.setSerieMonitor(rs.getString("serie_monitor"));
+                    usuario.setTombamentoMonitor(rs.getInt("tombo_monitor"));
 
                     if (rs.getInt("id_modelo_monitor2") !=31) {
                         ModeloMonitor modeloMonitor1 = new ModeloMonitor();
@@ -441,19 +443,12 @@ public class DadosRelatorios extends ConectarSQL implements InterfaceRelatorios{
                         usuario.setTombamentoMonitor1(rs.getInt("tombo_monitor2"));
                     }
 
-                    usuario.setSerieMonitor(rs.getString("serie_monitor"));
-
-
-                    usuario.setTombamentoMonitor(rs.getInt("tombo_monitor"));
-                    usuario.setTombamentoMonitor1(rs.getInt("tombo_monitor2"));
-
-
                     listaUsuario.add(usuario);
 
                 }
             } catch (SQLException e) {
 
-                throw new Exception("Erro ao executar Consulta/Listagem: " + e.getMessage());
+                throw new Exception("Erro ao acessar dados do relatório: " + e.getMessage());
             }
 
             desconectar();
