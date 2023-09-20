@@ -422,8 +422,6 @@ public class DadosRelatorios extends ConectarSQL implements InterfaceRelatorios{
                     usuario.setEtiquetaCESU(rs.getInt("cmtech"));
                     usuario.setGarantia(rs.getString("garantia"));
                     usuario.setNotebook(rs.getString("notebook"));
-                    usuario.setNovoTomboMicro(rs.getString("novo_tombo_micro"));
-                    usuario.setNovoTomboMonitor(rs.getString("novo_tombo_monitor"));
 
                     ModeloMicro modeloMicro = new ModeloMicro();
                     modeloMicro.setIdModelo(rs.getInt("id_modelo_micro"));
@@ -435,13 +433,17 @@ public class DadosRelatorios extends ConectarSQL implements InterfaceRelatorios{
                     modeloMonitor.setModelo(rs.getString("modelo_monitor"));
                     usuario.setModeloMonitor(modeloMonitor);
 
-                    ModeloMonitor modeloMonitor1 = new ModeloMonitor();
-                    modeloMonitor1.setIdModelo(rs.getInt("id_modelo_monitor2"));
-                    modeloMonitor1.setModelo(rs.getString("modelo_monitor2"));
-                    usuario.setModeloMonitor1(modeloMonitor1);
+                    if (rs.getInt("id_modelo_monitor2") !=31) {
+                        ModeloMonitor modeloMonitor1 = new ModeloMonitor();
+                        modeloMonitor1.setIdModelo(rs.getInt("id_modelo_monitor2"));
+                        modeloMonitor1.setModelo(rs.getString("modelo_monitor2"));
+                        usuario.setModeloMonitor1(modeloMonitor1);
+                        usuario.setSerieMonitor1(rs.getString("serie_monitor2"));
+                        usuario.setTombamentoMonitor1(rs.getInt("tombo_monitor2"));
+                    }
 
                     usuario.setSerieMonitor(rs.getString("serie_monitor"));
-                    usuario.setSerieMonitor1(rs.getString("serie_monitor2"));
+
 
 
                     listaUsuario.add(usuario);
