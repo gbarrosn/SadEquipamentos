@@ -841,7 +841,8 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         if (TodosUsuarios.getSelectedRow() >= 0) {
             Usuario selecionadoUsuario;
             selecionadoUsuario = listaDeUsuarios.get(TodosUsuarios.getSelectedRow());
-
+            Usuario userteste = new Usuario();
+            userteste = selecionadoUsuario;
         } else {
             JOptionPane.showMessageDialog(null, "Escolha algum usuário da tabela para gerar o termo!");
         }
