@@ -841,6 +841,8 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         if (TodosUsuarios.getSelectedRow() >= 0) {
             Usuario selecionadoUsuario;
             selecionadoUsuario = listaDeUsuarios.get(TodosUsuarios.getSelectedRow()); // ate aqui o sistema reconheece o usuario, atualzar o relatorio para o termo
+            AlterarUSUARIO alterarUser = new AlterarUSUARIO(selecionadoUsuario, this.logado);
+            alterarUser.setVisible(true);
         } else {
             JOptionPane.showMessageDialog(null, "Escolha algum usuário da tabela para gerar o termo!");
         }
