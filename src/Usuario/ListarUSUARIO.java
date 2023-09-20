@@ -17,6 +17,7 @@ import Micro.ProprietarioMicro.ProprietarioMicro;
 import Monitor.MarcaMonitor.MarcaMonitor;
 import Monitor.ModeloMonitor.ModeloMonitor;
 import Principal.TelaPrincipal;
+import RelatoriosSAD.DadosRelatorios;
 import RelatoriosSAD.FormRelatorioCompleto;
 import RelatoriosSAD.FormRelatorios;
 import SADpe.Cargo.Cargo;
@@ -35,6 +36,11 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import com.cete.dynamicpdf.*;
+import com.cete.dynamicpdf.pageelements.Label;
+import com.cete.dynamicpdf.pageelements.PageNumberingLabel;
+import com.cete.dynamicpdf.pageelements.Row;
+import com.cete.dynamicpdf.pageelements.Table;
 
 /**
  *
@@ -842,12 +848,26 @@ public class ListarUSUARIO extends javax.swing.JFrame {
             Usuario selecionadoUsuario;
             selecionadoUsuario = listaDeUsuarios.get(TodosUsuarios.getSelectedRow()); // ate aqui o sistema reconheece o usuario, atualzar o relatorio para o termo
 
-            RelatoriosSAD.DadosRelatorios.dadosTermoUsuario(selecionadoUsuario); // aqui o sistema deve abrir uma interface mesmo q invisivel
+            gerarTermoUsuario(selecionadoUsuario);
         } else {
             JOptionPane.showMessageDialog(null, "Escolha algum usuário da tabela para gerar o termo!");
         }
     }
+    private void gerarTermoUsuario(Usuario termoUser) {
+        // usar a variavel termoUser para gerar um pdf com os dados do usuario selecionado
+        // usar a classe DadosUsuario.visualizarUsuario para pegar os dados do usuario
 
+        // TODO add your handling code here:
+        // use the object termoUser to get the data and load the info using RelatoriosSAD.Formrelatoriocompleto.carregarUsers
+        RelatoriosSAD.FormRelatorioTermoUsuario termo = new RelatoriosSAD.FormRelatorioTermoUsuario();
+        // TODO add your handling code here:
+
+
+
+
+
+
+    }
     private void jButtonAlterarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAlterarUsuarioActionPerformed
         if (TodosUsuarios.getSelectedRow() >= 0) {
             Usuario selecionadoUsuario = new Usuario();
