@@ -839,9 +839,9 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         // TODO add your handling code here:
         // use the method RelatoriosSAD.DadosRelatorios.dadosTermoUsuario to get the data
         if (TodosUsuarios.getSelectedRow() >= 0) {
-            Usuario selecionadoUsuario = new Usuario();
+            Usuario selecionadoUsuario;
             selecionadoUsuario = listaDeUsuarios.get(TodosUsuarios.getSelectedRow());
-            RelatoriosSAD.DadosRelatorios.dadosTermoUsuario(selecionadoUsuario);
+
         } else {
             JOptionPane.showMessageDialog(null, "Escolha algum usuário da tabela para gerar o termo!");
         }
