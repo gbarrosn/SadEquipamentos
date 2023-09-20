@@ -858,6 +858,10 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         // usar a classe DadosUsuario.visualizarUsuario para pegar os dados do usuario
 
         // TODO add your handling code here:
+        // use the object termoUser to get the data and load the info using RelatoriosSAD.Formrelatoriocompleto.carregarUsers
+        RelatoriosSAD.FormRelatorioTermoUsuario termo = new RelatoriosSAD.FormRelatorioTermoUsuario();
+        // TODO add your handling code here:
+
 
 
 
