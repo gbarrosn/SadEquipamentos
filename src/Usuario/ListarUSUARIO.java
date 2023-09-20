@@ -706,6 +706,9 @@ public class ListarUSUARIO extends javax.swing.JFrame {
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Icons/file_format_pdf.png"))); // NOI18N
         jButton2.setText("Gerar Termo");
+        jButton2.setMaximumSize(new java.awt.Dimension(143, 39));
+        jButton2.setMinimumSize(new java.awt.Dimension(143, 39));
+        jButton2.setRequestFocusEnabled(false);
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 260, 200, 40));
 
         jCheckBox1.setText("Buscar inativos");
