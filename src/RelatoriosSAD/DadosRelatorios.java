@@ -378,5 +378,53 @@ public class DadosRelatorios extends ConectarSQL implements InterfaceRelatorios{
                 
             return listaPavimento;
     }
-    
+
+    public ArrayList<Usuario> listarUsuario(Usuario filtroUsuario) throws Exception {
+
+        ArrayList<Usuario> listaUsuario = new ArrayList<Usuario>();
+
+            try {
+
+                Statement conex = conectar();
+
+                String sql = "SELECT * " +
+                        "FROM Usuario " +
+                        "INNER JOIN Gerencia ON Usuario.id_gerencia = Gerencia.id_gerencia " +
+                        "INNER JOIN Cargo ON Usuario.id_cargo = Cargo.id_cargo " +
+                        "INNER JOIN Pavimento ON Usuario.id_pavimento = Pavimento.id_pavimento " +
+                        "INNER JOIN Configuracao ON Usuario.id_configuracao = Configuracao.id_configuracao " +
+                        "INNER JOIN Marca_Micro ON Usuario.id_marca_micro = Marca_Micro.id_marca_micro " +
+                        "INNER JOIN Modelo_Micro ON Usuario.id_modelo_micro = Modelo_Micro.id_modelo_micro " +
+                        "INNER JOIN Plataforma ON Usuario.id_plataforma = Plataforma.id_plataforma " +
+                        "INNER JOIN Proprietario_Micro ON Usuario.id_proprietario_micro = Proprietario_Micro.id_proprietario_micro " +
+                        "INNER JOIN Sistema ON Usuario.id_so = Sistema.id_so " +
+                        "INNER JOIN Modelo_Monitor ON Usuario.id_modelo_monitor = Modelo_Monitor.id_modelo_monitor " +
+                        "INNER JOIN Marca_Monitor ON Usuario.id_marca_monitor = Marca_Monitor.id_marca_monitor " +
+                        "INNER JOIN Proprietario_Monitor ON Usuario.id_proprietario_monitor = Proprietario_Monitor.id_proprietario_monitor " +
+                        "INNER JOIN Versao_Office ON Usuario.id_versao_office = Versao_Office.id_versao_office " +
+                        "LEFT JOIN Modelo_Monitor AS Modelo_Monitor2 ON Usuario.id_modelo_monitor2 = Modelo_Monitor2.id_modelo_monitor " +
+                        "LEFT JOIN Marca_Monitor AS Marca_Monitor2 ON Usuario.id_marca_monitor2 = Marca_Monitor2.id_marca_monitor " +
+                        "LEFT JOIN Proprietario_Monitor AS Proprietario_Monitor2 ON Usuario.id_proprietario_monitor2 = Proprietario_Monitor2.id_proprietario_monitor";
+
+
+
+                ResultSet rs = conex.executeQuery(sql);
+
+                while (rs.next()) {
+                    Usuario usuario = new Usuario();
+                    usuario.setId_usuario(rs.getInt("id_usuario"));
+                    usuario.setNome(rs.getString("nome"));
+
+                    listaUsuario.add(usuario);
+
+                }
+            } catch (SQLException e) {
+
+                throw new Exception("Erro ao executar Consulta/Listagem: " + e.getMessage());
+            }
+
+            desconectar();
+
+            return listaUsuario;
+    }
 }
