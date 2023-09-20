@@ -379,9 +379,9 @@ public class DadosRelatorios extends ConectarSQL implements InterfaceRelatorios{
             return listaPavimento;
     }
 
-    public ArrayList<Usuario> dadosTermoUsuario(Usuario filtroUsuario) throws Exception {
+    public Usuario dadosTermoUsuario(Usuario filtroUsuario) throws Exception {
 
-        ArrayList<Usuario> listaUsuario = new ArrayList<Usuario>();
+        Usuario usuario = new Usuario();
 
             try {
 
@@ -412,7 +412,6 @@ public class DadosRelatorios extends ConectarSQL implements InterfaceRelatorios{
                 ResultSet rs = conex.executeQuery(sql);
 
                 while (rs.next()) {
-                    Usuario usuario = new Usuario();
                     usuario.setId_usuario(rs.getInt("id_usuario"));
                     usuario.setNome(rs.getString("nome"));
                     usuario.setTombamentoMicro(rs.getInt("tombo_micro"));
@@ -443,7 +442,8 @@ public class DadosRelatorios extends ConectarSQL implements InterfaceRelatorios{
                         usuario.setTombamentoMonitor1(rs.getInt("tombo_monitor2"));
                     }
 
-                    listaUsuario.add(usuario);
+
+
 
                 }
             } catch (SQLException e) {
@@ -453,6 +453,6 @@ public class DadosRelatorios extends ConectarSQL implements InterfaceRelatorios{
 
             desconectar();
 
-            return listaUsuario;
+            return usuario;
     }
 }

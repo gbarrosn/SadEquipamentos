@@ -24,6 +24,7 @@ import SADpe.Gerencia.Gerencia;
 import SADpe.Pavimento.Pavimento;
 import Versao_Office.VersaoOffice;
 import java.awt.Desktop;
+import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -711,6 +712,12 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         jButton2.setRequestFocusEnabled(false);
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 260, 200, 40));
 
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         jCheckBox1.setText("Buscar inativos");
         getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 270, 180, -1));
 
@@ -827,6 +834,18 @@ public class ListarUSUARIO extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(ActionEvent evt) {
+        // TODO add your handling code here:
+        // use the method RelatoriosSAD.DadosRelatorios.dadosTermoUsuario to get the data
+        if (TodosUsuarios.getSelectedRow() >= 0) {
+            Usuario selecionadoUsuario = new Usuario();
+            selecionadoUsuario = listaDeUsuarios.get(TodosUsuarios.getSelectedRow());
+            RelatoriosSAD.DadosRelatorios.dadosTermoUsuario(selecionadoUsuario);
+        } else {
+            JOptionPane.showMessageDialog(null, "Escolha algum usuário da tabela para gerar o termo!");
+        }
+    }
 
     private void jButtonAlterarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAlterarUsuarioActionPerformed
         if (TodosUsuarios.getSelectedRow() >= 0) {
