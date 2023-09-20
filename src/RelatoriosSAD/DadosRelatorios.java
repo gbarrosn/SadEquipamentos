@@ -417,13 +417,11 @@ public class DadosRelatorios extends ConectarSQL implements InterfaceRelatorios{
                     usuario.setNome(rs.getString("nome"));
                     usuario.setTombamentoMicro(rs.getInt("tombo_micro"));
                     usuario.setSerieMicro(rs.getString("serie_micro"));
-                    usuario.setTombamentoMonitor(rs.getInt("tombo_monitor"));
-                    usuario.setSerieMonitor(rs.getString("serie_monitor"));
+
                     usuario.setEtiquetaCESU(rs.getInt("cmtech"));
                     usuario.setGarantia(rs.getString("garantia"));
                     usuario.setNotebook(rs.getString("notebook"));
-                    usuario.setNovoTomboMicro(rs.getString("novo_tombo_micro"));
-                    usuario.setNovoTomboMonitor(rs.getString("novo_tombo_monitor"));
+
 
                     ModeloMicro modeloMicro = new ModeloMicro();
                     modeloMicro.setIdModelo(rs.getInt("id_modelo_micro"));
@@ -442,6 +440,9 @@ public class DadosRelatorios extends ConectarSQL implements InterfaceRelatorios{
 
                     usuario.setSerieMonitor(rs.getString("serie_monitor"));
                     usuario.setSerieMonitor1(rs.getString("serie_monitor2"));
+
+                    usuario.setTombamentoMonitor(rs.getInt("tombo_monitor"));
+                    usuario.setTombamentoMonitor1(rs.getInt("tombo_monitor2"));
 
 
                     listaUsuario.add(usuario);
