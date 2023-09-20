@@ -406,6 +406,7 @@ public class DadosRelatorios extends ConectarSQL implements InterfaceRelatorios{
                         "LEFT JOIN Marca_Monitor AS Marca_Monitor2 ON Usuario.id_marca_monitor2 = Marca_Monitor2.id_marca_monitor " +
                         "LEFT JOIN Proprietario_Monitor AS Proprietario_Monitor2 ON Usuario.id_proprietario_monitor2 = Proprietario_Monitor2.id_proprietario_monitor";
 
+                        sql += " where id_usuario="+filtroUsuario.getId_usuario()+";";
 
 
                 ResultSet rs = conex.executeQuery(sql);
@@ -414,6 +415,34 @@ public class DadosRelatorios extends ConectarSQL implements InterfaceRelatorios{
                     Usuario usuario = new Usuario();
                     usuario.setId_usuario(rs.getInt("id_usuario"));
                     usuario.setNome(rs.getString("nome"));
+                    usuario.setTombamentoMicro(rs.getInt("tombo_micro"));
+                    usuario.setSerieMicro(rs.getString("serie_micro"));
+                    usuario.setTombamentoMonitor(rs.getInt("tombo_monitor"));
+                    usuario.setSerieMonitor(rs.getString("serie_monitor"));
+                    usuario.setEtiquetaCESU(rs.getInt("cmtech"));
+                    usuario.setGarantia(rs.getString("garantia"));
+                    usuario.setNotebook(rs.getString("notebook"));
+                    usuario.setNovoTomboMicro(rs.getString("novo_tombo_micro"));
+                    usuario.setNovoTomboMonitor(rs.getString("novo_tombo_monitor"));
+
+                    ModeloMicro modeloMicro = new ModeloMicro();
+                    modeloMicro.setIdModelo(rs.getInt("id_modelo_micro"));
+                    modeloMicro.setModelo(rs.getString("modelo_micro"));
+                    usuario.setModeloMicro(modeloMicro);
+
+                    ModeloMonitor modeloMonitor = new ModeloMonitor();
+                    modeloMonitor.setIdModelo(rs.getInt("id_modelo_monitor"));
+                    modeloMonitor.setModelo(rs.getString("modelo_monitor"));
+                    usuario.setModeloMonitor(modeloMonitor);
+
+                    ModeloMonitor modeloMonitor1 = new ModeloMonitor();
+                    modeloMonitor1.setIdModelo(rs.getInt("id_modelo_monitor2"));
+                    modeloMonitor1.setModelo(rs.getString("modelo_monitor2"));
+                    usuario.setModeloMonitor1(modeloMonitor1);
+
+                    usuario.setSerieMonitor(rs.getString("serie_monitor"));
+                    usuario.setSerieMonitor1(rs.getString("serie_monitor2"));
+
 
                     listaUsuario.add(usuario);
 
