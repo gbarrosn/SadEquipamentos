@@ -840,9 +840,7 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         // use the method RelatoriosSAD.DadosRelatorios.dadosTermoUsuario to get the data
         if (TodosUsuarios.getSelectedRow() >= 0) {
             Usuario selecionadoUsuario;
-            selecionadoUsuario = listaDeUsuarios.get(TodosUsuarios.getSelectedRow());
-            Usuario userteste = new Usuario();
-            userteste = selecionadoUsuario;
+            selecionadoUsuario = listaDeUsuarios.get(TodosUsuarios.getSelectedRow()); // ate aqui o sistema reconheece o usuario, atualzar o relatorio para o termo
         } else {
             JOptionPane.showMessageDialog(null, "Escolha algum usuário da tabela para gerar o termo!");
         }
