@@ -89,6 +89,7 @@ public class FormRelatorioTermoUsuario {
             String modeloMicro = usuario.getModeloMicro().getModelo();
             String gerencia = usuario.getGerencia().getGerencia();
             String cargo = usuario.getCargo().getCargo();
+            String configuracao = usuario.getConfigMicro().getConfiguracao();
 
             Date data = new Date();
             DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
@@ -124,6 +125,7 @@ public class FormRelatorioTermoUsuario {
                 document.getForm().getFields().getFormField("text_dataDia").setValue(dataDia);
                 document.getForm().getFields().getFormField("text_dataMes").setValue(dataMes);
                 document.getForm().getFields().getFormField("text_dataAno").setValue(dataAno);
+                document.getForm().getFields().getFormField("textarea_config_equipamento").setValue(configuracao);
 
 
 
