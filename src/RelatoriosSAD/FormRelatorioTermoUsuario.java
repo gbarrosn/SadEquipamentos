@@ -87,7 +87,7 @@ public class FormRelatorioTermoUsuario {
             String modeloMicro = usuario.getModeloMicro().getModelo();
 
 
-            URL resource = getClass().getResource("/resources/termoForm.pdf");
+            URL resource = getClass().getResource("src/resources/termoForm.pdf");
             assert resource != null;
             String filePath = resource.getPath();
             MergeDocument document = new MergeDocument(filePath);
@@ -97,7 +97,7 @@ public class FormRelatorioTermoUsuario {
             } else {
                 System.out.println("Documento carregado com sucesso");
 
-                document.getForm().getFields().getFormField("texto_nome").setValue(nome);
+                document.getForm().getFields().getFormField("texto_nome").setValue(nome); // null pointer exception
                 document.getForm().getFields().getFormField("texto_cesu").setValue(CESU);
                 document.getForm().getFields().getFormField("texto_tomboMicro").setValue(tomboMicro);
                 document.getForm().getFields().getFormField("texto_tomboMonitor").setValue(tomboMonitor);
