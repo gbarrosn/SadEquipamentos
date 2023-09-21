@@ -103,8 +103,11 @@ public class FormRelatorioTermoUsuario {
             document.getForm().getFields().getFormField("texto_serieMonitor1").setValue(serieMonitor1);
             document.getForm().getFields().getFormField("texto_modeloMicro").setValue(modeloMicro);
 
+            URL pasta = getClass().getResource("termos");
+            assert pasta != null;
+            String pastaPath = resource.getPath();
             //save the pdf
-            document.draw("C:\\Users\\gabriel.barrosn\\Desktop\\termosTeste" + "termo de responsabilidade " +nome+ ".pdf");
+            document.draw( pastaPath + "termo de responsabilidade " +nome+ ".pdf");
 
 
         } catch (Exception e) {
