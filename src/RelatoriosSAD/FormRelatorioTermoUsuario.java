@@ -99,6 +99,10 @@ public class FormRelatorioTermoUsuario {
             } else {
                 System.out.println("Documento carregado com sucesso");
 
+                document.setCreator("Gabriel Barros");
+                document.setAuthor("Gabriel Barros");
+                document.setTitle("Termo de Responsabilidade Equipamentos");
+
                 document.getForm().getFields().getFormField("text_nome").setValue(nome); // null pointer exception
                 document.getForm().getFields().getFormField("text_cesu").setValue(CESU);
                 document.getForm().getFields().getFormField("textarea_tombos").setValue(tomboMicro + "\n" + tomboMonitor + "\n" + tomboMonitor1);
@@ -107,11 +111,16 @@ public class FormRelatorioTermoUsuario {
                 document.getForm().getFields().getFormField("text_gerencia").setValue(gerencia);
                 document.getForm().getFields().getFormField("text_cargo").setValue(cargo);
 
-                URL pasta = getClass().getResource("out/production/SadEquipamentos_2/termos");
+                /*URL pasta = getClass().getResource("");
                 assert pasta != null;
                 String pastaPath = pasta.getPath();
                 //save the pdf
-                document.draw(pastaPath + "termo de responsabilidade " + nome + ".pdf");
+                document.draw(pastaPath + "termo de responsabilidade " + nome + ".pdf"); */
+
+                JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
+                janelaSalvarTermo.setVisible(true);
+
+
             }
 
         } catch (Exception e) {
