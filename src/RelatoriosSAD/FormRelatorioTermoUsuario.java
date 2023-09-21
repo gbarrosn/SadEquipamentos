@@ -111,7 +111,7 @@ public class FormRelatorioTermoUsuario {
 
 
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
 
     }
