@@ -1,5 +1,6 @@
 package RelatoriosSAD;
 
+import java.net.URL;
 
 import com.cete.dynamicpdf.*;
 import com.cete.dynamicpdf.pageelements.Label;
@@ -85,9 +86,12 @@ public class FormRelatorioTermoUsuario {
             String serieMonitor1 = usuario.getSerieMonitor1();
             String modeloMicro = usuario.getModeloMicro().getModelo();
 
-            File file = new File("/resources/termoForm.pdf");
-            //import an existing pdf form and fill the fields
-            MergeDocument document = new MergeDocument(file.getAbsolutePath());
+
+            URL resource = getClass().getResource("/resources/termoForm.pdf");
+            assert resource != null;
+            String filePath = resource.getPath();
+            MergeDocument document = new MergeDocument(filePath);
+
 
             document.getForm().getFields().getFormField("texto_nome").setValue(nome);
             document.getForm().getFields().getFormField("texto_cesu").setValue(CESU);
