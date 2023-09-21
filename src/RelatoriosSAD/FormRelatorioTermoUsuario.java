@@ -87,10 +87,10 @@ public class FormRelatorioTermoUsuario {
 
             //import an existing pdf form and fill the fields
             MergeDocument document = new MergeDocument("termoForm.pdf");
+
             document.getForm().getFields().getFormField("texto_nome").setValue(nome);
             document.getForm().getFields().getFormField("texto_cesu").setValue(CESU);
             document.getForm().getFields().getFormField("texto_tomboMicro").setValue(tomboMicro);
-
             document.getForm().getFields().getFormField("texto_tomboMonitor").setValue(tomboMonitor);
             document.getForm().getFields().getFormField("texto_tomboMonitor1").setValue(tomboMonitor1);
             document.getForm().getFields().getFormField("texto_serieMicro").setValue(serieMicro);
