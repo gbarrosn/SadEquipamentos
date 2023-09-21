@@ -107,7 +107,7 @@ public class FormRelatorioTermoUsuario {
                 document.getForm().getFields().getFormField("text_gerencia").setValue(gerencia);
                 document.getForm().getFields().getFormField("text_cargo").setValue(cargo);
 
-                URL pasta = getClass().getResource("out/production/SadEquipamentos_2/termos");
+                URL pasta = getClass().getResource("");
                 assert pasta != null;
                 String pastaPath = pasta.getPath();
                 //save the pdf
