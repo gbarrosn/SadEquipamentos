@@ -861,7 +861,7 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         // TODO add your handling code here:
         // use the method gerarRelatorio into RelatoriosSAD.FormRelatorioTermoUsuario to get the data
         FormRelatorioTermoUsuario relatorioTermo = new FormRelatorioTermoUsuario(termoUser);
-
+        relatorioTermo.gerarRelatorio();
         // TODO add your handling code here:
 
 
