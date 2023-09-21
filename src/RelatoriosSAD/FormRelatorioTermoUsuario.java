@@ -104,7 +104,7 @@ public class FormRelatorioTermoUsuario {
             document.getForm().getFields().getFormField("texto_modeloMicro").setValue(modeloMicro);
 
             //save the pdf
-            document.draw("termo de responsabilidade " +nome+ ".pdf");
+            document.draw("C:\\Users\\gabriel.barrosn\\Desktop\\termosTeste" + "termo de responsabilidade " +nome+ ".pdf");
 
 
         } catch (Exception e) {
