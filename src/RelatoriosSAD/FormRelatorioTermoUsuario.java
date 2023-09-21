@@ -103,7 +103,7 @@ public class FormRelatorioTermoUsuario {
                 document.getForm().getFields().getFormField("textarea_series").setValue(serieMicro + "\n" + serieMonitor + "\n" + serieMonitor1);
                 document.getForm().getFields().getFormField("text_modeloMicro").setValue(modeloMicro);
 
-                URL pasta = getClass().getResource("termos");
+                URL pasta = getClass().getResource("/termos");
                 assert pasta != null;
                 String pastaPath = resource.getPath();
                 //save the pdf
