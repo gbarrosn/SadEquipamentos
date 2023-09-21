@@ -125,7 +125,7 @@ public class FormRelatorioTermoUsuario {
                 document.getForm().getFields().getFormField("text_dataDia").setValue(dataDia);
                 document.getForm().getFields().getFormField("text_dataMes").setValue(dataMes);
                 document.getForm().getFields().getFormField("text_dataAno").setValue(dataAno);
-                document.getForm().getFields().getFormField("text_configuracao").setValue(configuracao);
+                document.getForm().getFields().getFormField("textarea_config_equipamento").setValue(configuracao);
                 /*URL pasta = getClass().getResource("");
                 assert pasta != null;
                 String pastaPath = pasta.getPath();
