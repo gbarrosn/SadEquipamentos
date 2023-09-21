@@ -97,15 +97,15 @@ public class FormRelatorioTermoUsuario {
             } else {
                 System.out.println("Documento carregado com sucesso");
 
-                document.getForm().getFields().getFormField("texto_nome").setValue(nome); // null pointer exception
-                document.getForm().getFields().getFormField("texto_cesu").setValue(CESU);
-                document.getForm().getFields().getFormField("texto_tomboMicro").setValue(tomboMicro);
-                document.getForm().getFields().getFormField("texto_tomboMonitor").setValue(tomboMonitor);
-                document.getForm().getFields().getFormField("texto_tomboMonitor1").setValue(tomboMonitor1);
-                document.getForm().getFields().getFormField("texto_serieMicro").setValue(serieMicro);
-                document.getForm().getFields().getFormField("texto_serieMonitor").setValue(serieMonitor);
-                document.getForm().getFields().getFormField("texto_serieMonitor1").setValue(serieMonitor1);
-                document.getForm().getFields().getFormField("texto_modeloMicro").setValue(modeloMicro);
+                document.getForm().getFields().getFormField("text_nome").setValue(nome); // null pointer exception
+                document.getForm().getFields().getFormField("text_cesu").setValue(CESU);
+                document.getForm().getFields().getFormField("text_tomboMicro").setValue(tomboMicro);
+                document.getForm().getFields().getFormField("text_tomboMonitor").setValue(tomboMonitor);
+                document.getForm().getFields().getFormField("text_tomboMonitor1").setValue(tomboMonitor1);
+                document.getForm().getFields().getFormField("text_serieMicro").setValue(serieMicro);
+                document.getForm().getFields().getFormField("text_serieMonitor").setValue(serieMonitor);
+                document.getForm().getFields().getFormField("text_serieMonitor1").setValue(serieMonitor1);
+                document.getForm().getFields().getFormField("text_modeloMicro").setValue(modeloMicro);
 
                 URL pasta = getClass().getResource("termos");
                 assert pasta != null;
