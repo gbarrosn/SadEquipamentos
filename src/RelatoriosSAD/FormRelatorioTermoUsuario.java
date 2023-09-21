@@ -105,7 +105,7 @@ public class FormRelatorioTermoUsuario {
 
                 URL pasta = getClass().getResource("/termos");
                 assert pasta != null;
-                String pastaPath = resource.getPath();
+                String pastaPath = pasta.getPath();
                 //save the pdf
                 document.draw(pastaPath + "termo de responsabilidade " + nome + ".pdf");
             }
