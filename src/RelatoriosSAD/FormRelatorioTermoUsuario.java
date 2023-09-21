@@ -10,7 +10,7 @@ import com.cete.dynamicpdf.forms.TextField;
 import com.cete.dynamicpdf.PageElement;
 import com.cete.dynamicpdf.merger.MergeDocument;
 import com.cete.dynamicpdf.merger.forms.PdfTextField;
-
+import java.io.File;
 import Usuario.Usuario;
 /*
 MergeDocument document = new MergeDocument( pdfFilePath );
@@ -85,12 +85,13 @@ public class FormRelatorioTermoUsuario {
             String serieMonitor1 = usuario.getSerieMonitor1();
             String modeloMicro = usuario.getModeloMicro().getModelo();
 
+            File file = new File("src/RelatoriosSAD/termoForm.pdf");
             //import an existing pdf form and fill the fields
-            MergeDocument document = new MergeDocument("termoForm.pdf");
+            MergeDocument document = new MergeDocument(file.getAbsolutePath());
+
             document.getForm().getFields().getFormField("texto_nome").setValue(nome);
             document.getForm().getFields().getFormField("texto_cesu").setValue(CESU);
             document.getForm().getFields().getFormField("texto_tomboMicro").setValue(tomboMicro);
-
             document.getForm().getFields().getFormField("texto_tomboMonitor").setValue(tomboMonitor);
             document.getForm().getFields().getFormField("texto_tomboMonitor1").setValue(tomboMonitor1);
             document.getForm().getFields().getFormField("texto_serieMicro").setValue(serieMicro);
