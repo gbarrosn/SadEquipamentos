@@ -99,6 +99,10 @@ public class FormRelatorioTermoUsuario {
             } else {
                 System.out.println("Documento carregado com sucesso");
 
+                document.setCreator("Gabriel Barros");
+                document.setAuthor("Gabriel Barros");
+                document.setTitle("Termo de Responsabilidade Equipamentos");
+
                 document.getForm().getFields().getFormField("text_nome").setValue(nome); // null pointer exception
                 document.getForm().getFields().getFormField("text_cesu").setValue(CESU);
                 document.getForm().getFields().getFormField("textarea_tombos").setValue(tomboMicro + "\n" + tomboMonitor + "\n" + tomboMonitor1);

@@ -42,7 +42,7 @@ public class JanelaSalvarTermo extends javax.swing.JFrame {
         icone();
         initComponents();
         setLocationRelativeTo(null);
-        setTitle("Salvar Relatório em PDF");
+        setTitle("Salvar Termo de Responsabilidade em PDF");
         this.documento = documento;
 
         String defaultFile="";
@@ -74,7 +74,7 @@ defaultFile = "Termo de Responsabilidade - "+nomeUsuario;
 
         janelaSalvarTermo.setDialogType(JFileChooser.SAVE_DIALOG);
         janelaSalvarTermo.setApproveButtonToolTipText("");
-        janelaSalvarTermo.setDialogTitle("Salvar Relatório");
+        janelaSalvarTermo.setDialogTitle("Salvar Termo");
         janelaSalvarTermo.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 janelaSalvarTermoActionPerformed(evt);
@@ -121,7 +121,7 @@ defaultFile = "Termo de Responsabilidade - "+nomeUsuario;
             if (!nomeDoArquivo.equals("null.pdf")) {
 
                 this.documento.draw(nomeDoArquivo);
-                JOptionPane.showMessageDialog(rootPane, "Relatório gerado com sucesso em:   \n" + "\"" + nomeDoArquivo + "\"");
+                JOptionPane.showMessageDialog(rootPane, "Termo de Responsabilidade gerado com sucesso em:   \n" + "\"" + nomeDoArquivo + "\"");
                 dispose();
 
             } else if (nomeDoArquivo.equals("null.pdf")) {
