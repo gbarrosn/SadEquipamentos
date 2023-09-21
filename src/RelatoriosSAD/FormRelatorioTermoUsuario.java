@@ -85,7 +85,7 @@ public class FormRelatorioTermoUsuario {
             String serieMonitor1 = usuario.getSerieMonitor1();
             String modeloMicro = usuario.getModeloMicro().getModelo();
 
-            File file = new File("resources/termoForm.pdf");
+            File file = new File("/resources/termoForm.pdf");
             //import an existing pdf form and fill the fields
             MergeDocument document = new MergeDocument(file.getAbsolutePath());
 
