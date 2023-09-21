@@ -1,7 +1,9 @@
 package RelatoriosSAD;
 
+import java.util.Date;
 import java.net.URL;
-
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import com.cete.dynamicpdf.*;
 import com.cete.dynamicpdf.pageelements.Label;
 import com.cete.dynamicpdf.forms.FormField;
@@ -88,6 +90,15 @@ public class FormRelatorioTermoUsuario {
             String gerencia = usuario.getGerencia().getGerencia();
             String cargo = usuario.getCargo().getCargo();
 
+            Date data = new Date();
+            DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+            String dataString;
+            dataString = dateFormat.format(data);
+
+            String dataDia = dataString.substring(0, 2);
+            String dataMes = dataString.substring(3, 5);
+            String dataAno = dataString.substring(6, 10);
+
 
             URL resource = getClass().getResource("/resources/termoForm.pdf");
             assert resource != null;
@@ -110,6 +121,9 @@ public class FormRelatorioTermoUsuario {
                 document.getForm().getFields().getFormField("text_modeloMicro").setValue(modeloMicro);
                 document.getForm().getFields().getFormField("text_gerencia").setValue(gerencia);
                 document.getForm().getFields().getFormField("text_cargo").setValue(cargo);
+                document.getForm().getFields().getFormField("text_dataDia").setValue(dataDia);
+                document.getForm().getFields().getFormField("text_dataMes").setValue(dataMes);
+                document.getForm().getFields().getFormField("text_dataAno").setValue(dataAno);
 
                 /*URL pasta = getClass().getResource("");
                 assert pasta != null;
