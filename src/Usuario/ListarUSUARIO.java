@@ -859,7 +859,7 @@ public class ListarUSUARIO extends javax.swing.JFrame {
 
         // TODO add your handling code here:
         // use the object termoUser to get the data and load the info using RelatoriosSAD.Formrelatoriocompleto.carregarUsers
-        RelatoriosSAD.FormRelatorioTermoUsuario termo = new RelatoriosSAD.FormRelatorioTermoUsuario();
+        RelatoriosSAD.FormRelatorioTermoUsuario termo = new RelatoriosSAD.FormRelatorioTermoUsuario(termoUser);
         // TODO add your handling code here:
 
 
