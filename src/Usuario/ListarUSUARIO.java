@@ -19,6 +19,7 @@ import Monitor.ModeloMonitor.ModeloMonitor;
 import Principal.TelaPrincipal;
 import RelatoriosSAD.DadosRelatorios;
 import RelatoriosSAD.FormRelatorioCompleto;
+import RelatoriosSAD.FormRelatorioTermoUsuario;
 import RelatoriosSAD.FormRelatorios;
 import SADpe.Cargo.Cargo;
 import SADpe.Gerencia.Gerencia;
@@ -858,8 +859,9 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         // usar a classe DadosUsuario.visualizarUsuario para pegar os dados do usuario
 
         // TODO add your handling code here:
-        // use the object termoUser to get the data and load the info using RelatoriosSAD.Formrelatoriocompleto.carregarUsers
-        RelatoriosSAD.FormRelatorioTermoUsuario termo = new RelatoriosSAD.FormRelatorioTermoUsuario(termoUser);
+        // use the method gerarRelatorio into RelatoriosSAD.FormRelatorioTermoUsuario to get the data
+        FormRelatorioTermoUsuario relatorioTermo = new FormRelatorioTermoUsuario(termoUser);
+
         // TODO add your handling code here:
 
 
