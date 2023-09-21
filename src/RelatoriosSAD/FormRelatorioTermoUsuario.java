@@ -111,11 +111,16 @@ public class FormRelatorioTermoUsuario {
                 document.getForm().getFields().getFormField("text_gerencia").setValue(gerencia);
                 document.getForm().getFields().getFormField("text_cargo").setValue(cargo);
 
-                URL pasta = getClass().getResource("");
+                /*URL pasta = getClass().getResource("");
                 assert pasta != null;
                 String pastaPath = pasta.getPath();
                 //save the pdf
-                document.draw(pastaPath + "termo de responsabilidade " + nome + ".pdf");
+                document.draw(pastaPath + "termo de responsabilidade " + nome + ".pdf"); */
+
+                JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
+                janelaSalvarTermo.setVisible(true);
+
+
             }
 
         } catch (Exception e) {
