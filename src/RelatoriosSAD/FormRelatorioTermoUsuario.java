@@ -85,6 +85,8 @@ public class FormRelatorioTermoUsuario {
             String serieMonitor = usuario.getSerieMonitor();
             String serieMonitor1 = usuario.getSerieMonitor1();
             String modeloMicro = usuario.getModeloMicro().getModelo();
+            String gerencia = usuario.getGerencia().getGerencia();
+            String cargo = usuario.getCargo().getCargo();
 
 
             URL resource = getClass().getResource("/resources/termoForm.pdf");
@@ -102,6 +104,8 @@ public class FormRelatorioTermoUsuario {
                 document.getForm().getFields().getFormField("textarea_tombos").setValue(tomboMicro + "\n" + tomboMonitor + "\n" + tomboMonitor1);
                 document.getForm().getFields().getFormField("textarea_series").setValue(serieMicro + "\n" + serieMonitor + "\n" + serieMonitor1);
                 document.getForm().getFields().getFormField("text_modeloMicro").setValue(modeloMicro);
+                document.getForm().getFields().getFormField("text_gerencia").setValue(gerencia);
+                document.getForm().getFields().getFormField("text_cargo").setValue(cargo);
 
                 URL pasta = getClass().getResource("/termos");
                 assert pasta != null;
