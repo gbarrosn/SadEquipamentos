@@ -87,7 +87,7 @@ public class FormRelatorioTermoUsuario {
             String modeloMicro = usuario.getModeloMicro().getModelo();
 
 
-            URL resource = getClass().getResource("src/resources/termoForm.pdf");
+            URL resource = getClass().getResource("/src/resources/termoForm.pdf");
             assert resource != null;
             String filePath = resource.getPath();
             MergeDocument document = new MergeDocument(filePath);
