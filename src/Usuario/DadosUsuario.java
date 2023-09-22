@@ -563,6 +563,8 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
             sql += " or id_marca_monitor2 LIKE '%"+ filtroUserString.trim() + "%'";
             sql += " or id_proprietario_monitor2 LIKE '%"+ filtroUserString.trim() + "%'";
 
+            sql += " or usuario.cpf LIKE '%"+ filtroUserString.trim() + "%'";
+
 
             ResultSet rs = conex.executeQuery(sql);
 
@@ -670,6 +672,9 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
                 proprietarioMonitor1.setIdProprietario(rs.getInt("id_proprietario_monitor2"));
                 proprietarioMonitor1.setProprietario(rs.getString("proprietario_monitor"));
                 user.setProprietarioMonitor1(proprietarioMonitor1);
+
+                user.setAtivo(rs.getBoolean("ativo"));
+                user.setCpf(rs.getString("cpf"));
 
                 listaUser.add(user);
             }
