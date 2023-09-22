@@ -78,7 +78,7 @@ public class Usuario {
     private String usuarioAlteracao;
     private Boolean termo_responsabilidade;
     private String etiquetaSAD;
-
+    private String cpf;
     private Boolean ativo;
     private VersaoOffice versao_office;
     //*************
@@ -107,6 +107,21 @@ public class Usuario {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    /**
+     * @return the cpf
+     */
+    public String getCpf() {
+        return cpf;
+    }
+
+    /**
+     * @param cpf the cpf to set
+     */
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
 
     /**
      * @return the gerencia
