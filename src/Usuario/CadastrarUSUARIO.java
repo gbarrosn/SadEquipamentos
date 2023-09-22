@@ -741,6 +741,18 @@ public class CadastrarUSUARIO extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void Box_ProprietarioMonitor1ActionPerformed(ActionEvent evt) {
+    }
+
+    private void Box_ModeloMonitorActionPerformed(ActionEvent evt) {
+    }
+
+    private void Campo_SerieMonitor1ActionPerformed(ActionEvent evt) {
+    }
+
+    private void Box_MarcaMonitor1ActionPerformed(ActionEvent evt) {
+    }
+
 
     private void Button_CadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_CadastrarActionPerformed
 

@@ -64,7 +64,7 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
     private ArrayList<VersaoOffice> allVersaoOffice;
     private ArrayList<OS> allOs;
     
-    private JCheckBox jCheckBox1;
+
 
     public AlterarUSUARIO() {
         initComponents();
