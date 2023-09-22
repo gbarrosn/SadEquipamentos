@@ -90,6 +90,7 @@ public class FormRelatorioTermoUsuario {
             String gerencia = usuario.getGerencia().getGerencia();
             String cargo = usuario.getCargo().getCargo();
             String configuracao = usuario.getConfigMicro().getConfiguracao();
+            String cpf = usuario.getCpf();
 
             Date data = new Date();
             DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
@@ -126,6 +127,7 @@ public class FormRelatorioTermoUsuario {
                 document.getForm().getFields().getFormField("text_dataMes").setValue(dataMes);
                 document.getForm().getFields().getFormField("text_dataAno").setValue(dataAno);
                 document.getForm().getFields().getFormField("textarea_config_equipamento").setValue(configuracao);
+                document.getForm().getFields().getFormField("text_cpf").setValue(cpf);
 
 
 
