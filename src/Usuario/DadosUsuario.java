@@ -985,6 +985,14 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
             }
 
             // Cpf usuario
+            // verificar se cpf tem 11 digitos
+            if (user.getCpf().length() != 11) {
+                throw new Exception("CPF inválido, preencha apenas com números.");
+            }
+            // verificar se cpf tem apenas números
+            if (!user.getCpf().matches("[0-9]*")) {
+                throw new Exception("CPF inválido, preencha apenas com números.");
+            }
             sqlValida = "select cpf,id_usuario ";
             sqlValida += " from Usuario where cpf = '" + user.getCpf() + "';";
             rs = conex.executeQuery(sqlValida);
