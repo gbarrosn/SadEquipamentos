@@ -608,6 +608,8 @@ public class VisualizarUsuario extends javax.swing.JFrame {
         Box_ModeloMonitor1 = new javax.swing.JComboBox();
         jSeparator7 = new javax.swing.JSeparator();
         jCheckBox1 = new javax.swing.JCheckBox();
+        jLabel34 = new javax.swing.JLabel();
+        Campo_CpfUser = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -676,7 +678,7 @@ public class VisualizarUsuario extends javax.swing.JFrame {
         Box_GerenciaUser.setName(""); // NOI18N
         Box_GerenciaUser.setRequestFocusEnabled(false);
         Box_GerenciaUser.setVerifyInputWhenFocusTarget(false);
-        getContentPane().add(Box_GerenciaUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(505, 81, 233, -1));
+        getContentPane().add(Box_GerenciaUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(505, 81, 200, -1));
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel16.setText("          Monitor:");
@@ -765,7 +767,7 @@ public class VisualizarUsuario extends javax.swing.JFrame {
         Box_CargoUser.setName(""); // NOI18N
         Box_CargoUser.setRequestFocusEnabled(false);
         Box_CargoUser.setVerifyInputWhenFocusTarget(false);
-        getContentPane().add(Box_CargoUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(505, 47, 394, -1));
+        getContentPane().add(Box_CargoUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(505, 47, 200, -1));
 
         jLabel23.setText("CESU:");
         getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(645, 212, -1, -1));
@@ -890,7 +892,7 @@ public class VisualizarUsuario extends javax.swing.JFrame {
                 ButtonExibirOrganogramaActionPerformed(evt);
             }
         });
-        getContentPane().add(ButtonExibirOrganograma, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 81, 146, -1));
+        getContentPane().add(ButtonExibirOrganograma, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 80, 200, -1));
 
         jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Icons/clock_32.png"))); // NOI18N
         getContentPane().add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 6, -1, -1));
@@ -965,6 +967,14 @@ public class VisualizarUsuario extends javax.swing.JFrame {
 
         jCheckBox1.setText("Usuáio inativo");
         getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, -1, -1));
+
+        jLabel34.setText("CPF:");
+        getContentPane().add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 50, -1, -1));
+
+        Campo_CpfUser.setEditable(false);
+        Campo_CpfUser.setFocusable(false);
+        Campo_CpfUser.setRequestFocusEnabled(false);
+        getContentPane().add(Campo_CpfUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 50, 170, -1));
 
         jMenu1.setText("Opções");
 
@@ -1117,6 +1127,7 @@ public class VisualizarUsuario extends javax.swing.JFrame {
     private javax.swing.JButton ButtonExibirInformarObs;
     private javax.swing.JButton ButtonExibirOrganograma;
     private javax.swing.JButton Button_Cadastrar1;
+    private javax.swing.JTextField Campo_CpfUser;
     private javax.swing.JTextField Campo_HostNameMicro;
     private javax.swing.JTextField Campo_NomeUser;
     private javax.swing.JTextField Campo_SerieMicro;
@@ -1158,6 +1169,7 @@ public class VisualizarUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
