@@ -42,8 +42,9 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
             sql += "host_nome,tombo_micro,serie_micro,id_configuracao,id_marca_micro,id_modelo_micro,";
             sql += "id_plataforma,id_proprietario_micro,id_so,tombo_monitor,serie_monitor,id_modelo_monitor,";
             sql += "id_marca_monitor, id_proprietario_monitor,garantia,cmtech,notebook,id_versao_office,data_alteracao,usuario_alteracao,";
-            sql += "novo_tombo_micro,novo_tombo_monitor,possui_termo, etq_sad, id_modelo_monitor2, id_marca_monitor2, id_proprietario_monitor2, tombo_monitor2, serie_monitor2)";
-            sql += "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+            sql += "novo_tombo_micro,novo_tombo_monitor,possui_termo, etq_sad, id_modelo_monitor2, id_marca_monitor2, ";
+            sql += "id_proprietario_monitor2, tombo_monitor2, serie_monitor2, cpf)";
+            sql += "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
             PreparedStatement conex = conectarSQL.prepareStatement(sql);
             conex.setString(1, user.getNome());
             conex.setInt(2, user.getGerencia().getIdGerencia());
@@ -78,6 +79,7 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
             conex.setInt(31, user.getProprietarioMonitor1().getIdProprietario());
             conex.setLong(32, user.getTombamentoMonitor1());
             conex.setString(33, user.getSerieMonitor1());
+            conex.setString(34, user.getCpf());
 
             conex.executeUpdate();
 
