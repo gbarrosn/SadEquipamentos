@@ -198,7 +198,7 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
                     "INNER JOIN Versao_Office ON Usuario.id_versao_office = Versao_Office.id_versao_office " +
                     "LEFT JOIN Modelo_Monitor AS Modelo_Monitor2 ON Usuario.id_modelo_monitor2 = Modelo_Monitor2.id_modelo_monitor " +
                     "LEFT JOIN Marca_Monitor AS Marca_Monitor2 ON Usuario.id_marca_monitor2 = Marca_Monitor2.id_marca_monitor " +
-                    "LEFT JOIN Proprietario_Monitor AS Proprietario_Monitor2 ON Usuario.id_proprietario_monitor2 = Proprietario_Monitor2.id_proprietario_monitor";
+                    "LEFT JOIN Proprietario_Monitor AS Proprietario_Monitor2 ON Usuario.id_proprietario_monitor2 = Proprietario_Monitor2.id_proprietario_monitor"; // aaqui nao mostra se o cpf foi trocado
 
 
             if (filtroUser.getAtivo()){
@@ -475,6 +475,7 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
                 proprietarioMonitor1.setProprietario(rs.getString("proprietario_monitor"));
                 user.setProprietarioMonitor1(proprietarioMonitor1);
 
+                user.setCpf(rs.getString("cpf"));
                 //ativo ou não
 
                 user.setAtivo(rs.getBoolean("ativo"));
