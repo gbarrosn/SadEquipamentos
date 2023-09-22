@@ -13,5 +13,6 @@
     <orderEntry type="library" name="lib" level="project" />
     <orderEntry type="library" name="lib2" level="project" />
     <orderEntry type="library" name="libs3" level="project" />
+    <orderEntry type="library" name="pdfbox-app-3.0.0" level="project" />
   </component>
 </module>
