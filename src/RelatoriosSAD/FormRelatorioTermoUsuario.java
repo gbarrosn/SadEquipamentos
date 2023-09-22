@@ -13,6 +13,7 @@ import com.cete.dynamicpdf.forms.TextField;
 import com.cete.dynamicpdf.PageElement;
 import com.cete.dynamicpdf.merger.MergeDocument;
 import com.cete.dynamicpdf.merger.forms.PdfTextField;
+import com.cete.dynamicpdf.merger.FormFlatteningOptions;
 import java.io.File;
 import Usuario.Usuario;
 /*
@@ -128,7 +129,6 @@ public class FormRelatorioTermoUsuario {
                 document.getForm().getFields().getFormField("text_dataAno").setValue(dataAno);
                 document.getForm().getFields().getFormField("textarea_config_equipamento").setValue(configuracao);
                 document.getForm().getFields().getFormField("text_cpf").setValue(cpf);
-
 
 
                 JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
