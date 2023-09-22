@@ -330,6 +330,8 @@ public class CadastrarUSUARIO extends javax.swing.JFrame {
         jLabel33 = new javax.swing.JLabel();
         Box_ModeloMonitor1 = new javax.swing.JComboBox();
         Campo_SerieMonitor1 = new javax.swing.JTextField();
+        jLabel27 = new javax.swing.JLabel();
+        Campo_CpfUser = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -418,7 +420,7 @@ public class CadastrarUSUARIO extends javax.swing.JFrame {
                 Box_GerenciaUserMouseClicked(evt);
             }
         });
-        getContentPane().add(Box_GerenciaUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(542, 85, 197, -1));
+        getContentPane().add(Box_GerenciaUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(542, 85, 170, -1));
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel16.setText("        Monitor:");
@@ -437,10 +439,18 @@ public class CadastrarUSUARIO extends javax.swing.JFrame {
                 Box_ModeloMonitorMouseClicked(evt);
             }
         });
-
+        Box_ModeloMonitor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Box_ModeloMonitorActionPerformed(evt);
+            }
+        });
         getContentPane().add(Box_ModeloMonitor, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 445, 135, -1));
         getContentPane().add(Campo_SerieMonitor, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 409, 135, -1));
-
+        Campo_SerieMonitor1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Campo_SerieMonitor1ActionPerformed(evt);
+            }
+        });
 
         jLabel7.setText("Host Name:");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(45, 199, -1, -1));
@@ -461,7 +471,7 @@ public class CadastrarUSUARIO extends javax.swing.JFrame {
                 ButtonExibirOrganogramaActionPerformed(evt);
             }
         });
-        getContentPane().add(ButtonExibirOrganograma, new org.netbeans.lib.awtextra.AbsoluteConstraints(749, 81, 141, 31));
+        getContentPane().add(ButtonExibirOrganograma, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 80, 180, 31));
 
         jLabel26.setText("Office:");
         getContentPane().add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(383, 304, -1, -1));
@@ -529,7 +539,7 @@ public class CadastrarUSUARIO extends javax.swing.JFrame {
                 Box_CargoUserMouseClicked(evt);
             }
         });
-        getContentPane().add(Box_CargoUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(538, 47, 352, -1));
+        getContentPane().add(Box_CargoUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(538, 47, 170, -1));
 
         jLabel23.setText("CESU:");
         getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(657, 235, -1, -1));
@@ -631,7 +641,11 @@ public class CadastrarUSUARIO extends javax.swing.JFrame {
                 Box_ProprietarioMonitor1MouseClicked(evt);
             }
         });
-
+        Box_ProprietarioMonitor1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Box_ProprietarioMonitor1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(Box_ProprietarioMonitor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(552, 481, 189, -1));
 
         jLabel29.setText("Tombo2:");
@@ -647,7 +661,11 @@ public class CadastrarUSUARIO extends javax.swing.JFrame {
                 Box_MarcaMonitor1MouseClicked(evt);
             }
         });
-
+        Box_MarcaMonitor1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Box_MarcaMonitor1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(Box_MarcaMonitor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(753, 445, 154, -1));
 
         jLabel31.setText("Marca2:");
@@ -679,8 +697,16 @@ public class CadastrarUSUARIO extends javax.swing.JFrame {
         });
         getContentPane().add(Box_ModeloMonitor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(552, 445, 135, -1));
 
-
+        Campo_SerieMonitor1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Campo_SerieMonitor1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(Campo_SerieMonitor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(552, 409, 135, -1));
+
+        jLabel27.setText("CPF:");
+        getContentPane().add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 50, -1, -1));
+        getContentPane().add(Campo_CpfUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 50, 140, -1));
 
         jMenu1.setText("Opções");
 
@@ -1642,6 +1668,7 @@ public class CadastrarUSUARIO extends javax.swing.JFrame {
     private javax.swing.JButton ButtonExibirOrganograma;
     private javax.swing.JButton Button_Cadastrar;
     private javax.swing.JButton Button_Cadastrar1;
+    private javax.swing.JTextField Campo_CpfUser;
     private javax.swing.JTextField Campo_HostNameMicro;
     private javax.swing.JTextField Campo_NomeUser;
     private javax.swing.JTextField Campo_NovoTomboMicro;
@@ -1675,6 +1702,7 @@ public class CadastrarUSUARIO extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
