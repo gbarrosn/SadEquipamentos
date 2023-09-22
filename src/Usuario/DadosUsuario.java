@@ -208,13 +208,6 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
                 sql += " where ativo = 0";
             }
 
-            //cpf user
-            if (!filtroUser.getCpf().trim().equals("") && filtroUser.getPesq().equals("livre")) {
-                sql += " and cpf LIKE '%" + filtroUser.getCpf().trim() + "%'";
-            }
-            if (!filtroUser.getCpf().trim().equals("") && filtroUser.getPesq().equals("exata")) {
-                sql += " and cpf = '" + filtroUser.getCpf().trim() + "'";
-            }
 
             //Tombamento Micro
             if (filtroUser.getTombamentoMicro() > 0 && filtroUser.getPesq().equals("livre")) {
