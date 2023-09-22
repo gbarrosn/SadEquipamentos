@@ -973,8 +973,6 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
             }
 
 
-
-
             //Série Micro
             sqlValida = "select serie_micro,id_usuario ";
             sqlValida += " from Usuario where serie_micro = '" + user.getSerieMicro() + "';";
@@ -986,7 +984,16 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
 
             }
 
+            // Cpf usuario
+            sqlValida = "select cpf,id_usuario ";
+            sqlValida += " from Usuario where cpf = '" + user.getCpf() + "';";
+            rs = conex.executeQuery(sqlValida);
+            while (rs.next()) {
+                if ((!rs.getString("cpf").equals("N/I")) && (rs.getInt("id_usuario")!=user.getId_usuario())) {
+                    throw new Exception("Este CPF já está cadastrado no sistema.");
+                }
 
+            }
 
         } catch (SQLException e) {
             throw new Exception("Erro ao executar Consulta - " + e.getMessage());
