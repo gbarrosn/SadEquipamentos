@@ -1050,6 +1050,7 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
             alterarUser.setId_usuario(selecionadoUser.getId_usuario());
             alterarUser.setNotebook("não");
 
+            alterarUser.setAtivo(!jCheckBox1.isSelected());
             //Recebendo objetos do ComboBox:
             //VERSÃO DO PACOTE OFFICE
             try {
