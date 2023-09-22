@@ -913,6 +913,8 @@ public class CadastrarUSUARIO extends javax.swing.JFrame {
             
             user.setEtiquetaSAD(jTextField_EtiquetaSad.getText());
 
+            user.setCpf(Campo_CpfUser.getText());
+
             //String campoObs = campoOBS.getText();
             //user.setObs(campoObs);
             DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
