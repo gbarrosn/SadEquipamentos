@@ -1191,7 +1191,7 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
 
             alterarUser.setEtiquetaSAD(jTextField_EtiquetaSad.getText());
 
-
+            alterarUser.setCpf(Campo_CpfUser.getText());
 
             //String campoObs = campoOBS.getText();
             //alterarUser.setObs(campoObs);
