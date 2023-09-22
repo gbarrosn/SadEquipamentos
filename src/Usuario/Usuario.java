@@ -122,7 +122,6 @@ public class Usuario {
         this.cpf = cpf;
     }
 
-
     /**
      * @return the gerencia
      */
