@@ -655,13 +655,14 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
         jLabel35 = new javax.swing.JLabel();
         Box_ModeloMonitor1 = new javax.swing.JComboBox();
         jCheckBox1 = new javax.swing.JCheckBox();
+        jLabel27 = new javax.swing.JLabel();
+        Campo_CpfUser = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
-        jCheckBox1 = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
@@ -775,7 +776,7 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
         getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 500, -1, -1));
 
         Box_CargoUser.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(Box_CargoUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(514, 49, 339, -1));
+        getContentPane().add(Box_CargoUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(514, 49, 130, -1));
 
         jLabel23.setText("CESU:");
         getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 240, -1, -1));
@@ -983,6 +984,10 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, 140, -1));
+
+        jLabel27.setText("CPF:");
+        getContentPane().add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 50, -1, -1));
+        getContentPane().add(Campo_CpfUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 50, 160, -1));
 
         jMenu1.setText("Opções");
 
@@ -1611,6 +1616,7 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
     private javax.swing.JButton ButtonExibirOrganograma;
     private javax.swing.JButton Button_Alterar;
     private javax.swing.JButton Button_Voltar;
+    private javax.swing.JTextField Campo_CpfUser;
     private javax.swing.JTextField Campo_HostNameMicro;
     private javax.swing.JTextField Campo_NomeUser;
     private javax.swing.JTextField Campo_SerieMicro;
@@ -1625,6 +1631,7 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
     private javax.swing.JTextField campo_Garantia;
     private javax.swing.JCheckBox checkPossuiTermo;
     private javax.swing.JButton jButton2;
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1644,6 +1651,7 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
