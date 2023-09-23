@@ -102,7 +102,7 @@ public class FormRelatorioTermoUsuario {
             String dataMes = dataString.substring(3, 5);
             String dataAno = dataString.substring(6, 10);
 
-            if (tomboMonitor1.equals("1")) {
+            if (usuario.getTombamentoMonitor1() == 1) {
                 URL resource = getClass().getResource("/resources/termo1monitor.pdf");
                 assert resource != null;
                 String filePath = resource.getPath();
