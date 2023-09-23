@@ -102,40 +102,75 @@ public class FormRelatorioTermoUsuario {
             String dataMes = dataString.substring(3, 5);
             String dataAno = dataString.substring(6, 10);
 
+            if (tomboMonitor1.equals("1")) {
+                URL resource = getClass().getResource("/resources/termo1monitor.pdf");
+                assert resource != null;
+                String filePath = resource.getPath();
+                MergeDocument document = new MergeDocument(filePath);
 
-            URL resource = getClass().getResource("/resources/termoForm.pdf");
-            assert resource != null;
-            String filePath = resource.getPath();
-            MergeDocument document = new MergeDocument(filePath);
+                if (document == null) {
+                    System.out.println("Documento não carregado");
+                } else {
+                    System.out.println("Documento carregado com sucesso");}
 
-            if (document == null) {
-                System.out.println("Documento não carregado");
-            } else {
-                System.out.println("Documento carregado com sucesso");
+                    document.setCreator("Gabriel Barros");
+                    document.setAuthor("Gabriel Barros");
+                    document.setTitle("Termo de Responsabilidade Equipamentos");
 
-                document.setCreator("Gabriel Barros");
-                document.setAuthor("Gabriel Barros");
-                document.setTitle("Termo de Responsabilidade Equipamentos");
-
-                document.getForm().getFields().getFormField("text_nome").setValue(nome); // null pointer exception
-                document.getForm().getFields().getFormField("text_cesu").setValue(CESU);
-                document.getForm().getFields().getFormField("textarea_tombos").setValue(tomboMicro + "\n" + tomboMonitor + "\n" + tomboMonitor1);
-                document.getForm().getFields().getFormField("textarea_series").setValue(serieMicro + "\n" + serieMonitor + "\n" + serieMonitor1);
-                document.getForm().getFields().getFormField("text_modeloMicro").setValue(modeloMicro);
-                document.getForm().getFields().getFormField("text_gerencia").setValue(gerencia);
-                document.getForm().getFields().getFormField("text_cargo").setValue(cargo);
-                document.getForm().getFields().getFormField("text_dataDia").setValue(dataDia);
-                document.getForm().getFields().getFormField("text_dataMes").setValue(dataMes);
-                document.getForm().getFields().getFormField("text_dataAno").setValue(dataAno);
-                document.getForm().getFields().getFormField("textarea_config_equipamento").setValue(configuracao);
-                document.getForm().getFields().getFormField("text_cpf").setValue(cpf);
-
-
-                JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
-                janelaSalvarTermo.setVisible(true);
-
-
+                    document.getForm().getFields().getFormField("text_nome").setValue(nome); // null pointer exception
+                    document.getForm().getFields().getFormField("text_cesu").setValue(CESU);
+                    document.getForm().getFields().getFormField("text_tomboMicro").setValue(tomboMicro);
+                    document.getForm().getFields().getFormField("text_tomboMonitor").setValue(tomboMonitor);
+                    document.getForm().getFields().getFormField("text_serieMicro").setValue(serieMicro);
+                    document.getForm().getFields().getFormField("text_serieMonitor").setValue(serieMonitor);
+                    document.getForm().getFields().getFormField("text_modeloMicro").setValue(modeloMicro);
+                    document.getForm().getFields().getFormField("text_gerencia").setValue(gerencia);
+                    document.getForm().getFields().getFormField("text_cargo").setValue(cargo);
+                    document.getForm().getFields().getFormField("text_dataDia").setValue(dataDia);
+                    document.getForm().getFields().getFormField("text_dataMes").setValue(dataMes);
+                    document.getForm().getFields().getFormField("text_dataAno").setValue(dataAno);
+                    document.getForm().getFields().getFormField("textarea_config_equipamento").setValue(configuracao);
+                    document.getForm().getFields().getFormField("text_cpf").setValue(cpf);
+                    JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
+                    janelaSalvarTermo.setVisible(true);
             }
+            else {
+                URL resource = getClass().getResource("/resources/termo2monitores.pdf");
+                assert resource != null;
+                String filePath = resource.getPath();
+                MergeDocument document = new MergeDocument(filePath);
+
+                if (document == null) {
+                    System.out.println("Documento não carregado");
+                } else {
+                    System.out.println("Documento carregado com sucesso");}
+
+                    document.setCreator("Gabriel Barros");
+                    document.setAuthor("Gabriel Barros");
+                    document.setTitle("Termo de Responsabilidade Equipamentos");
+
+                    document.getForm().getFields().getFormField("text_nome").setValue(nome); // null pointer exception
+                    document.getForm().getFields().getFormField("text_cesu").setValue(CESU);
+                    document.getForm().getFields().getFormField("text_tomboMicro").setValue(tomboMicro);
+                    document.getForm().getFields().getFormField("text_tomboMonitor").setValue(tomboMonitor);
+                    document.getForm().getFields().getFormField("text_tomboMonitor1").setValue(tomboMonitor1);
+                    document.getForm().getFields().getFormField("text_serieMicro").setValue(serieMicro);
+                    document.getForm().getFields().getFormField("text_serieMonitor").setValue(serieMonitor);
+                    document.getForm().getFields().getFormField("text_serieMonitor1").setValue(serieMonitor1);
+                    document.getForm().getFields().getFormField("text_modeloMicro").setValue(modeloMicro);
+                    document.getForm().getFields().getFormField("text_gerencia").setValue(gerencia);
+                    document.getForm().getFields().getFormField("text_cargo").setValue(cargo);
+                    document.getForm().getFields().getFormField("text_dataDia").setValue(dataDia);
+                    document.getForm().getFields().getFormField("text_dataMes").setValue(dataMes);
+                    document.getForm().getFields().getFormField("text_dataAno").setValue(dataAno);
+                    document.getForm().getFields().getFormField("textarea_config_equipamento").setValue(configuracao);
+                    document.getForm().getFields().getFormField("text_cpf").setValue(cpf);
+                    JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
+                    janelaSalvarTermo.setVisible(true);
+
+                }
+
+
 
         } catch (Exception e) {
             e.printStackTrace();
