@@ -88,7 +88,7 @@ public class FormRelatorioTermoUsuario {
             String serieMonitor = usuario.getSerieMonitor();
             String serieMonitor1 = usuario.getSerieMonitor1();
             String modeloMicro = usuario.getModeloMicro().getModelo();
-            String gerencia = usuario.getGerencia().getGerencia();
+            String gerencia = usuario.getGerencia().getSiglaGerencia();
             String cargo = usuario.getCargo().getCargo();
             String configuracao = usuario.getConfigMicro().getConfiguracao();
             String cpf = usuario.getCpf();
