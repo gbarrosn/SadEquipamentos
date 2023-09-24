@@ -51,7 +51,7 @@ public class JanelaSalvarTermo extends javax.swing.JFrame {
         String dataString;
         dataString = dateFormat.format(data);
 
-defaultFile = "Termo de Responsabilidade - "+nomeUsuario;
+defaultFile = "Termo de Responsabilidade - "+nomeUsuario + " " + dataString;
 
 
         try {
