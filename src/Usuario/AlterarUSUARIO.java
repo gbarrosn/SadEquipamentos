@@ -133,6 +133,7 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
         Campo_TomboMonitor1.setText(selecionadoUser.getTombamentoMonitor1() + "");
         Campo_SerieMonitor1.setText(selecionadoUser.getSerieMonitor1());
         Box_MarcaMonitor1.setSelectedItem(selecionadoUser.getMarcaMonitor1().getMarca());
+        Campo_CpfUser.setText(selecionadoUser.getCpf());
 
         if (selecionadoUser.getAtivo()) {
             jCheckBox1.setSelected(false);
