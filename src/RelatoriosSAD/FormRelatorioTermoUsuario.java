@@ -116,7 +116,7 @@ public class FormRelatorioTermoUsuario {
                     acroForm.getField("text_tomboMonitor1").setValue(tomboMonitor1);
                     acroForm.getField("text_serieMicro").setValue(serieMicro);
                     acroForm.getField("text_serieMonitor").setValue(serieMonitor);
-                    acroForm.getField("text_SerieMonitor1").setValue(serieMonitor1);
+                    acroForm.getField("text_serieMonitor1").setValue(serieMonitor1);
                     acroForm.getField("text_modeloMicro").setValue(modeloMicro);
                     acroForm.getField("text_gerencia").setValue(gerencia);
                     acroForm.getField("text_cargo").setValue(cargo);
