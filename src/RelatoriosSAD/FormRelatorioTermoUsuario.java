@@ -11,16 +11,6 @@ import java.util.Date;
 import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import com.cete.dynamicpdf.*;
-import com.cete.dynamicpdf.pageelements.Label;
-import com.cete.dynamicpdf.forms.FormField;
-import com.cete.dynamicpdf.forms.FormFieldList;
-import com.cete.dynamicpdf.forms.FormField;
-import com.cete.dynamicpdf.forms.TextField;
-import com.cete.dynamicpdf.PageElement;
-import com.cete.dynamicpdf.merger.MergeDocument;
-import com.cete.dynamicpdf.merger.forms.PdfTextField;
-import com.cete.dynamicpdf.merger.FormFlatteningOptions;
 import java.io.File;
 import Usuario.Usuario;
 
