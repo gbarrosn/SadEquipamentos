@@ -1233,6 +1233,19 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
                 }
             }
 
+            // Tombo monitor 2
+            try {
+                String tomboMonitorPC = Campo_TomboMonitor1.getText();
+                long tomboMonitorPCIntParse = Long.parseLong(tomboMonitorPC);
+                alterarUser.setTombamentoMonitor1(tomboMonitorPCIntParse);
+            } catch (NumberFormatException e) {
+                if (Campo_TomboMonitor1.getText().trim().equals("") == true) {
+                    alterarUser.setTombamentoMonitor1(1);
+                } else {
+                    throw new Exception("Erro - Campo Tombamento do Monitor 2: Preencha apenas com números.");
+                }
+            }
+
 
             //Etiqueta CMTECH:
             try {
