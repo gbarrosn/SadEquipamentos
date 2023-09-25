@@ -131,7 +131,6 @@ public class FormRelatorioTermoUsuario {
                     JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
                     janelaSalvarTermo.setVisible(true);
 
-                    document.close();
 
                 }
 
