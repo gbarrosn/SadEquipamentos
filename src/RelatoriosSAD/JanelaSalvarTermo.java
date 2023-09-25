@@ -1,8 +1,8 @@
 package RelatoriosSAD;
+import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
 
-import SADpe.Pavimento.Pavimento;
-import com.cete.dynamicpdf.Document;
-
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.pdmodel.PDDocument.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
@@ -36,9 +36,9 @@ public class JanelaSalvarTermo extends javax.swing.JFrame {
         }
     }
 
-    private Document documento;
+    private PDDocument documento;
 
-    public JanelaSalvarTermo(Document documento, String nomeUsuario) {
+    public JanelaSalvarTermo(PDDocument documento, String nomeUsuario) {
         icone();
         initComponents();
         setLocationRelativeTo(null);
@@ -120,7 +120,7 @@ defaultFile = "Termo de Responsabilidade - "+nomeUsuario + " " + dataString;
 
             if (!nomeDoArquivo.equals("null.pdf")) {
 
-                this.documento.draw(nomeDoArquivo);
+                this.documento.save(nomeDoArquivo);
                 JOptionPane.showMessageDialog(rootPane, "Termo de Responsabilidade gerado com sucesso em:   \n" + "\"" + nomeDoArquivo + "\"");
                 dispose();
 

@@ -1,5 +1,12 @@
 package RelatoriosSAD;
-
+import java.io.IOException;
+import java.io.InputStream;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.io.RandomAccessReadWriteBuffer;
+import org.apache.pdfbox.io.RandomAccessReadBufferedFile;
+import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
+import org.apache.pdfbox.Loader;
+import org.apache.pdfbox.cos.COSDocument;
 import java.util.Date;
 import java.net.URL;
 import java.text.DateFormat;
@@ -16,59 +23,13 @@ import com.cete.dynamicpdf.merger.forms.PdfTextField;
 import com.cete.dynamicpdf.merger.FormFlatteningOptions;
 import java.io.File;
 import Usuario.Usuario;
+
 /*
-MergeDocument document = new MergeDocument( pdfFilePath );
-// Set the field values
-document.Form.Fields["TextBox1"].Value = "My Text"; // TextBox field
-document.Form.Fields["CheckBox1"].Value = "Yes"; // CheckBox field
-document.Form.Fields["ComboBox1"].Value = "Item4"; // ComboBox field
-document.Form.Fields["RadioButton1"].Value = "Item2"; // RadioButton field
-ListBoxField listBox = (ListBoxField) document.Form.Fields["ListBox1"]; // ListBox field
-listBox.SetValues( new string[] { "Item1", "Item3", "Item5" } );
-// Save the PDF
-document.Draw(pdfFilePath);
-MergeDocument document = new MergeDocument(@"OutputPDF.pdf");
-document.Pages[0].ReaderEvents.Open = new ImportFormDataAction("FDF file path");
-document.Draw(outputPath);
-
-using ceTe.DynamicPDF;
-using ceTe.DynamicPDF.PageElements.Forms;
-using ceTe.DynamicPDF.PageElements;
-
-public class Example
-{
-    public static void CreatePDF(string fdfFilePath, string outputPath)
-    {
-        // Create a PDF Document
-        Document document = new Document();
-
-        // Create a page and add it to the document
-        Page page = new Page();
-        document.Pages.Add(page);
-
-        Button button = new Button("btn", 50, 150, 100, 30);
-        button.Label = "Click Here";
-
-        // Create label and text field
-        Label label1 = new Label("Click the button to fill the text field using import data action: ", 50, 100, 250, 30);
-        ceTe.DynamicPDF.PageElements.Forms.TextField field = new ceTe.DynamicPDF.PageElements.Forms.TextField("Text1", 320, 100, 100, 30);
-
-        // Add the label and form fields to the page
-        page.Elements.Add(button);
-        page.Elements.Add(field);
-        page.Elements.Add(label1);
-
-        // Create a import form data action and assign to the button events.
-        ImportFormDataAction action = new ImportFormDataAction(fdfFilePath);
-        button.ReaderEvents.MouseUp = action;
-
-        // Save the PDF
-        document.Draw(outputPath);
-    }
-}
+PDDocument(COSDocument doc)
+Constructor that uses an existing document. The COSDocument that is passed in must be valid.
  */
 public class FormRelatorioTermoUsuario {
-    private Usuario usuario;
+    private final Usuario usuario;
 
     public FormRelatorioTermoUsuario(Usuario usuario) {
         this.usuario = usuario;
@@ -103,80 +64,79 @@ public class FormRelatorioTermoUsuario {
             String dataAno = dataString.substring(6, 10);
 
             if (usuario.getTombamentoMonitor1() == 1) {
-                URL resource = getClass().getResource("/resources/termo1monitor.pdf");
-                assert resource != null;
-                String filePath = resource.getPath();
-                MergeDocument document = new MergeDocument(filePath);
 
-                if (document == null) {
-                    System.out.println("Documento não carregado");
-                } else {
-                    System.out.println("Documento carregado com sucesso");}
+                    URL resource = getClass().getResource("/resources/termo1monitor.pdf");
+                    assert resource != null;
+                    PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(resource.getPath()));
 
-                    document.setCreator("Gabriel Barros");
-                    document.setAuthor("Gabriel Barros");
-                    document.setTitle("Termo de Responsabilidade Equipamentos");
+                    if (document == null) {
+                        System.out.println("Documento não carregado");
+                    } else {
+                        System.out.println("Documento carregado com sucesso");
+                    }
 
-                    document.getForm().getFields().getFormField("text_nome").setValue(nome); // null pointer exception
-                    document.getForm().getFields().getFormField("text_cesu").setValue(CESU);
-                    document.getForm().getFields().getFormField("text_tomboMicro").setValue(tomboMicro);
-                    document.getForm().getFields().getFormField("text_tomboMonitor").setValue(tomboMonitor);
-                    document.getForm().getFields().getFormField("text_serieMicro").setValue(serieMicro);
-                    document.getForm().getFields().getFormField("text_serieMonitor").setValue(serieMonitor);
-                    document.getForm().getFields().getFormField("text_modeloMicro").setValue(modeloMicro);
-                    document.getForm().getFields().getFormField("text_gerencia").setValue(gerencia);
-                    document.getForm().getFields().getFormField("text_cargo").setValue(cargo);
-                    document.getForm().getFields().getFormField("text_dataDia").setValue(dataDia);
-                    document.getForm().getFields().getFormField("text_dataMes").setValue(dataMes);
-                    document.getForm().getFields().getFormField("text_dataAno").setValue(dataAno);
-                    document.getForm().getFields().getFormField("textarea_config_equipamento").setValue(configuracao);
-                    document.getForm().getFields().getFormField("text_cpf").setValue(cpf);
+                    PDAcroForm acroForm = document.getDocumentCatalog().getAcroForm();
+
+                    acroForm.getField("text_nome").setValue(nome);
+                    acroForm.getField("text_cesu").setValue(CESU);
+                    acroForm.getField("text_tomboMicro").setValue(tomboMicro);
+                    acroForm.getField("text_tomboMonitor").setValue(tomboMonitor);
+                    acroForm.getField("text_serieMicro").setValue(serieMicro);
+                    acroForm.getField("text_serieMonitor").setValue(serieMonitor);
+                    acroForm.getField("text_modeloMicro").setValue(modeloMicro);
+                    acroForm.getField("text_gerencia").setValue(gerencia);
+                    acroForm.getField("text_cargo").setValue(cargo);
+                    acroForm.getField("text_dataDia").setValue(dataDia);
+                    acroForm.getField("text_dataMes").setValue(dataMes);
+                    acroForm.getField("text_dataAno").setValue(dataAno);
+                    acroForm.getField("textarea_config_equipamento").setValue(configuracao);
+                    acroForm.getField("text_cpf").setValue(cpf);
+
+                    acroForm.flatten();
                     JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
                     janelaSalvarTermo.setVisible(true);
+
+
             }
             else {
                 URL resource = getClass().getResource("/resources/termo2monitores.pdf");
                 assert resource != null;
-                String filePath = resource.getPath();
-                MergeDocument document = new MergeDocument(filePath);
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(resource.getPath()));
 
                 if (document == null) {
                     System.out.println("Documento não carregado");
                 } else {
                     System.out.println("Documento carregado com sucesso");}
+                    PDAcroForm acroForm = document.getDocumentCatalog().getAcroForm();
 
-                    document.setCreator("Gabriel Barros");
-                    document.setAuthor("Gabriel Barros");
-                    document.setTitle("Termo de Responsabilidade Equipamentos");
+                    acroForm.getField("text_nome").setValue(nome);
+                    acroForm.getField("text_cesu").setValue(CESU);
+                    acroForm.getField("text_tomboMicro").setValue(tomboMicro);
+                    acroForm.getField("text_tomboMonitor").setValue(tomboMonitor);
+                    acroForm.getField("text_tomboMonitor1").setValue(tomboMonitor1);
+                    acroForm.getField("text_serieMicro").setValue(serieMicro);
+                    acroForm.getField("text_serieMonitor").setValue(serieMonitor);
+                    acroForm.getField("text_SerieMonitor1").setValue(serieMonitor1);
+                    acroForm.getField("text_modeloMicro").setValue(modeloMicro);
+                    acroForm.getField("text_gerencia").setValue(gerencia);
+                    acroForm.getField("text_cargo").setValue(cargo);
+                    acroForm.getField("text_dataDia").setValue(dataDia);
+                    acroForm.getField("text_dataMes").setValue(dataMes);
+                    acroForm.getField("text_dataAno").setValue(dataAno);
+                    acroForm.getField("textarea_config_equipamento").setValue(configuracao);
+                    acroForm.getField("text_cpf").setValue(cpf);
 
-                    document.getForm().getFields().getFormField("text_nome").setValue(nome); // null pointer exception
-                    document.getForm().getFields().getFormField("text_cesu").setValue(CESU);
-                    document.getForm().getFields().getFormField("text_tomboMicro").setValue(tomboMicro);
-                    document.getForm().getFields().getFormField("text_tomboMonitor").setValue(tomboMonitor);
-                    document.getForm().getFields().getFormField("text_tomboMonitor1").setValue(tomboMonitor1);
-                    document.getForm().getFields().getFormField("text_serieMicro").setValue(serieMicro);
-                    document.getForm().getFields().getFormField("text_serieMonitor").setValue(serieMonitor);
-                    document.getForm().getFields().getFormField("text_serieMonitor1").setValue(serieMonitor1);
-                    document.getForm().getFields().getFormField("text_modeloMicro").setValue(modeloMicro);
-                    document.getForm().getFields().getFormField("text_gerencia").setValue(gerencia);
-                    document.getForm().getFields().getFormField("text_cargo").setValue(cargo);
-                    document.getForm().getFields().getFormField("text_dataDia").setValue(dataDia);
-                    document.getForm().getFields().getFormField("text_dataMes").setValue(dataMes);
-                    document.getForm().getFields().getFormField("text_dataAno").setValue(dataAno);
-                    document.getForm().getFields().getFormField("textarea_config_equipamento").setValue(configuracao);
-                    document.getForm().getFields().getFormField("text_cpf").setValue(cpf);
+                    acroForm.flatten();
+
                     JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
                     janelaSalvarTermo.setVisible(true);
 
+                    document.close();
+
                 }
-
-
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
-
-
 }
