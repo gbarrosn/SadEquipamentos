@@ -850,6 +850,13 @@ public class ListarUSUARIO extends javax.swing.JFrame {
             selecionadoUsuario = listaDeUsuarios.get(TodosUsuarios.getSelectedRow()); // ate aqui o sistema reconheece o usuario, atualzar o relatorio para o termo
 
             gerarTermoUsuario(selecionadoUsuario);
+            Usuario alterarUser = selecionadoUsuario;
+            alterarUser.setTermo_responsabilidade(true);
+            try {
+                Fachada.getInstancia().alterarUsuario(alterarUser, selecionadoUsuario);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
         } else {
             JOptionPane.showMessageDialog(null, "Escolha algum usuário da tabela para gerar o termo!");
         }
@@ -863,11 +870,6 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         FormRelatorioTermoUsuario relatorioTermo = new FormRelatorioTermoUsuario(termoUser);
         relatorioTermo.gerarRelatorio();
         // TODO add your handling code here:
-
-
-
-
-
 
     }
     private void jButtonAlterarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAlterarUsuarioActionPerformed
