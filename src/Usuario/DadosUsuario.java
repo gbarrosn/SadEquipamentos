@@ -911,12 +911,17 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
             Statement conex = conectar();
 
             //HOST NAME
-            String sqlValida = "select host_nome,id_usuario ";
+            String sqlValida = "select host_nome,id_usuario, ativo ";
             sqlValida += " from Usuario where host_nome = '" + user.getNomepc() + "';";
             ResultSet rs = conex.executeQuery(sqlValida);
             while (rs.next()) {
-                if ((!rs.getString("host_nome").equals("N/I")) && (rs.getInt("id_usuario") != user.getId_usuario())) {
+                if ((!rs.getString("host_nome").equals("N/I")) && (rs.getInt("id_usuario") != user.getId_usuario()) && (rs.getBoolean("ativo") == true)) {
                     throw new Exception("Este Host Name já está cadastrado no sistema.");
+                } else {
+                    // apaga o host name do usuario que foi desativado
+                    String sql = "update usuario set host_nome='N/I'";
+                    sql += " where id_usuario = '" + rs.getInt("id_usuario") + "';";
+                    conex.execute(sql);
                 }
             }
 
