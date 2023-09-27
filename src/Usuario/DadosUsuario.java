@@ -1014,7 +1014,7 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
             sqlValida += " from Usuario where cpf = '" + user.getCpf() + "';";
             rs = conex.executeQuery(sqlValida);
             while (rs.next()) {
-                if ((!rs.getString("cpf").equals("N/I")) && (rs.getInt("id_usuario")!=user.getId_usuario())) {
+                if ((!rs.getString("cpf").equals(null)) && (rs.getInt("id_usuario")!=user.getId_usuario())) {
                     throw new Exception("Este CPF já está cadastrado no sistema.");
                 }
 
