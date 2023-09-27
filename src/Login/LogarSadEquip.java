@@ -41,7 +41,7 @@ public class LogarSadEquip extends javax.swing.JFrame {
     void icone() {
         BufferedImage img = null;
         try {
-            img = ImageIO.read(new File("src\\resources\\favicon-cor.png"));
+            img = ImageIO.read(new File("resources\\favicon-cor.png"));
             this.setIconImage(img);
         } catch (IOException e) {
         }
@@ -52,7 +52,7 @@ public class LogarSadEquip extends javax.swing.JFrame {
         try {
 
             ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-            InputStream input = classLoader.getResourceAsStream("src/resources/carregando.gif");
+            InputStream input = classLoader.getResourceAsStream("resources/carregando.gif");
             img = ImageIO.read(input);
             icon = new ImageIcon(img);
 
