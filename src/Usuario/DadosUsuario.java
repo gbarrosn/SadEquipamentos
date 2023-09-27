@@ -1002,20 +1002,22 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
             }
 
             // Cpf usuario
-            // verificar se cpf tem 11 digitos
-            if (user.getCpf().length() != 11) {
-                throw new Exception("CPF inválido, preencha apenas com números.");
-            }
-            // verificar se cpf tem apenas números
-            if (!user.getCpf().matches("[0-9]*")) {
-                throw new Exception("CPF inválido, preencha apenas com números.");
-            }
-            sqlValida = "select cpf,id_usuario ";
-            sqlValida += " from Usuario where cpf = '" + user.getCpf() + "';";
-            rs = conex.executeQuery(sqlValida);
-            while (rs.next()) {
-                if ((!rs.getString("cpf").equals(null)) && (rs.getInt("id_usuario")!=user.getId_usuario())) {
-                    throw new Exception("Este CPF já está cadastrado no sistema.");
+            if (user.getCpf() != null) {
+                // verificar se cpf tem 11 digitos
+                if (user.getCpf().length() != 11) {
+                    throw new Exception("CPF inválido, preencha apenas com números.");
+                }
+                // verificar se cpf tem apenas números
+                if (!user.getCpf().matches("[0-9]*")) {
+                    throw new Exception("CPF inválido, preencha apenas com números.");
+                }
+                sqlValida = "select cpf,id_usuario ";
+                sqlValida += " from Usuario where cpf = '" + user.getCpf() + "';";
+                rs = conex.executeQuery(sqlValida);
+                while (rs.next()) {
+                    if ((!rs.getString("cpf").equals(null)) && (rs.getInt("id_usuario") != user.getId_usuario())) {
+                        throw new Exception("Este CPF já está cadastrado no sistema.");
+                    }
                 }
 
             }
