@@ -69,7 +69,7 @@ public class ListarUSUARIO extends javax.swing.JFrame {
     void icone() {
         BufferedImage img = null;
         try {
-            img = ImageIO.read(new File("src\\resources\\favicon-cor.png"));
+            img = ImageIO.read(new File("resources\\favicon-cor.png"));
             this.setIconImage(img);
         } catch (IOException e) {
         }
