@@ -911,12 +911,17 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
             Statement conex = conectar();
 
             //HOST NAME
-            String sqlValida = "select host_nome,id_usuario ";
+            String sqlValida = "select host_nome,id_usuario, ativo ";
             sqlValida += " from Usuario where host_nome = '" + user.getNomepc() + "';";
             ResultSet rs = conex.executeQuery(sqlValida);
             while (rs.next()) {
-                if ((!rs.getString("host_nome").equals("N/I")) && (rs.getInt("id_usuario") != user.getId_usuario())) {
+                if ((!rs.getString("host_nome").equals("N/I")) && (rs.getInt("id_usuario") != user.getId_usuario()) && (rs.getBoolean("ativo") == true)) {
                     throw new Exception("Este Host Name já está cadastrado no sistema.");
+                } else {
+                    // apaga o host name do usuario que foi desativado
+                    String sql = "update usuario set host_nome='N/I'";
+                    sql += " where id_usuario = '" + rs.getInt("id_usuario") + "';";
+                    conex.execute(sql);
                 }
             }
 
@@ -931,23 +936,33 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
 //             }
 
             //TOMBO MICRO
-            sqlValida = "select tombo_micro,id_usuario, nome ";
+            sqlValida = "select tombo_micro,id_usuario, nome, ativo ";
             sqlValida += " from Usuario where tombo_micro = '" + user.getTombamentoMicro() + "';";
             rs = conex.executeQuery(sqlValida);
             while (rs.next()) {
-                if (rs.getInt("tombo_micro") != 1 && rs.getInt("id_usuario")!=user.getId_usuario()) {
+                if (rs.getInt("tombo_micro") != 1 && rs.getInt("id_usuario")!=user.getId_usuario() && (rs.getBoolean("ativo") == true)) {
                     throw new Exception("Este Tombamento de Micro já está cadastrado no sistema no nome de:" + rs.getString("nome") + ".");
+                } else {
+                    // apaga o tombo do usuario que foi desativado
+                    String sql = "update usuario set tombo_micro=1";
+                    sql += " where id_usuario = '" + rs.getInt("id_usuario") + "';";
+                    conex.execute(sql);
                 }
 
             }
 
             //CMTECH
-            sqlValida = "select cmtech,id_usuario ";
+            sqlValida = "select cmtech,id_usuario, ativo ";
             sqlValida += " from Usuario where cmtech = '" + user.getEtiquetaCESU() + "';";
             rs = conex.executeQuery(sqlValida);
             while (rs.next()) {
-                if (rs.getInt("cmtech") != 1 && rs.getInt("id_usuario")!=user.getId_usuario()) {
+                if (rs.getInt("cmtech") != 1 && rs.getInt("id_usuario")!=user.getId_usuario() && (rs.getBoolean("ativo") == true)) {
                     throw new Exception("Esta etiqueta CMTECH já está cadastrada no sistema.");
+                } else {
+                    // apaga o cmtech do usuario que foi desativado
+                    String sql = "update usuario set cmtech=1";
+                    sql += " where id_usuario = '" + rs.getInt("id_usuario") + "';";
+                    conex.execute(sql);
                 }
 
             }
@@ -999,7 +1014,7 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
             sqlValida += " from Usuario where cpf = '" + user.getCpf() + "';";
             rs = conex.executeQuery(sqlValida);
             while (rs.next()) {
-                if ((!rs.getString("cpf").equals("N/I")) && (rs.getInt("id_usuario")!=user.getId_usuario())) {
+                if ((!rs.getString("cpf").equals(null)) && (rs.getInt("id_usuario")!=user.getId_usuario())) {
                     throw new Exception("Este CPF já está cadastrado no sistema.");
                 }
 
