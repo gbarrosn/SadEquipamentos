@@ -85,11 +85,13 @@ public class FormRelatorioTermoUsuario {
                     if (cpf != null) {
                         acroForm.getField("text_cpf").setValue(cpf);
                     } else {
+                        acroForm.setNeedAppearances(false);
                         acroForm.flatten();
                         JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
                         janelaSalvarTermo.setVisible(true);
                     }
 
+                    acroForm.setNeedAppearances(false);
                     acroForm.flatten();
                     JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
                     janelaSalvarTermo.setVisible(true);
@@ -126,10 +128,12 @@ public class FormRelatorioTermoUsuario {
                     if (cpf != null) {
                         acroForm.getField("text_cpf").setValue(cpf);
                     } else {
+                        acroForm.setNeedAppearances(false);
                         acroForm.flatten();
                         JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
                         janelaSalvarTermo.setVisible(true);
                     }
+                    acroForm.setNeedAppearances(false);
                     acroForm.flatten();
                     JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
                     janelaSalvarTermo.setVisible(true);
