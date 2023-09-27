@@ -58,7 +58,7 @@ public class FormRelatorioTermoUsuario {
                     URL resource = getClass().getResource("/resources/termo1monitor.pdf");
                     assert resource != null;
                     String path = resource.getPath();
-                    PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(path));
+                    PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/termo1monitor.pdf"));
 
                     if (document == null) {
                         System.out.println("Documento não carregado");
@@ -100,7 +100,7 @@ public class FormRelatorioTermoUsuario {
                 URL resource = getClass().getResource("/resources/termo2monitores.pdf");
                 assert resource != null;
                 String path = resource.getPath();
-                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(path));
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/termo2monitores.pdf"));
 
                 if (document == null) {
                     System.out.println("Documento não carregado");
