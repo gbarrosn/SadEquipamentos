@@ -46,12 +46,7 @@ public class JanelaSalvarTermo extends javax.swing.JFrame {
         this.documento = documento;
 
         String defaultFile="";
-        Date data = new Date();
-        DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-        String dataString;
-        dataString = dateFormat.format(data);
-
-defaultFile = "Termo de Responsabilidade - "+nomeUsuario + " " + dataString;
+        defaultFile = "Termo de Responsabilidade - "+ nomeUsuario ;
 
 
         try {

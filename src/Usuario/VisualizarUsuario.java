@@ -1060,7 +1060,7 @@ public class VisualizarUsuario extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try {
             String urlPadrao = ("\\\\sadfs01\\GTINF\\USINF\\Sistema SAD Equipamentos\\Termos de Responsabilidade\\");
-            File file = new File(urlPadrao + this.selecionadoUser.getNome() + ".pdf");
+            File file = new File(urlPadrao + "Termo de Responsabilidade - " + this.selecionadoUser.getNome() + ".pdf");
 
             Desktop.getDesktop().open(file);
         } catch (Exception ex) {
