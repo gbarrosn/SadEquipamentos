@@ -84,19 +84,16 @@ public class FormRelatorioTermoUsuario {
 
                     if (cpf != null) {
                         acroForm.getField("text_cpf").setValue(cpf);
+                        acroForm.setNeedAppearances(false);
+                        acroForm.flatten();
+                        JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
+                        janelaSalvarTermo.setVisible(true);
                     } else {
                         acroForm.setNeedAppearances(false);
                         acroForm.flatten();
                         JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
                         janelaSalvarTermo.setVisible(true);
                     }
-
-                    acroForm.setNeedAppearances(false);
-                    acroForm.flatten();
-                    JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
-                    janelaSalvarTermo.setVisible(true);
-
-
             }
             else {
                 URL resource = getClass().getResource("/resources/termo2monitores.pdf");
@@ -127,16 +124,16 @@ public class FormRelatorioTermoUsuario {
 
                     if (cpf != null) {
                         acroForm.getField("text_cpf").setValue(cpf);
+                        acroForm.setNeedAppearances(false);
+                        acroForm.flatten();
+                        JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
+                        janelaSalvarTermo.setVisible(true);
                     } else {
                         acroForm.setNeedAppearances(false);
                         acroForm.flatten();
                         JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
                         janelaSalvarTermo.setVisible(true);
                     }
-                    acroForm.setNeedAppearances(false);
-                    acroForm.flatten();
-                    JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
-                    janelaSalvarTermo.setVisible(true);
 
 
                 }
