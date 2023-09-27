@@ -55,51 +55,46 @@ public class FormRelatorioTermoUsuario {
 
             if (usuario.getTombamentoMonitor1() == 1) {
 
-                    URL resource = getClass().getResource("/resources/termo1monitor.pdf");
-                    assert resource != null;
-                    String path = resource.getPath();
-                    PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/termo1monitor.pdf"));
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/termo1monitor.pdf"));
 
-                    if (document == null) {
-                        System.out.println("Documento não carregado");
-                    } else {
-                        System.out.println("Documento carregado com sucesso");
-                    }
+                if (document == null) {
+                    System.out.println("Documento não carregado");
+                } else {
+                    System.out.println("Documento carregado com sucesso");
+                }
 
-                    PDAcroForm acroForm = document.getDocumentCatalog().getAcroForm();
+                PDAcroForm acroForm = document.getDocumentCatalog().getAcroForm();
 
-                    acroForm.getField("text_nome").setValue(nome);
-                    acroForm.getField("text_cesu").setValue(CESU);
-                    acroForm.getField("text_tomboMicro").setValue(tomboMicro);
-                    acroForm.getField("text_tomboMonitor").setValue(tomboMonitor);
-                    acroForm.getField("text_serieMicro").setValue(serieMicro);
-                    acroForm.getField("text_serieMonitor").setValue(serieMonitor);
-                    acroForm.getField("text_modeloMicro").setValue(modeloMicro);
-                    acroForm.getField("text_gerencia").setValue(gerencia);
-                    acroForm.getField("text_cargo").setValue(cargo);
-                    acroForm.getField("text_dataDia").setValue(dataDia);
-                    acroForm.getField("text_dataMes").setValue(dataMes);
-                    acroForm.getField("text_dataAno").setValue(dataAno);
-                    acroForm.getField("textarea_config_equipamento").setValue(configuracao);
+                acroForm.getField("text_nome").setValue(nome);
+                acroForm.getField("text_cesu").setValue(CESU);
+                acroForm.getField("text_tomboMicro").setValue(tomboMicro);
+                acroForm.getField("text_tomboMonitor").setValue(tomboMonitor);
+                acroForm.getField("text_serieMicro").setValue(serieMicro);
+                acroForm.getField("text_serieMonitor").setValue(serieMonitor);
+                acroForm.getField("text_modeloMicro").setValue(modeloMicro);
+                acroForm.getField("text_gerencia").setValue(gerencia);
+                acroForm.getField("text_cargo").setValue(cargo);
+                acroForm.getField("text_dataDia").setValue(dataDia);
+                acroForm.getField("text_dataMes").setValue(dataMes);
+                acroForm.getField("text_dataAno").setValue(dataAno);
+                acroForm.getField("textarea_config_equipamento").setValue(configuracao);
+                acroForm.getField("text_cpf").setValue(cpf);
+
+                if (cpf != null) {
                     acroForm.getField("text_cpf").setValue(cpf);
-
-                    if (cpf != null) {
-                        acroForm.getField("text_cpf").setValue(cpf);
-                        acroForm.setNeedAppearances(false);
-                        acroForm.flatten();
-                        JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
-                        janelaSalvarTermo.setVisible(true);
-                    } else {
-                        acroForm.setNeedAppearances(false);
-                        acroForm.flatten();
-                        JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
-                        janelaSalvarTermo.setVisible(true);
-                    }
+                    acroForm.setNeedAppearances(false);
+                    acroForm.flatten();
+                    JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
+                    janelaSalvarTermo.setVisible(true);
+                } else {
+                    acroForm.setNeedAppearances(false);
+                    acroForm.flatten();
+                    JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
+                    janelaSalvarTermo.setVisible(true);
+                }
             }
             else {
-                URL resource = getClass().getResource("/resources/termo2monitores.pdf");
-                assert resource != null;
-                String path = resource.getPath();
+
                 PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/termo2monitores.pdf"));
 
                 if (document == null) {
@@ -136,7 +131,6 @@ public class FormRelatorioTermoUsuario {
                         JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
                         janelaSalvarTermo.setVisible(true);
                     }
-
 
                 }
 
