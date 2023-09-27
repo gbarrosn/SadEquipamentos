@@ -1,0 +1,46 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SadEquipamentos.jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SadEquipamentos_jar</output-path>
+    <root id="archive" name="SadEquipamentos_2.jar">
+      <element id="module-output" name="SadEquipamentos_2" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bin/dist/lib/AbsoluteLayout.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bin/dist/lib/mssql-jdbc-12.2.0.jre8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bin/dist/lib/sqljdbc4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bin/dist/lib/DynamicPDF.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bin/dist/lib/itextpdf-5.4.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bin/dist/lib/dynamicpdf-api-1.4.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bin/libs/dynamicpdf-api-1.4.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bin/libs/mssql-jdbc-12.2.0.jre11.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bin/libs/javax.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bin/libs/sqljdbc42.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bin/libs/mssql-jdbc-12.2.0.jre8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bin/libs/sqljdbc4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bin/libs/jaxb-api-2.2.11.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bin/libs/DynamicPDF.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bin/libs/itextpdf-5.4.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Sistema SAD Equipamentos - versão 8.0.1 (Servidor 10.1.0.12 porta 14222)/lib/itextpdf-5.4.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Sistema SAD Equipamentos - versão 8.0.1 (Servidor 10.1.0.12 porta 14222)/lib/mssql-jdbc-12.2.0.jre8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Sistema SAD Equipamentos - versão 8.0.1 (Servidor 10.1.0.12 porta 14222)/lib/DynamicPDF.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Sistema SAD Equipamentos - versão 8.0.1 (Servidor 10.1.0.12 porta 14222)/lib/sqljdbc4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Sistema SAD Equipamentos - versão 8.0.1 (Servidor 10.1.0.12 porta 14222)/lib/AbsoluteLayout.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Sistema SAD Equipamentos - versão 8.0.1 (Servidor 10.1.0.12 porta 14222)/lib/dynamicpdf-api-1.4.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bin/Sistema SAD Equipamentos - versão 8.0.1 (Servidor 10.1.0.12 porta 14222)/lib/DynamicPDF.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bin/Sistema SAD Equipamentos - versão 8.0.1 (Servidor 10.1.0.12 porta 14222)/lib/AbsoluteLayout.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bin/Sistema SAD Equipamentos - versão 8.0.1 (Servidor 10.1.0.12 porta 14222)/lib/mssql-jdbc-12.2.0.jre8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bin/Sistema SAD Equipamentos - versão 8.0.1 (Servidor 10.1.0.12 porta 14222)/lib/sqljdbc4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bin/Sistema SAD Equipamentos - versão 8.0.1 (Servidor 10.1.0.12 porta 14222)/lib/dynamicpdf-api-1.4.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bin/Sistema SAD Equipamentos - versão 8.0.1 (Servidor 10.1.0.12 porta 14222)/lib/itextpdf-5.4.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/mssql-jdbc-12.2.0.jre11.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/DynamicPDF.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/sqljdbc4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jaxb-api-2.2.11.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/dynamicpdf-api-1.4.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/javax.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/itextpdf-5.4.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/sqljdbc42.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/mssql-jdbc-12.2.0.jre8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/pdfbox-app-3.0.0.jar" path-in-jar="/" />
+      <element id="library" level="project" name="lib2" />
+    </root>
+  </artifact>
+</component>
