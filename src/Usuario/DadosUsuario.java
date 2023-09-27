@@ -985,7 +985,7 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
             }
 
             // Cpf usuario
-            if (user.getCpf() != null) {
+            if (user.getCpf() != null || !user.getCpf().equals("")) {
                 // verificar se cpf tem 11 digitos
                 if (user.getCpf().length() != 11) {
                     throw new Exception("CPF inválido, preencha apenas com números.");
