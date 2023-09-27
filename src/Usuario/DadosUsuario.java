@@ -968,35 +968,48 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
             }
 
             //Tombamento do Monitor
-            sqlValida = "select tombo_monitor,id_usuario ";
+            sqlValida = "select tombo_monitor,id_usuario, ativo ";
             sqlValida += " from Usuario where tombo_monitor = '" + user.getTombamentoMonitor() + "';";
             rs = conex.executeQuery(sqlValida);
             while (rs.next()) {
-                if (rs.getInt("tombo_monitor") != 1 && rs.getInt("id_usuario")!=user.getId_usuario()) {
+                if (rs.getInt("tombo_monitor") != 1 && rs.getInt("id_usuario")!=user.getId_usuario() && (rs.getBoolean("ativo") == true)) {
                     throw new Exception("Este Tombamento de Monitor já está cadastrado no sistema.");
+                } else {
+                    // apaga o tombo do usuario que foi desativado
+                    String sql = "update usuario set tombo_monitor=1";
+                    sql += " where id_usuario = '" + rs.getInt("id_usuario") + "';";
+                    conex.execute(sql);
                 }
-
             }
 
             //Série Monitor
-            sqlValida = "select serie_monitor,id_usuario ";
+            sqlValida = "select serie_monitor,id_usuario, ativo ";
             sqlValida += " from Usuario where serie_monitor = '" + user.getSerieMonitor() + "';";
             rs = conex.executeQuery(sqlValida);
             while (rs.next()) {
-                if ((!rs.getString("serie_monitor").equals("N/I")) && (rs.getInt("id_usuario")!=user.getId_usuario())) {
+                if ((!rs.getString("serie_monitor").equals("N/I")) && (rs.getInt("id_usuario")!=user.getId_usuario()) && (rs.getBoolean("ativo") == true)) {
                     throw new Exception("Este nº de série de Monitor já está cadastrado no sistema.");
+                } else {
+                    // apaga a serie do monitor do usuario que foi desativado
+                    String sql = "update usuario set serie_monitor='N/I'";
+                    sql += " where id_usuario = '" + rs.getInt("id_usuario") + "';";
+                    conex.execute(sql);
                 }
 
             }
 
-
             //Série Micro
-            sqlValida = "select serie_micro,id_usuario ";
+            sqlValida = "select serie_micro,id_usuario, ativo ";
             sqlValida += " from Usuario where serie_micro = '" + user.getSerieMicro() + "';";
             rs = conex.executeQuery(sqlValida);
             while (rs.next()) {
-                if ((!rs.getString("serie_micro").equals("N/I")) && (rs.getInt("id_usuario")!=user.getId_usuario())) {
+                if ((!rs.getString("serie_micro").equals("N/I")) && (rs.getInt("id_usuario")!=user.getId_usuario()) && (rs.getBoolean("ativo") == true)) {
                     throw new Exception("Este nº de série de Micro já está cadastrado no sistema.");
+                } else {
+                    // apaga a serie do micro do usuario que foi desativado
+                    String sql = "update usuario set serie_micro='N/I'";
+                    sql += " where id_usuario = '" + rs.getInt("id_usuario") + "';";
+                    conex.execute(sql);
                 }
 
             }
