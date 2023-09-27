@@ -850,13 +850,7 @@ public class ListarUSUARIO extends javax.swing.JFrame {
             selecionadoUsuario = listaDeUsuarios.get(TodosUsuarios.getSelectedRow()); // ate aqui o sistema reconheece o usuario, atualzar o relatorio para o termo
 
             gerarTermoUsuario(selecionadoUsuario);
-            Usuario alterarUser = selecionadoUsuario;
-            alterarUser.setTermo_responsabilidade(true);
-            try {
-                Fachada.getInstancia().alterarUsuario(alterarUser, selecionadoUsuario);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
+
         } else {
             JOptionPane.showMessageDialog(null, "Escolha algum usuário da tabela para gerar o termo!");
         }
