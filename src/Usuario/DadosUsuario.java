@@ -936,12 +936,17 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
 //             }
 
             //TOMBO MICRO
-            sqlValida = "select tombo_micro,id_usuario, nome ";
+            sqlValida = "select tombo_micro,id_usuario, nome, ativo ";
             sqlValida += " from Usuario where tombo_micro = '" + user.getTombamentoMicro() + "';";
             rs = conex.executeQuery(sqlValida);
             while (rs.next()) {
-                if (rs.getInt("tombo_micro") != 1 && rs.getInt("id_usuario")!=user.getId_usuario()) {
+                if (rs.getInt("tombo_micro") != 1 && rs.getInt("id_usuario")!=user.getId_usuario() && (rs.getBoolean("ativo") == true)) {
                     throw new Exception("Este Tombamento de Micro já está cadastrado no sistema no nome de:" + rs.getString("nome") + ".");
+                } else {
+                    // apaga o tombo do usuario que foi desativado
+                    String sql = "update usuario set tombo_micro=1";
+                    sql += " where id_usuario = '" + rs.getInt("id_usuario") + "';";
+                    conex.execute(sql);
                 }
 
             }
