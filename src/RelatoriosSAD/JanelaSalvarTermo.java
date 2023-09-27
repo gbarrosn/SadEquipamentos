@@ -51,6 +51,7 @@ public class JanelaSalvarTermo extends javax.swing.JFrame {
 
         try {
 
+            janelaSalvarTermo.setCurrentDirectory(new File("\\\\sadfs01\\GTINF\\USINF\\Sistema SAD Equipamentos\\Termos de Responsabilidade\\"));
             FileChooserUI fcUi = janelaSalvarTermo.getUI();
             Class<? extends FileChooserUI> fcClass = fcUi.getClass();
             Method setFileName = fcClass.getMethod("setFileName", String.class);
