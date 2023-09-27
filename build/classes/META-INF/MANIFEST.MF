@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 Manifest-Version: 1.0
 Main-Class: Login.LogarSadEquip
 
+=======
+Manifest-Version: 1.0
+Main-Class: Login.LogarSadEquip
+
+>>>>>>> cce63cee82c704e1518d28e401997d5411738ca0
