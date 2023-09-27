@@ -952,12 +952,17 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
             }
 
             //CMTECH
-            sqlValida = "select cmtech,id_usuario ";
+            sqlValida = "select cmtech,id_usuario, ativo ";
             sqlValida += " from Usuario where cmtech = '" + user.getEtiquetaCESU() + "';";
             rs = conex.executeQuery(sqlValida);
             while (rs.next()) {
-                if (rs.getInt("cmtech") != 1 && rs.getInt("id_usuario")!=user.getId_usuario()) {
+                if (rs.getInt("cmtech") != 1 && rs.getInt("id_usuario")!=user.getId_usuario() && (rs.getBoolean("ativo") == true)) {
                     throw new Exception("Esta etiqueta CMTECH já está cadastrada no sistema.");
+                } else {
+                    // apaga o cmtech do usuario que foi desativado
+                    String sql = "update usuario set cmtech=1";
+                    sql += " where id_usuario = '" + rs.getInt("id_usuario") + "';";
+                    conex.execute(sql);
                 }
 
             }
