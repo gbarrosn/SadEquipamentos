@@ -918,7 +918,7 @@ public class VisualizarUsuario extends javax.swing.JFrame {
         Campo_TomboMonitor1.setRequestFocusEnabled(false);
         getContentPane().add(Campo_TomboMonitor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 361, 140, -1));
 
-        jLabel28.setText("Modelo2:");
+        jLabel28.setText("Modelo:");
         getContentPane().add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 394, -1, -1));
 
         Box_MarcaMonitor1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -930,7 +930,7 @@ public class VisualizarUsuario extends javax.swing.JFrame {
         getContentPane().add(Box_MarcaMonitor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 391, 130, -1));
 
         jLabel29.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel29.setText("          Monitor2:");
+        jLabel29.setText("          Monitor:");
         jLabel29.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 329, 130, 20));
 
@@ -939,7 +939,7 @@ public class VisualizarUsuario extends javax.swing.JFrame {
         Campo_SerieMonitor1.setRequestFocusEnabled(false);
         getContentPane().add(Campo_SerieMonitor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 361, 130, -1));
 
-        jLabel30.setText("Série2:");
+        jLabel30.setText("Série:");
         getContentPane().add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 364, -1, -1));
 
         Box_ProprietarioMonitor1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -950,13 +950,13 @@ public class VisualizarUsuario extends javax.swing.JFrame {
         Box_ProprietarioMonitor1.setVerifyInputWhenFocusTarget(false);
         getContentPane().add(Box_ProprietarioMonitor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 419, 190, -1));
 
-        jLabel31.setText("Tombo2:");
+        jLabel31.setText("Tombo:");
         getContentPane().add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 364, -1, -1));
 
-        jLabel32.setText("Marca2:");
+        jLabel32.setText("Marca:");
         getContentPane().add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 394, -1, -1));
 
-        jLabel33.setText("Proprietário2:");
+        jLabel33.setText("Proprietário:");
         getContentPane().add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 422, 80, -1));
 
         Box_ModeloMonitor1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
