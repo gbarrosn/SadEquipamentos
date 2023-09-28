@@ -63,6 +63,7 @@ public class FormRelatorioTermoUsuario {
                     System.out.println("Documento carregado com sucesso");
                 }
 
+                assert document != null;
                 PDAcroForm acroForm = document.getDocumentCatalog().getAcroForm();
 
                 acroForm.getField("text_nome").setValue(nome);
@@ -101,7 +102,8 @@ public class FormRelatorioTermoUsuario {
                     System.out.println("Documento não carregado");
                 } else {
                     System.out.println("Documento carregado com sucesso");}
-                    PDAcroForm acroForm = document.getDocumentCatalog().getAcroForm();
+                assert document != null;
+                PDAcroForm acroForm = document.getDocumentCatalog().getAcroForm();
 
                     acroForm.getField("text_nome").setValue(nome);
                     acroForm.getField("text_cesu").setValue(CESU);
