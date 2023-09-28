@@ -1,18 +1,15 @@
 package RelatoriosSAD;
-import java.io.IOException;
-import java.io.InputStream;
-import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.io.RandomAccessReadWriteBuffer;
-import org.apache.pdfbox.io.RandomAccessReadBufferedFile;
-import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
+
+import Usuario.Usuario;
 import org.apache.pdfbox.Loader;
-import org.apache.pdfbox.cos.COSDocument;
-import java.util.Date;
-import java.net.URL;
+import org.apache.pdfbox.io.RandomAccessReadBufferedFile;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
+
+import javax.swing.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.io.File;
-import Usuario.Usuario;
+import java.util.Date;
 
 /*
 PDDocument(COSDocument doc)
@@ -138,6 +135,7 @@ public class FormRelatorioTermoUsuario {
 
         } catch (Exception e) {
             e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Erro ao gerar relatório - " + e.getMessage());
         }
     }
 }
