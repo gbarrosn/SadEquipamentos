@@ -1007,7 +1007,7 @@ public class CadastrarUSUARIO extends javax.swing.JFrame {
         Campo_SerieMonitor1.setText("");        
         Campo_TomboMicro.setText("");
         Campo_TomboMonitor.setText("");
-        Campo_TomboMonitor1.setText("");
+        Campo_TomboMonitor1.setText("1");
         Campo_cmtech.setText("");
         campo_Garantia.setText("");
         jTextField_EtiquetaSad.setText("");
@@ -1021,7 +1021,7 @@ public class CadastrarUSUARIO extends javax.swing.JFrame {
         Campo_SerieMonitor1.setText("");  
         Campo_TomboMicro.setText("");
         Campo_TomboMonitor.setText("");
-        Campo_TomboMonitor1.setText("");
+        Campo_TomboMonitor1.setText("1");
         Campo_cmtech.setText("");
         campo_Garantia.setText("");
     }//GEN-LAST:event_jMenuItem1ActionPerformed
