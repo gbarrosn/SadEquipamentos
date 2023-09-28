@@ -632,7 +632,7 @@ public class CadastrarUSUARIO extends javax.swing.JFrame {
         getContentPane().add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(657, 301, -1, -1));
         getContentPane().add(jTextField_EtiquetaSad, new org.netbeans.lib.awtextra.AbsoluteConstraints(744, 301, 163, -1));
 
-        jLabel25.setText("Série2:");
+        jLabel25.setText("Série:");
         getContentPane().add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(466, 411, -1, 20));
 
         Box_ProprietarioMonitor1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Proprietário do Monitor" }));
@@ -648,11 +648,11 @@ public class CadastrarUSUARIO extends javax.swing.JFrame {
         });
         getContentPane().add(Box_ProprietarioMonitor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(552, 481, 189, -1));
 
-        jLabel29.setText("Tombo2:");
+        jLabel29.setText("Tombo:");
         getContentPane().add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 415, -1, -1));
         getContentPane().add(Campo_TomboMonitor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(754, 409, 153, -1));
 
-        jLabel30.setText("Modelo2:");
+        jLabel30.setText("Modelo:");
         getContentPane().add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(466, 451, -1, -1));
 
         Box_MarcaMonitor1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Marca do Monitor" }));
@@ -668,10 +668,10 @@ public class CadastrarUSUARIO extends javax.swing.JFrame {
         });
         getContentPane().add(Box_MarcaMonitor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(753, 445, 154, -1));
 
-        jLabel31.setText("Marca2:");
+        jLabel31.setText("Marca:");
         getContentPane().add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 451, -1, -1));
 
-        jLabel32.setText("Proprietário2:");
+        jLabel32.setText("Proprietário:");
         getContentPane().add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(466, 487, -1, -1));
 
         jLabel33.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
