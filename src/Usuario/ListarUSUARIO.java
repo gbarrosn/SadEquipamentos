@@ -876,8 +876,8 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         // use the method gerarRelatorio into RelatoriosSAD.FormRelatorioTermoUsuario to get the data
         FormRelatorioTermoDevolucaoUsuario relatorioDevolucao = new FormRelatorioTermoDevolucaoUsuario(devolucaoUser);
         relatorioDevolucao.gerarTermoDevolucao();
-        devolucaoUser.setEstoque(true);
         try {
+            devolucaoUser.setEstoque(true);
             Fachada.getInstancia().alterarUsuario(devolucaoUser, selecionadoUser);
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -909,9 +909,9 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         // use the method gerarRelatorio into RelatoriosSAD.FormRelatorioTermoUsuario to get the data
         FormRelatorioTermoUsuario relatorioTermo = new FormRelatorioTermoUsuario(termoUser);
         relatorioTermo.gerarRelatorio();
-        termoUser.setEstoque(false);
 
         try {
+            termoUser.setEstoque(false);
             Fachada.getInstancia().alterarUsuario(termoUser, selecionadoUsuario);
         } catch (Exception e) {
             throw new RuntimeException(e);
