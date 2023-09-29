@@ -860,15 +860,14 @@ public class ListarUSUARIO extends javax.swing.JFrame {
             Usuario selecionadoUsuario;
             selecionadoUsuario = listaDeUsuarios.get(TodosUsuarios.getSelectedRow()); // ate aqui o sistema reconheece o usuario, atualzar o relatorio para o termo
 
-            Usuario devolucaoUser = selecionadoUsuario;
-            gerarDevolucaoUsuario(devolucaoUser, selecionadoUsuario);
+            gerarDevolucaoUsuario(selecionadoUsuario);
 
         } else {
             JOptionPane.showMessageDialog(null, "Escolha algum usuário da tabela para gerar o termo!");
         }
     }
 
-    private void gerarDevolucaoUsuario(Usuario devolucaoUser, Usuario selecionadoUser) {
+    private void gerarDevolucaoUsuario(Usuario devolucaoUser) {
         // usar a variavel termoUser para gerar um pdf com os dados do usuario selecionado
         // usar a classe DadosUsuario.visualizarUsuario para pegar os dados do usuario
 
@@ -877,11 +876,7 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         FormRelatorioTermoDevolucaoUsuario relatorioDevolucao = new FormRelatorioTermoDevolucaoUsuario(devolucaoUser);
         relatorioDevolucao.gerarTermoDevolucao();
         devolucaoUser.setEstoque(true);
-        try {
-            Fachada.getInstancia().alterarUsuario(devolucaoUser, selecionadoUser);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+        new AlterarUSUARIO(devolucaoUser, logado);
         // TODO add your handling code here:
 
 
@@ -894,14 +889,13 @@ public class ListarUSUARIO extends javax.swing.JFrame {
             Usuario selecionadoUsuario;
             selecionadoUsuario = listaDeUsuarios.get(TodosUsuarios.getSelectedRow()); // ate aqui o sistema reconheece o usuario, atualzar o relatorio para o termo
 
-            Usuario termoUser = selecionadoUsuario;
-            gerarTermoUsuario(termoUser, selecionadoUsuario);
+            gerarTermoUsuario(selecionadoUsuario);
 
         } else {
             JOptionPane.showMessageDialog(null, "Escolha algum usuário da tabela para gerar o termo!");
         }
     }
-    private void gerarTermoUsuario(Usuario termoUser, Usuario selecionadoUsuario) {
+    private void gerarTermoUsuario(Usuario termoUser) {
         // usar a variavel termoUser para gerar um pdf com os dados do usuario selecionado
         // usar a classe DadosUsuario.visualizarUsuario para pegar os dados do usuario
 
@@ -910,13 +904,7 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         FormRelatorioTermoUsuario relatorioTermo = new FormRelatorioTermoUsuario(termoUser);
         relatorioTermo.gerarRelatorio();
         termoUser.setEstoque(false);
-
-        try {
-            Fachada.getInstancia().alterarUsuario(termoUser, selecionadoUsuario);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-
+        new AlterarUSUARIO(termoUser,logado);
         // TODO add your handling code here:
 
     }
