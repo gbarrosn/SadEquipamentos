@@ -5,6 +5,7 @@
  */
 package Usuario;
 
+import RelatoriosSAD.FormRelatorioTermoDevolucaoUsuario;
 import Geral.Fachada;
 import Graficos.*;
 import Login.LoginUser;
@@ -853,6 +854,31 @@ public class ListarUSUARIO extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton6ActionPerformed(ActionEvent evt) {
+        if (TodosUsuarios.getSelectedRow() >= 0) {
+            Usuario selecionadoUsuario;
+            selecionadoUsuario = listaDeUsuarios.get(TodosUsuarios.getSelectedRow()); // ate aqui o sistema reconheece o usuario, atualzar o relatorio para o termo
+
+            gerarDevolucaoUsuario(selecionadoUsuario);
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Escolha algum usuário da tabela para gerar o termo!");
+        }
+    }
+
+    private void gerarDevolucaoUsuario(Usuario devolucaoUser) {
+        // usar a variavel termoUser para gerar um pdf com os dados do usuario selecionado
+        // usar a classe DadosUsuario.visualizarUsuario para pegar os dados do usuario
+
+        // TODO add your handling code here:
+        // use the method gerarRelatorio into RelatoriosSAD.FormRelatorioTermoUsuario to get the data
+        FormRelatorioTermoDevolucaoUsuario relatorioDevolucao = new FormRelatorioTermoDevolucaoUsuario(devolucaoUser);
+        relatorioDevolucao.gerarTermoDevolucao();
+        // TODO add your handling code here:
+
+
+    }
 
     private void jButton2ActionPerformed(ActionEvent evt) {
         // TODO add your handling code here:
