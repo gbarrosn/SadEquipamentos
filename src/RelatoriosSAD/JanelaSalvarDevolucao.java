@@ -103,7 +103,7 @@ public class JanelaSalvarDevolucao extends javax.swing.JFrame {
 
             if (!nomeDoArquivo.equals("null.pdf")) {
                 this.documento.save(nomeDoArquivo);
-                JOptionPane.showMessageDialog(rootPane, "Termo de Responsabilidade gerado com sucesso em:   \n" + "\"" + nomeDoArquivo + "\"");
+                JOptionPane.showMessageDialog(rootPane, "Termo de Devolução gerado com sucesso em:   \n" + "\"" + nomeDoArquivo + "\"");
                 dispose();
             } else if (nomeDoArquivo.equals("null.pdf")) {
                 dispose();

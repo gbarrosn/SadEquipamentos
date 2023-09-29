@@ -81,6 +81,7 @@ public class Usuario {
     private String cpf;
     private Boolean ativo;
     private VersaoOffice versao_office;
+    private Boolean estoque;
     //*************
 
 
@@ -90,7 +91,10 @@ public class Usuario {
         this.novoTomboMonitor="N/I";
         this.tombamentoMonitor=1;
     }
-        
+
+    public Boolean getEstoque() {return estoque;}
+
+    public void setEstoque(Boolean estoque) {this.estoque = estoque;}
     public Boolean getAtivo() {return ativo;}
 
     public void setAtivo(Boolean ativo) {this.ativo = ativo;}

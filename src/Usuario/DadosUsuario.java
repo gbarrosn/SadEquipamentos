@@ -142,7 +142,8 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
             sql += "id_proprietario_monitor2='"+alterarUser.getProprietarioMonitor1().getIdProprietario()+"',";
             sql += "tombo_monitor2='"+alterarUser.getTombamentoMonitor1()+"',";
             sql += "serie_monitor2='"+alterarUser.getSerieMonitor1()+"',";
-            sql += "cpf='"+alterarUser.getCpf()+"'"; //ERRO NA QUERY AQUI
+            sql += "cpf='"+alterarUser.getCpf()+"',"; //ERRO NA QUERY AQUI
+            sql += "estoque='"+alterarUser.getEstoque()+"'";
 
 
             sql += " WHERE id_usuario=" + selecionadoUser.getId_usuario() + ";";
