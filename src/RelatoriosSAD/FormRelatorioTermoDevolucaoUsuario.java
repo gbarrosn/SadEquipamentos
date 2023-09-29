@@ -47,11 +47,14 @@ public class FormRelatorioTermoDevolucaoUsuario {
             String dataAno = dataString.substring(6, 10);
 
             if (usuario.getTombamentoMonitor() == 1) {
-                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/devolucao1monitor.pdf"));
+
+                URL resource = getClass().getResource("/resources/devolucao1monitor.pdf");
+                assert resource != null;
+                String filePath = resource.getPath();
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(filePath));
 
                 if (document == null) {
-                    URL resource = getClass().getResource("resources/devolucao1monitor.pdf");
-                    document = Loader.loadPDF(new RandomAccessReadBufferedFile(String.valueOf(resource)));
+
                     System.out.println("Documento carregado");
                 } else {
                     System.out.println("Documento carregado com sucesso");
@@ -89,11 +92,12 @@ public class FormRelatorioTermoDevolucaoUsuario {
                 }
 
             } else {
-                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/devolucao2monitores.pdf"));
+                URL resource = getClass().getResource("/resources/devolucao2monitores.pdf");
+                assert resource != null;
+                String filePath = resource.getPath();
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(filePath));
 
                 if (document == null) {
-                    URL resource = getClass().getResource("resources/devolucao2monitores.pdf");
-                    document = Loader.loadPDF(new RandomAccessReadBufferedFile(String.valueOf(resource)));
                     System.out.println("Documento não carregado");
                 } else {
                     System.out.println("Documento carregado com sucesso");
