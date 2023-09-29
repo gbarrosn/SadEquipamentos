@@ -216,6 +216,7 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jCheckBox1 = new javax.swing.JCheckBox();
+        jButton6 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -713,20 +714,21 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         getContentPane().add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(735, 107, -1, -1));
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Icons/file_format_pdf.png"))); // NOI18N
-        jButton2.setText("Gerar Termo");
+        jButton2.setText("Termo de Devolução");
         jButton2.setMaximumSize(new java.awt.Dimension(143, 39));
         jButton2.setMinimumSize(new java.awt.Dimension(143, 39));
         jButton2.setRequestFocusEnabled(false);
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 260, 200, 40));
-
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 200, 40));
 
         jCheckBox1.setText("Buscar inativos");
         getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 270, 180, -1));
+
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Icons/file_format_pdf.png"))); // NOI18N
+        jButton6.setText("Termo de Devolução");
+        jButton6.setMaximumSize(new java.awt.Dimension(143, 39));
+        jButton6.setMinimumSize(new java.awt.Dimension(143, 39));
+        jButton6.setRequestFocusEnabled(false);
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 260, 200, 40));
 
         jMenu1.setText("Arquivo");
 
@@ -2090,6 +2092,7 @@ public class ListarUSUARIO extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButtonAlterarUsuario;
     protected static javax.swing.JButton jButtonListarFiltros;
     private javax.swing.JButton jButtonNovoCadastro;
