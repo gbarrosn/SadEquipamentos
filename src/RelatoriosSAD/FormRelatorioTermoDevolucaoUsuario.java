@@ -45,6 +45,36 @@ public class FormRelatorioTermoDevolucaoUsuario {
             String dataMes = dataString.substring(3, 5);
             String dataAno = dataString.substring(6, 10);
 
+            if (usuario.getTombamentoMonitor() == 1) {
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/devolucao1monitor.pdf"));
+
+                if (document == null) {
+                    System.out.println("Documento não carregado");
+                } else {
+                    System.out.println("Documento carregado com sucesso");
+                }
+
+                assert document != null;
+                PDAcroForm acroForm = document.getDocumentCatalog().getAcroForm();
+
+                acroForm.getField("text_nome").setValue(nome);
+                acroForm.getField("text_cesu").setValue(CESU);
+                acroForm.getField("text_tomboMicro").setValue(tomboMicro);
+                acroForm.getField("text_tomboMonitor").setValue(tomboMonitor);
+                acroForm.getField("text_serieMicro").setValue(serieMicro);
+                acroForm.getField("text_serieMonitor").setValue(serieMonitor);
+                acroForm.getField("text_modeloMicro").setValue(modeloMicro);
+                acroForm.getField("text_gerencia").setValue(gerencia);
+                acroForm.getField("text_cargo").setValue(cargo);
+                acroForm.getField("text_dataDia").setValue(dataDia);
+                acroForm.getField("text_dataMes").setValue(dataMes);
+                acroForm.getField("text_dataAno").setValue(dataAno);
+                acroForm.getField("textarea_config_equipamento").setValue(configuracao);
+                acroForm.getField("text_cpf").setValue(cpf);
+
+
+            }
+
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Erro ao gerar termo de devolução: " + e);
