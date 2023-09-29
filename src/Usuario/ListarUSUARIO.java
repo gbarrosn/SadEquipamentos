@@ -714,11 +714,16 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         getContentPane().add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(735, 107, -1, -1));
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Icons/file_format_pdf.png"))); // NOI18N
-        jButton2.setText("Termo de Devolução");
+        jButton2.setText("Termo de Responsabilidade");
         jButton2.setMaximumSize(new java.awt.Dimension(143, 39));
         jButton2.setMinimumSize(new java.awt.Dimension(143, 39));
         jButton2.setRequestFocusEnabled(false);
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 200, 40));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 220, 40));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jCheckBox1.setText("Buscar inativos");
         getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 270, 180, -1));
@@ -729,6 +734,11 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         jButton6.setMinimumSize(new java.awt.Dimension(143, 39));
         jButton6.setRequestFocusEnabled(false);
         getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 260, 200, 40));
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jMenu1.setText("Arquivo");
 
