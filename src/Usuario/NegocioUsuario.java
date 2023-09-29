@@ -122,8 +122,7 @@ public class NegocioUsuario implements InterfaceUsuario {
                 && (alterarUser.getEtiquetaCESU() == selecionadoUser.getEtiquetaCESU())
                 && (alterarUser.getEtiquetaSAD() == selecionadoUser.getEtiquetaSAD())
                 && (alterarUser.getVersao_office().getId_versao_office() == selecionadoUser.getVersao_office().getId_versao_office())
-                && (alterarUser.getNovoTomboMicro().equals(selecionadoUser.getNovoTomboMicro()))
-                && (alterarUser.getNovoTomboMonitor().equals(selecionadoUser.getNovoTomboMonitor()))
+                && (alterarUser.getEstoque() == selecionadoUser.getEstoque())
                 && (Objects.equals(alterarUser.getTermo_responsabilidade(), selecionadoUser.getTermo_responsabilidade()))) {
 
             throw new Exception("Não houve nenhuma alteração no Usuário.");
