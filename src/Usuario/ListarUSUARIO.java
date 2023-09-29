@@ -861,6 +861,7 @@ public class ListarUSUARIO extends javax.swing.JFrame {
             selecionadoUsuario = listaDeUsuarios.get(TodosUsuarios.getSelectedRow()); // ate aqui o sistema reconheece o usuario, atualzar o relatorio para o termo
 
             Usuario devolucaoUser = selecionadoUsuario;
+            devolucaoUser.setEstoque(true);
             gerarDevolucaoUsuario(devolucaoUser, selecionadoUsuario);
 
         } else {
@@ -877,7 +878,6 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         FormRelatorioTermoDevolucaoUsuario relatorioDevolucao = new FormRelatorioTermoDevolucaoUsuario(devolucaoUser);
         relatorioDevolucao.gerarTermoDevolucao();
         try {
-            devolucaoUser.setEstoque(true);
             Fachada.getInstancia().alterarUsuario(devolucaoUser, selecionadoUser);
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -895,6 +895,7 @@ public class ListarUSUARIO extends javax.swing.JFrame {
             selecionadoUsuario = listaDeUsuarios.get(TodosUsuarios.getSelectedRow()); // ate aqui o sistema reconheece o usuario, atualzar o relatorio para o termo
 
             Usuario termoUser = selecionadoUsuario;
+            termoUser.setEstoque(false);
             gerarTermoUsuario(termoUser, selecionadoUsuario);
 
         } else {
@@ -911,7 +912,6 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         relatorioTermo.gerarRelatorio();
 
         try {
-            termoUser.setEstoque(false);
             Fachada.getInstancia().alterarUsuario(termoUser, selecionadoUsuario);
         } catch (Exception e) {
             throw new RuntimeException(e);
