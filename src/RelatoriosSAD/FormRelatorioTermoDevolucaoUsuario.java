@@ -82,13 +82,13 @@ public class FormRelatorioTermoDevolucaoUsuario {
                     acroForm.getField("text_cpf").setValue(cpf);
                     acroForm.setNeedAppearances(true);
                     acroForm.flatten();
-                    JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
-                    janelaSalvarTermo.setVisible(true);
+                    JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome);
+                    janelaSalvarDevolucao.setVisible(true);
                 } else {
                     acroForm.setNeedAppearances(true);
                     acroForm.flatten();
-                    JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
-                    janelaSalvarTermo.setVisible(true);
+                    JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome);
+                    janelaSalvarDevolucao.setVisible(true);
                 }
 
             } else {
@@ -126,13 +126,13 @@ public class FormRelatorioTermoDevolucaoUsuario {
                     acroForm.getField("text_cpf").setValue(cpf);
                     acroForm.setNeedAppearances(true);
                     acroForm.flatten();
-                    JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
-                    janelaSalvarTermo.setVisible(true);
+                    JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome);
+                    janelaSalvarDevolucao.setVisible(true);
                 } else {
                     acroForm.setNeedAppearances(true);
                     acroForm.flatten();
-                    JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
-                    janelaSalvarTermo.setVisible(true);
+                    JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome);
+                    janelaSalvarDevolucao.setVisible(true);
                 }
             }
 
