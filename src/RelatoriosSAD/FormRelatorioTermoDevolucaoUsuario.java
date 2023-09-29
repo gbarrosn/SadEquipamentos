@@ -31,6 +31,19 @@ public class FormRelatorioTermoDevolucaoUsuario {
             String serieMonitor = usuario.getSerieMonitor();
             String serieMonitor1 = usuario.getSerieMonitor1();
             String modeloMicro = usuario.getModeloMicro().getModelo();
+            String gerencia = usuario.getGerencia().getSiglaGerencia();
+            String cargo = usuario.getCargo().getCargo();
+            String configuracao = usuario.getConfigMicro().getConfiguracao();
+            String cpf = usuario.getCpf();
+
+            Date data = new Date();
+            DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+            String dataString;
+            dataString = dateFormat.format(data);
+
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro ao gerar termo de devolução: " + e);
 
         }
     }
