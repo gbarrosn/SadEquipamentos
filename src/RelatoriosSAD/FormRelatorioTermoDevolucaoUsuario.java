@@ -6,6 +6,7 @@ import org.apache.pdfbox.io.RandomAccessReadBufferedFile;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
 
+import java.net.URL;
 import javax.swing.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -49,7 +50,9 @@ public class FormRelatorioTermoDevolucaoUsuario {
                 PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/devolucao1monitor.pdf"));
 
                 if (document == null) {
-                    System.out.println("Documento não carregado");
+                    URL resource = getClass().getResource("resources/devolucao1monitor.pdf");
+                    document = Loader.loadPDF(new RandomAccessReadBufferedFile(String.valueOf(resource)));
+                    System.out.println("Documento carregado");
                 } else {
                     System.out.println("Documento carregado com sucesso");
                 }
@@ -89,6 +92,8 @@ public class FormRelatorioTermoDevolucaoUsuario {
                 PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/devolucao2monitores.pdf"));
 
                 if (document == null) {
+                    URL resource = getClass().getResource("resources/devolucao2monitores.pdf");
+                    document = Loader.loadPDF(new RandomAccessReadBufferedFile(String.valueOf(resource)));
                     System.out.println("Documento não carregado");
                 } else {
                     System.out.println("Documento carregado com sucesso");
