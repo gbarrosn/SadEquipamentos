@@ -70,8 +70,20 @@ public class FormRelatorioTermoDevolucaoUsuario {
                 acroForm.getField("text_dataMes").setValue(dataMes);
                 acroForm.getField("text_dataAno").setValue(dataAno);
                 acroForm.getField("textarea_config_equipamento").setValue(configuracao);
-                acroForm.getField("text_cpf").setValue(cpf);
 
+
+                if (cpf != null) {
+                    acroForm.getField("text_cpf").setValue(cpf);
+                    acroForm.setNeedAppearances(true);
+                    acroForm.flatten();
+                    JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
+                    janelaSalvarTermo.setVisible(true);
+                } else {
+                    acroForm.setNeedAppearances(true);
+                    acroForm.flatten();
+                    JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
+                    janelaSalvarTermo.setVisible(true);
+                }
 
             }
 
