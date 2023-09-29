@@ -41,6 +41,10 @@ public class FormRelatorioTermoDevolucaoUsuario {
             String dataString;
             dataString = dateFormat.format(data);
 
+            String dataDia = dataString.substring(0, 2);
+            String dataMes = dataString.substring(3, 5);
+            String dataAno = dataString.substring(6, 10);
+
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Erro ao gerar termo de devolução: " + e);
