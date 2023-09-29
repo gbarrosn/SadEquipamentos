@@ -85,6 +85,46 @@ public class FormRelatorioTermoDevolucaoUsuario {
                     janelaSalvarTermo.setVisible(true);
                 }
 
+            } else {
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/devolucao2monitores.pdf"));
+
+                if (document == null) {
+                    System.out.println("Documento não carregado");
+                } else {
+                    System.out.println("Documento carregado com sucesso");
+                }
+
+                assert document != null;
+                PDAcroForm acroForm = document.getDocumentCatalog().getAcroForm();
+
+                acroForm.getField("text_nome").setValue(nome);
+                acroForm.getField("text_cesu").setValue(CESU);
+                acroForm.getField("text_tomboMicro").setValue(tomboMicro);
+                acroForm.getField("text_tomboMonitor").setValue(tomboMonitor);
+                acroForm.getField("text_tomboMonitor1").setValue(tomboMonitor1);
+                acroForm.getField("text_serieMicro").setValue(serieMicro);
+                acroForm.getField("text_serieMonitor").setValue(serieMonitor);
+                acroForm.getField("text_serieMonitor1").setValue(serieMonitor1);
+                acroForm.getField("text_modeloMicro").setValue(modeloMicro);
+                acroForm.getField("text_gerencia").setValue(gerencia);
+                acroForm.getField("text_cargo").setValue(cargo);
+                acroForm.getField("text_dataDia").setValue(dataDia);
+                acroForm.getField("text_dataMes").setValue(dataMes);
+                acroForm.getField("text_dataAno").setValue(dataAno);
+                acroForm.getField("textarea_config_equipamento").setValue(configuracao);
+
+                if (cpf != null) {
+                    acroForm.getField("text_cpf").setValue(cpf);
+                    acroForm.setNeedAppearances(true);
+                    acroForm.flatten();
+                    JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
+                    janelaSalvarTermo.setVisible(true);
+                } else {
+                    acroForm.setNeedAppearances(true);
+                    acroForm.flatten();
+                    JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome);
+                    janelaSalvarTermo.setVisible(true);
+                }
             }
 
 
