@@ -867,7 +867,7 @@ public class ListarUSUARIO extends javax.swing.JFrame {
             gerarDevolucaoUsuario(selecionadoUsuario);
 
         } else {
-            JOptionPane.showMessageDialog(null, "Escolha algum usuário da tabela para gerar o termo!");
+            JOptionPane.showMessageDialog(null, "Escolha algum usuário da tabela para gerar o termo de devolução!");
         }
     }
 
@@ -883,7 +883,8 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         devolucaoUser.setEstoque(true);
 
         try {
-            Fachada.getInstancia().alterarUsuario(devolucaoUser, selecionadoUser);
+            DadosUsuario userDados = new DadosUsuario();
+            userDados.alterarUsuario(devolucaoUser, selecionadoUser);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

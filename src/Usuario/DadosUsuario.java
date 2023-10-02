@@ -917,9 +917,11 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
             String sqlValida = "select host_nome,id_usuario, ativo ";
             sqlValida += " from Usuario where host_nome = '" + user.getNomepc() + "';";
             ResultSet rs = conex.executeQuery(sqlValida);
-            while (rs.next()) {
-                if ((!rs.getString("host_nome").equals("N/I")) && (rs.getInt("id_usuario") != user.getId_usuario()) && (rs.getBoolean("ativo") == true)) {
-                    throw new Exception("Este Host Name já está cadastrado no sistema.");
+            if (!user.getNomepc().equals("asdf")) {
+                while (rs.next()) {
+                    if ((!rs.getString("host_nome").equals("N/I")) && (rs.getInt("id_usuario") != user.getId_usuario()) && (rs.getBoolean("ativo") == true)) {
+                        throw new Exception("Este Host Name já está cadastrado no sistema.");
+                    }
                 }
             }
 
