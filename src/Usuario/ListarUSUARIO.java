@@ -4,6 +4,10 @@
  * and open the template in the editor.
  */
 package Usuario;
+import java.io.ByteArrayOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.ByteArrayInputStream;
 
 import RelatoriosSAD.FormRelatorioTermoDevolucaoUsuario;
 import Geral.Fachada;
@@ -860,23 +864,44 @@ public class ListarUSUARIO extends javax.swing.JFrame {
             Usuario selecionadoUsuario;
             selecionadoUsuario = listaDeUsuarios.get(TodosUsuarios.getSelectedRow()); // ate aqui o sistema reconheece o usuario, atualzar o relatorio para o termo
 
-            Usuario devolucaoUser = selecionadoUsuario;
-            devolucaoUser.setEstoque(true);
-            gerarDevolucaoUsuario(devolucaoUser, selecionadoUsuario);
+            gerarDevolucaoUsuario(selecionadoUsuario);
 
         } else {
             JOptionPane.showMessageDialog(null, "Escolha algum usuário da tabela para gerar o termo!");
         }
     }
 
-    private void gerarDevolucaoUsuario(Usuario devolucaoUser, Usuario selecionadoUser) {
+    private void gerarDevolucaoUsuario(Usuario selecionadoUser) {
         // usar a variavel termoUser para gerar um pdf com os dados do usuario selecionado
         // usar a classe DadosUsuario.visualizarUsuario para pegar os dados do usuario
 
         // TODO add your handling code here:
         // use the method gerarRelatorio into RelatoriosSAD.FormRelatorioTermoUsuario to get the data
-        FormRelatorioTermoDevolucaoUsuario relatorioDevolucao = new FormRelatorioTermoDevolucaoUsuario(devolucaoUser);
+        FormRelatorioTermoDevolucaoUsuario relatorioDevolucao = new FormRelatorioTermoDevolucaoUsuario(selecionadoUser);
         relatorioDevolucao.gerarTermoDevolucao();
+        Usuario devolucaoUser = null;
+
+        try {
+            // Serialize the selecionadoUser object
+            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(byteArrayOutputStream);
+            objectOutputStream.writeObject(selecionadoUser);
+
+            // Deserialize to create a deep copy
+            ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
+            ObjectInputStream objectInputStream = new ObjectInputStream(byteArrayInputStream);
+            devolucaoUser = (Usuario) objectInputStream.readObject();
+
+            // Make changes to the devolucaoUser without affecting selecionadoUser
+            devolucaoUser.setEstoque(true);
+
+            // Close streams if necessary
+            objectOutputStream.close();
+            objectInputStream.close();
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
         try {
             Fachada.getInstancia().alterarUsuario(devolucaoUser, selecionadoUser);
         } catch (Exception e) {
