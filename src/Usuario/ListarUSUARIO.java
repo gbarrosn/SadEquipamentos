@@ -879,7 +879,7 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         // use the method gerarRelatorio into RelatoriosSAD.FormRelatorioTermoUsuario to get the data
         FormRelatorioTermoDevolucaoUsuario relatorioDevolucao = new FormRelatorioTermoDevolucaoUsuario(selecionadoUser);
         relatorioDevolucao.gerarTermoDevolucao();
-        Usuario devolucaoUser = null;
+        Usuario devolucaoUser = selecionadoUser.criarCopia();
 
         try {
             Fachada.getInstancia().alterarUsuario(devolucaoUser, selecionadoUser);
