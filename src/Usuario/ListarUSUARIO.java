@@ -880,6 +880,7 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         FormRelatorioTermoDevolucaoUsuario relatorioDevolucao = new FormRelatorioTermoDevolucaoUsuario(selecionadoUser);
         relatorioDevolucao.gerarTermoDevolucao();
         Usuario devolucaoUser = selecionadoUser.criarCopia();
+        devolucaoUser.setEstoque(true);
 
         try {
             Fachada.getInstancia().alterarUsuario(devolucaoUser, selecionadoUser);
