@@ -610,6 +610,49 @@ public class Usuario {
         }
     }
 
+    public Usuario criarCopia() {
+        Usuario copia = new Usuario();
+        copia.setNome(this.getNome());
+        copia.setCpf(this.getCpf());
+        copia.setGerencia(this.getGerencia());
+        copia.setCargo(this.getCargo());
+        copia.setPavimentoUsuario(this.getPavimentoUsuario());
+        copia.setNomepc(this.getNomepc());
+        copia.setTombamentoMicro(this.getTombamentoMicro());
+        copia.setSerieMicro(this.getSerieMicro());
+        copia.setConfigMicro(this.getConfigMicro());
+        copia.setMarcaMicro(this.getMarcaMicro());
+        copia.setModeloMicro(this.getModeloMicro());
+        copia.setPlataformaMicro(this.getPlataformaMicro());
+        copia.setProprietarioMicro(this.getProprietarioMicro());
+        copia.setOsMicro(this.getOsMicro());
+        copia.setTombamentoMonitor(this.getTombamentoMonitor());
+        copia.setSerieMonitor(this.getSerieMonitor());
+        copia.setModeloMonitor(this.getModeloMonitor());
+        copia.setMarcaMonitor(this.getMarcaMonitor());
+        copia.setProprietarioMonitor(this.getProprietarioMonitor());
+        copia.setTombamentoMonitor1(this.getTombamentoMonitor1());
+        copia.setSerieMonitor1(this.getSerieMonitor1());
+        copia.setModeloMonitor1(this.getModeloMonitor1());
+        copia.setMarcaMonitor1(this.getMarcaMonitor1());
+        copia.setProprietarioMonitor1(this.getProprietarioMonitor1());
+        copia.setGarantia(this.getGarantia());
+        copia.setEtiquetaCESU(this.getEtiquetaCESU());
+        copia.setId_usuario(this.getId_usuario());
+        copia.setPesq(this.getPesq());
+        copia.setNotebook(this.getNotebook());
+        copia.setDataAlteracao(this.getDataAlteracao());
+        copia.setVersao_office(this.getVersao_office());
+        copia.setUsuarioAlteracao(this.getUsuarioAlteracao());
+        copia.setTermo_responsabilidade(this.getTermo_responsabilidade());
+        copia.setNovoTomboMicro(this.getNovoTomboMicro());
+        copia.setNovoTomboMonitor(this.getNovoTomboMonitor());
+        copia.setEtiquetaSAD(this.getEtiquetaSAD());
+        copia.setAtivo(this.getAtivo());
+        copia.setEstoque(this.getEstoque());
+
+        return copia;
+    }
     private static class MarcaMonitor1 {
 
         public MarcaMonitor1() {

@@ -882,27 +882,6 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         Usuario devolucaoUser = null;
 
         try {
-            // Serialize the selecionadoUser object
-            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(byteArrayOutputStream);
-            objectOutputStream.writeObject(selecionadoUser);
-
-            // Deserialize to create a deep copy
-            ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
-            ObjectInputStream objectInputStream = new ObjectInputStream(byteArrayInputStream);
-            devolucaoUser = (Usuario) objectInputStream.readObject();
-
-            // Make changes to the devolucaoUser without affecting selecionadoUser
-            devolucaoUser.setEstoque(true);
-
-            // Close streams if necessary
-            objectOutputStream.close();
-            objectInputStream.close();
-        } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-
-        try {
             Fachada.getInstancia().alterarUsuario(devolucaoUser, selecionadoUser);
         } catch (Exception e) {
             throw new RuntimeException(e);
