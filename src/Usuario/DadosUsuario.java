@@ -921,12 +921,13 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
             Statement conex = conectar();
 
             //HOST NAME
-            String sqlValida = "select host_nome,id_usuario, ativo ";
+            String sqlValida = "select host_nome,id_usuario, ativo, estoque ";
             sqlValida += " from Usuario where host_nome = '" + user.getNomepc() + "';";
             ResultSet rs = conex.executeQuery(sqlValida);
             if (!user.getNomepc().equals("asdf")) {
                 while (rs.next()) {
-                    if ((!rs.getString("host_nome").equals("N/I")) && (rs.getInt("id_usuario") != user.getId_usuario()) && (rs.getBoolean("ativo") == true)) {
+                    if ((!rs.getString("host_nome").equals("N/I")) && (rs.getInt("id_usuario") != user.getId_usuario())
+                            && (rs.getBoolean("ativo") == true) && (rs.getBoolean("estoque") == false)) {
                         throw new Exception("Este Host Name já está cadastrado no sistema.");
                     }
                 }
@@ -943,11 +944,12 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
 //             }
 
             //TOMBO MICRO
-            sqlValida = "select tombo_micro,id_usuario, nome, ativo ";
+            sqlValida = "select tombo_micro,id_usuario, nome, ativo, estoque";
             sqlValida += " from Usuario where tombo_micro = '" + user.getTombamentoMicro() + "';";
             rs = conex.executeQuery(sqlValida);
             while (rs.next()) {
-                if (rs.getInt("tombo_micro") != 1 && rs.getInt("id_usuario")!=user.getId_usuario() && (rs.getBoolean("ativo") == true)) {
+                if (rs.getInt("tombo_micro") != 1 && rs.getInt("id_usuario")!=user.getId_usuario()
+                        && (rs.getBoolean("ativo") == true) && (rs.getBoolean("estoque") == false) ) {
                     throw new Exception("Este Tombamento de Micro já está cadastrado no sistema no nome de:" + rs.getString("nome") + ".");
                 }
 
@@ -958,7 +960,8 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
             sqlValida += " from Usuario where cmtech = '" + user.getEtiquetaCESU() + "';";
             rs = conex.executeQuery(sqlValida);
             while (rs.next()) {
-                if (rs.getInt("cmtech") != 1 && rs.getInt("id_usuario")!=user.getId_usuario() && (rs.getBoolean("ativo") == true)) {
+                if (rs.getInt("cmtech") != 1 && rs.getInt("id_usuario")!=user.getId_usuario()
+                        && (rs.getBoolean("ativo") == true)) {
                     throw new Exception("Esta etiqueta CMTECH já está cadastrada no sistema.");
                 }
 
