@@ -42,13 +42,14 @@ public class FormRelatorioTermoUsuario {
             String configuracao = usuario.getConfigMicro().getConfiguracao();
             String cpf = usuario.getCpf();
 
-            if (String.valueOf(usuario.getTombamentoMicro()).length() == 4) {
+            if (String.valueOf(usuario.getTombamentoMicro()).length() == 4 && String.valueOf(usuario.getTombamentoMicro()).substring(0, 1).equals("5") ) {
                 tomboMonitor = "0" + usuario.getTombamentoMicro() + " - SEPLAG";
             }
-            else if (String.valueOf(usuario.getTombamentoMicro()).length() == 5){
+            else if (String.valueOf(usuario.getTombamentoMicro()).length() == 4 && String.valueOf(usuario.getTombamentoMicro()).substring(0, 1).equals("8")
+            || String.valueOf(usuario.getTombamentoMicro()).length() == 5 && String.valueOf(usuario.getTombamentoMicro()).substring(0, 1).equals("6")){
                 tomboMicro = "0" + usuario.getTombamentoMicro() + " - SEFAZ";
             }
-            else if (String.valueOf(usuario.getTombamentoMicro()).length() == 6 && String.valueOf(usuario.getTombamentoMicro()).substring(0, 3) == "300"){
+            else if (String.valueOf(usuario.getTombamentoMicro()).length() == 6 && String.valueOf(usuario.getTombamentoMicro()).substring(0, 3).equals("300")){
                 tomboMicro = usuario.getTombamentoMicro() + " - SEFAZ";
             }
 
