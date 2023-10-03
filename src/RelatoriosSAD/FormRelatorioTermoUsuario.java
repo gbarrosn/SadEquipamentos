@@ -42,6 +42,13 @@ public class FormRelatorioTermoUsuario {
             String configuracao = usuario.getConfigMicro().getConfiguracao();
             String cpf = usuario.getCpf();
 
+            //foprmatando cpf para o termo
+            String cpf1 = cpf.substring(0, 3);
+            String cpf2 = cpf.substring(3, 6);
+            String cpf3 = cpf.substring(6, 9);
+            String cpf4 = cpf.substring(9, 11);
+            cpf = cpf1 + "." + cpf2 + "." + cpf3 + "-" + cpf4;
+
             Date data = new Date();
             DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
             String dataString;
