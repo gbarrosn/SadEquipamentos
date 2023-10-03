@@ -11,6 +11,7 @@ import javax.swing.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Objects;
 
 /*
 PDDocument(COSDocument doc)
@@ -53,7 +54,7 @@ public class FormRelatorioTermoUsuario {
                 tomboMicro = usuario.getTombamentoMicro() + " - SEFAZ";
             }
 
-            if (usuario.getCpf() != null) {
+            if (cpf != null) {
                 //foprmatando cpf para o termo
                 String cpf1 = cpf.substring(0, 3);
                 String cpf2 = cpf.substring(3, 6);
