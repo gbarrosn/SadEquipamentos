@@ -968,32 +968,35 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
             }
 
             //Tombamento do Monitor
-            sqlValida = "select tombo_monitor,id_usuario, ativo ";
+            sqlValida = "select tombo_monitor,id_usuario, ativo, estoque ";
             sqlValida += " from Usuario where tombo_monitor = '" + user.getTombamentoMonitor() + "';";
             rs = conex.executeQuery(sqlValida);
             while (rs.next()) {
-                if (rs.getInt("tombo_monitor") != 1 && rs.getInt("id_usuario")!=user.getId_usuario() && (rs.getBoolean("ativo") == true)) {
+                if (rs.getInt("tombo_monitor") != 1 && rs.getInt("id_usuario")!=user.getId_usuario()
+                        && (rs.getBoolean("ativo") == true) && (rs.getBoolean("estoque") == false)) {
                     throw new Exception("Este Tombamento de Monitor já está cadastrado no sistema.");
                 }
             }
 
             //Série Monitor
-            sqlValida = "select serie_monitor,id_usuario, ativo ";
+            sqlValida = "select serie_monitor,id_usuario, ativo, estoque ";
             sqlValida += " from Usuario where serie_monitor = '" + user.getSerieMonitor() + "';";
             rs = conex.executeQuery(sqlValida);
             while (rs.next()) {
-                if ((!rs.getString("serie_monitor").equals("N/I")) && (rs.getInt("id_usuario")!=user.getId_usuario()) && (rs.getBoolean("ativo") == true)) {
+                if ((!rs.getString("serie_monitor").equals("N/I")) && (rs.getInt("id_usuario")!=user.getId_usuario())
+                        && (rs.getBoolean("ativo") == true) && (rs.getBoolean("estoque") == false)) {
                     throw new Exception("Este nº de série de Monitor já está cadastrado no sistema.");
                 }
 
             }
 
             //Série Micro
-            sqlValida = "select serie_micro,id_usuario, ativo ";
+            sqlValida = "select serie_micro,id_usuario, ativo, estoque ";
             sqlValida += " from Usuario where serie_micro = '" + user.getSerieMicro() + "';";
             rs = conex.executeQuery(sqlValida);
             while (rs.next()) {
-                if ((!rs.getString("serie_micro").equals("N/I")) && (rs.getInt("id_usuario")!=user.getId_usuario()) && (rs.getBoolean("ativo") == true)) {
+                if ((!rs.getString("serie_micro").equals("N/I")) && (rs.getInt("id_usuario")!=user.getId_usuario())
+                        && (rs.getBoolean("ativo") == true) && (rs.getBoolean("estoque") == false) ) {
                     throw new Exception("Este nº de série de Micro já está cadastrado no sistema.");
                 }
 
