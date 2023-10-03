@@ -40,6 +40,7 @@ public class FormRelatorioTermoUsuario {
             String gerencia = usuario.getGerencia().getSiglaGerencia();
             String cargo = usuario.getCargo().getCargo();
             String configuracao = usuario.getConfigMicro().getConfiguracao();
+            String cpf = usuario.getCpf();
 
             if (String.valueOf(usuario.getTombamentoMicro()).length() == 4) {
                 tomboMicro = "0" + usuario.getTombamentoMicro() + " - SEPLAG";
@@ -53,7 +54,6 @@ public class FormRelatorioTermoUsuario {
             }
 
             if (usuario.getCpf() != null) {
-                String cpf = usuario.getCpf();
                 //foprmatando cpf para o termo
                 String cpf1 = cpf.substring(0, 3);
                 String cpf2 = cpf.substring(3, 6);
