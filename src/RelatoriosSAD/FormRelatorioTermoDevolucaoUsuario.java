@@ -47,11 +47,8 @@ public class FormRelatorioTermoDevolucaoUsuario {
             String dataAno = dataString.substring(6, 10);
 
             if (usuario.getTombamentoMonitor() == 1) {
-
-                URL resource = getClass().getResource("/resources/devolucao1monitor.pdf");
-                assert resource != null;
-                String filePath = resource.getPath();
-                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(filePath));
+               
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/devolucao1monitor.pdf"));
 
                 if (document == null) {
 
@@ -92,10 +89,7 @@ public class FormRelatorioTermoDevolucaoUsuario {
                 }
 
             } else {
-                URL resource = getClass().getResource("/resources/devolucao2monitores.pdf");
-                assert resource != null;
-                String filePath = resource.getPath();
-                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(filePath));
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/devolucao2monitores.pdf"));
 
                 if (document == null) {
                     System.out.println("Documento não carregado");
