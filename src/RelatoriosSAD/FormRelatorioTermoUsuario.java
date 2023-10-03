@@ -42,6 +42,16 @@ public class FormRelatorioTermoUsuario {
             String configuracao = usuario.getConfigMicro().getConfiguracao();
             String cpf = usuario.getCpf();
 
+            if (String.valueOf(usuario.getTombamentoMicro()).length() == 4) {
+                tomboMonitor = "0" + usuario.getTombamentoMicro() + " - SEPLAG";
+            }
+            else if (String.valueOf(usuario.getTombamentoMicro()).length() == 5){
+                tomboMicro = "0" + usuario.getTombamentoMicro() + " - SEFAZ";
+            }
+            else if (String.valueOf(usuario.getTombamentoMicro()).length() == 6 && String.valueOf(usuario.getTombamentoMicro()).substring(0, 3) == "300"){
+                tomboMicro = usuario.getTombamentoMicro() + " - SEFAZ";
+            }
+
             if (cpf != null) {
                 //foprmatando cpf para o termo
                 String cpf1 = cpf.substring(0, 3);
