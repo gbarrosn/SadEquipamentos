@@ -57,7 +57,19 @@ public class FormRelatorioTermoUsuario {
                 tomboMicro = "Sem tombamento";
             }
 
-
+            if (String.valueOf(usuario.getTombamentoMonitor()).length() == 4) {
+                tomboMonitor = "0" + usuario.getTombamentoMonitor() + " - SEPLAG";
+            }
+            else if (String.valueOf(usuario.getTombamentoMonitor()).length() == 4 && String.valueOf(usuario.getTombamentoMonitor()).substring(0, 1).equals("8")
+            || String.valueOf(usuario.getTombamentoMonitor()).length() == 5 && String.valueOf(usuario.getTombamentoMonitor()).substring(0, 1).equals("6")){
+                tomboMonitor = "0" + usuario.getTombamentoMonitor() + " - SEFAZ";
+            }
+            else if (String.valueOf(usuario.getTombamentoMonitor()).length() == 6 && String.valueOf(usuario.getTombamentoMonitor()).substring(0, 3).equals("300")){
+                tomboMonitor = usuario.getTombamentoMonitor() + " - SEFAZ";
+            }
+            else if (String.valueOf(usuario.getTombamentoMonitor()).equals("1")){
+                tomboMonitor = "Sem tombamento";
+            }
 
             if (cpf != null) {
                 //foprmatando cpf para o termo
