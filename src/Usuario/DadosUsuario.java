@@ -146,7 +146,7 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
             sql += "cpf='"+alterarUser.getCpf()+"',";
             sql += "ativo='"+alterarUser.getAtivo()+"',";
 
-            if (alterarUser.getEstoque()) {
+            if (alterarUser.getEstoque() != null && alterarUser.getEstoque()) {
                 sql += "estoque=1";
             }
             else {
