@@ -985,19 +985,19 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
             while (rs.next()) {
                 if ((!rs.getString("serie_monitor").equals("N/I")) && (rs.getInt("id_usuario")!=user.getId_usuario())
                         && (rs.getBoolean("ativo") == true) && (rs.getBoolean("estoque") == false)) {
-                    throw new Exception("Este nº de série de Monitor já está cadastrado no sistema.");
+                    throw new Exception("Este nº de série de Monitor já está cadastrado no sistema: "+rs.getString("nome"));
                 }
 
             }
 
             //Série Micro
-            sqlValida = "select serie_micro,id_usuario, ativo, estoque ";
+            sqlValida = "select serie_micro,id_usuario, ativo, estoque, nome ";
             sqlValida += " from Usuario where serie_micro = '" + user.getSerieMicro() + "';";
             rs = conex.executeQuery(sqlValida);
             while (rs.next()) {
                 if ((!rs.getString("serie_micro").equals("N/I")) && (rs.getInt("id_usuario")!=user.getId_usuario())
                         && (rs.getBoolean("ativo") == true) && (rs.getBoolean("estoque") == false) ) {
-                    throw new Exception("Este nº de série de Micro já está cadastrado no sistema.");
+                    throw new Exception("Este nº de série de Micro já está cadastrado no sistema: "+rs.getString("nome"));
                 }
 
             }
@@ -1012,12 +1012,13 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
                 if (!user.getCpf().matches("[0-9]*")) {
                     throw new Exception("CPF inválido, preencha apenas com números.");
                 }
-                sqlValida = "select cpf,id_usuario ";
+                sqlValida = "select cpf,id_usuario, nome, estoque ";
                 sqlValida += " from Usuario where cpf = '" + user.getCpf() + "';";
                 rs = conex.executeQuery(sqlValida);
                 while (rs.next()) {
-                    if ((!rs.getString("cpf").equals(null)) && (rs.getInt("id_usuario") != user.getId_usuario())) {
-                        throw new Exception("Este CPF já está cadastrado no sistema.");
+                    if ((!rs.getString("cpf").equals(null)) && (rs.getInt("id_usuario") != user.getId_usuario())
+                            && (rs.getBoolean("estoque") == false)) {
+                        throw new Exception("Este CPF já está cadastrado no sistema: "+rs.getString("nome"));
                     }
                 }
 
