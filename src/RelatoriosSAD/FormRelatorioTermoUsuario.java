@@ -53,6 +53,11 @@ public class FormRelatorioTermoUsuario {
             else if (String.valueOf(usuario.getTombamentoMicro()).length() == 6 && String.valueOf(usuario.getTombamentoMicro()).substring(0, 3).equals("300")){
                 tomboMicro = usuario.getTombamentoMicro() + " - SEFAZ";
             }
+            else if (String.valueOf(usuario.getTombamentoMicro()).equals("1")){
+                tomboMicro = "Sem tombamento";
+            }
+
+
 
             if (cpf != null) {
                 //foprmatando cpf para o termo
