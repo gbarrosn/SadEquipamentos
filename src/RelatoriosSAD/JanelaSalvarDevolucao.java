@@ -33,14 +33,14 @@ public class JanelaSalvarDevolucao extends javax.swing.JFrame {
         }
     }
 
-    public JanelaSalvarDevolucao(PDDocument documento, String nomeUsuario) {
+    public JanelaSalvarDevolucao(PDDocument documento, String nomeUsuario, String pcUsuario) {
         icone();
         initComponents();
         setLocationRelativeTo(null);
         setTitle("Salvar Termo de Devolução em PDF");
         this.documento = documento;
 
-        String defaultFile = "Termo de Devolução - " + nomeUsuario;
+        String defaultFile = "Termo de Devolução - " + nomeUsuario + " - " + pcUsuario + ".pdf";
 
         try {
             janelaSalvarDevolucao.setCurrentDirectory(new File("\\\\sadfs01\\GTINF\\USINF\\Sistema SAD Equipamentos\\Termos de Devolução\\"));
