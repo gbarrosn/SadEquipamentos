@@ -37,6 +37,49 @@ public class FormRelatorioTermoDevolucaoUsuario {
             String configuracao = usuario.getConfigMicro().getConfiguracao();
             String cpf = usuario.getCpf();
 
+            if (String.valueOf(usuario.getTombamentoMicro()).length() == 4) {
+                tomboMicro = "0" + usuario.getTombamentoMicro() + " - SEPLAG";
+            }
+            else if (String.valueOf(usuario.getTombamentoMicro()).length() == 4 && String.valueOf(usuario.getTombamentoMicro()).substring(0, 1).equals("8")
+                    || String.valueOf(usuario.getTombamentoMicro()).length() == 5 && String.valueOf(usuario.getTombamentoMicro()).substring(0, 1).equals("6")){
+                tomboMicro = "0" + usuario.getTombamentoMicro() + " - SEFAZ";
+            }
+            else if (String.valueOf(usuario.getTombamentoMicro()).length() == 6 && String.valueOf(usuario.getTombamentoMicro()).substring(0, 3).equals("300")){
+                tomboMicro = usuario.getTombamentoMicro() + " - SEFAZ";
+            }
+            else if (String.valueOf(usuario.getTombamentoMicro()).equals("1")){
+                tomboMicro = "Sem tombamento";
+            }
+
+            if (String.valueOf(usuario.getTombamentoMonitor()).length() == 4) {
+                tomboMonitor = "0" + usuario.getTombamentoMonitor() + " - SEPLAG";
+            }
+            else if (String.valueOf(usuario.getTombamentoMonitor()).length() == 4 && String.valueOf(usuario.getTombamentoMonitor()).substring(0, 1).equals("8")
+                    || String.valueOf(usuario.getTombamentoMonitor()).length() == 5 && String.valueOf(usuario.getTombamentoMonitor()).substring(0, 1).equals("6")){
+                tomboMonitor = "0" + usuario.getTombamentoMonitor() + " - SEFAZ";
+            }
+            else if (String.valueOf(usuario.getTombamentoMonitor()).length() == 6 && String.valueOf(usuario.getTombamentoMonitor()).substring(0, 3).equals("300")){
+                tomboMonitor = usuario.getTombamentoMonitor() + " - SEFAZ";
+            }
+            else if (String.valueOf(usuario.getTombamentoMonitor()).equals("1")){
+                tomboMonitor = "Sem tombamento";
+            }
+
+            if (usuario.getTombamentoMonitor1() != 1){
+                if (String.valueOf(usuario.getTombamentoMonitor1()).length() == 4) {
+                    tomboMonitor1 = "0" + usuario.getTombamentoMonitor1() + " - SEPLAG";
+                }
+                else if (String.valueOf(usuario.getTombamentoMonitor1()).length() == 4 && String.valueOf(usuario.getTombamentoMonitor1()).substring(0, 1).equals("8")
+                        || String.valueOf(usuario.getTombamentoMonitor1()).length() == 5 && String.valueOf(usuario.getTombamentoMonitor1()).substring(0, 1).equals("6")){
+                    tomboMonitor1 = "0" + usuario.getTombamentoMonitor1() + " - SEFAZ";
+                }
+                else if (String.valueOf(usuario.getTombamentoMonitor1()).length() == 6 && String.valueOf(usuario.getTombamentoMonitor1()).substring(0, 3).equals("300")){
+                    tomboMonitor1 = usuario.getTombamentoMonitor1() + " - SEFAZ";
+                }
+
+            }
+
+
             Date data = new Date();
             DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
             String dataString;
