@@ -881,6 +881,7 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         relatorioDevolucao.gerarTermoDevolucao();
         Usuario devolucaoUser = selecionadoUser.criarCopia();
         devolucaoUser.setEstoque(true);
+        devolucaoUser.setAtivo(true);
 
         try {
             DadosUsuario userDados = new DadosUsuario();
@@ -917,6 +918,7 @@ public class ListarUSUARIO extends javax.swing.JFrame {
 
         Usuario termoUser = selecionadoUsuario.criarCopia();
         termoUser.setEstoque(false);
+        termoUser.setAtivo(true);
         try {
             DadosUsuario userDados = new DadosUsuario();
             userDados.alterarUsuario(termoUser, selecionadoUsuario);
