@@ -38,7 +38,7 @@ public class JanelaSalvarTermo extends javax.swing.JFrame {
 
     private PDDocument documento;
 
-    public JanelaSalvarTermo(PDDocument documento, String nomeUsuario) {
+    public JanelaSalvarTermo(PDDocument documento, String nomeUsuario, String pcUsuario) {
         icone();
         initComponents();
         setLocationRelativeTo(null);
@@ -46,7 +46,7 @@ public class JanelaSalvarTermo extends javax.swing.JFrame {
         this.documento = documento;
 
         String defaultFile="";
-        defaultFile = "Termo de Responsabilidade - "+ nomeUsuario ;
+        defaultFile = "Termo de Responsabilidade - "+ nomeUsuario + " - " + pcUsuario + ".pdf";
 
 
         try {
