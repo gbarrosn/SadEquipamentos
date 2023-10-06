@@ -54,7 +54,7 @@ public class FormRelatorioTermoUsuario {
                 tomboMicro = usuario.getTombamentoMicro() + " - SEFAZ";
             }
             else if (String.valueOf(usuario.getTombamentoMicro()).equals("1")){
-                tomboMicro = "Sem tombamento";
+                tomboMicro = "Não Informado.";
             }
 
             if (String.valueOf(usuario.getTombamentoMonitor()).length() == 4) {
@@ -68,7 +68,7 @@ public class FormRelatorioTermoUsuario {
                 tomboMonitor = usuario.getTombamentoMonitor() + " - SEFAZ";
             }
             else if (String.valueOf(usuario.getTombamentoMonitor()).equals("1")){
-                tomboMonitor = "Sem tombamento";
+                tomboMonitor = "Não Informado.";
             }
 
             if (usuario.getTombamentoMonitor1() != 1){
