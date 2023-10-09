@@ -162,7 +162,12 @@ public class FormRelatorioTermoUsuario {
                 }
                 assert document != null;
                 PDAcroForm acroForm = document.getDocumentCatalog().getAcroForm();
-                
+
+                    acroForm.getField("text_nome").setValue(nome);
+                    acroForm.getField("text_cesu").setValue(CESU);
+                    ac
+
+
 
 
             }
