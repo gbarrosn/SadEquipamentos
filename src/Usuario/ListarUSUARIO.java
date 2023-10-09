@@ -934,7 +934,7 @@ public class ListarUSUARIO extends javax.swing.JFrame {
             Usuario selecionadoUsuario = new Usuario();
             selecionadoUsuario = listaDeUsuarios.get(TodosUsuarios.getSelectedRow());
 
-            if (selecionadoUsuario.getNotebook().equals("sSSim")) {
+            if (selecionadoUsuario.getNotebook().equals("sim")) {
                 AlterarUSUARIONOTEBOOK alterarUser = new AlterarUSUARIONOTEBOOK(selecionadoUsuario, this.logado);
                 alterarUser.setVisible(true);
             } else {
