@@ -167,7 +167,13 @@ public class FormRelatorioTermoUsuario {
                     acroForm.getField("text_cesu").setValue(CESU);
                     acroForm.getField("text_tomboMicro").setValue(tomboMicro);
                     acroForm.getField("text_serieMicro").setValue(serieMicro);
-                    
+                    acroForm.getField("text_gerencia").setValue(gerencia);
+                    acroForm.getField("texrt_cargo").setValue(cargo);
+                    acroForm.getField("text_dataDia").setValue(dataDia);
+                    acroForm.getField("text_dataMes").setValue(dataMes);
+                    acroForm.getField("text_dataAno").setValue(dataAno);
+                    acroForm.getField("textarea_config_equipamento").setValue("Notebook " + configuracao +"\n"+"Mochila, Mouse");
+
 
 
             }
