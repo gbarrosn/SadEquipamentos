@@ -174,6 +174,19 @@ public class FormRelatorioTermoUsuario {
                     acroForm.getField("text_dataAno").setValue(dataAno);
                     acroForm.getField("textarea_config_equipamento").setValue("Notebook " + configuracao +"\n"+"Mochila, Mouse");
 
+                if (cpf != null && cpf != "null") {
+                    acroForm.getField("text_cpf").setValue(cpf);
+                    acroForm.setNeedAppearances(true);
+                    acroForm.flatten();
+                    JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, configuracao);
+                    janelaSalvarDevolucao.setVisible(true);
+                } else {
+                    acroForm.setNeedAppearances(true);
+                    acroForm.flatten();
+                    JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, configuracao);
+                    janelaSalvarDevolucao.setVisible(true);
+                }
+
 
 
             }
