@@ -156,8 +156,14 @@ public class FormRelatorioTermoUsuario {
                 //PDDOcument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/termoNotebook.pdf"));
 
                 if (document == null) {
-
+                    System.out.println("Documento não carregado");
+                } else {
+                    System.out.println("Documento carregado com sucesso");
                 }
+                assert document != null;
+                PDAcroForm acroForm = document.getDocumentCatalog().getAcroForm();
+                
+
 
             }
             else {
