@@ -165,9 +165,9 @@ public class FormRelatorioTermoUsuario {
 
                     acroForm.getField("text_nome").setValue(nome);
                     acroForm.getField("text_cesu").setValue(CESU);
-                    ac
-
-
+                    acroForm.getField("text_tomboMicro").setValue(tomboMicro);
+                    acroForm.getField("text_serieMicro").setValue(serieMicro);
+                    
 
 
             }
