@@ -186,9 +186,7 @@ public class FormRelatorioTermoUsuario {
                     JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, configuracao);
                     janelaSalvarDevolucao.setVisible(true);
                 }
-
-
-
+                
             }
             else {
 
