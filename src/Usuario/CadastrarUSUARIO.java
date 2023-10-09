@@ -69,14 +69,14 @@ public class CadastrarUSUARIO extends javax.swing.JFrame {
         campo_Garantia.setText("N/I");
         Campo_SerieMicro.setText("N/I");
         Campo_SerieMonitor.setText("N/I");
-        Campo_SerieMonitor1.setText("N/I2");
+        Campo_SerieMonitor1.setText("N/I");
         Campo_NovoTomboMicro.setText("N/I");
 
         campoPossuiTermo.setSelected(false);
 
         Campo_TomboMicro.setText(1 + "");
         Campo_TomboMonitor.setText(1 + "");
-        Campo_TomboMonitor1.setText(12 + "");
+        Campo_TomboMonitor1.setText(1 + "");
         Campo_cmtech.setText(1 + "");
         jTextField_EtiquetaSad.setText("NULL");
         //Box_SO.setSelectedIndex(5);
@@ -93,14 +93,14 @@ public class CadastrarUSUARIO extends javax.swing.JFrame {
         campo_Garantia.setText("N/I");
         Campo_SerieMicro.setText("N/I");
         Campo_SerieMonitor.setText("N/I");
-        Campo_SerieMonitor1.setText("N/I2");
+        Campo_SerieMonitor1.setText("N/I");
         Campo_NovoTomboMicro.setText("N/I");
 
         campoPossuiTermo.setSelected(false);
 
         Campo_TomboMicro.setText(1 + "");
         Campo_TomboMonitor.setText(1 + "");
-        Campo_TomboMonitor1.setText(12 + "");
+        Campo_TomboMonitor1.setText(1 + "");
         Campo_cmtech.setText(1 + "");
         jTextField_EtiquetaSad.setText("NULL");
         //Box_SO.setSelectedIndex(5);
