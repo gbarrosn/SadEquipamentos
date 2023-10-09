@@ -950,7 +950,7 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
             while (rs.next()) {
                 if (rs.getInt("tombo_micro") != 1 && rs.getInt("id_usuario")!=user.getId_usuario()
                         && (rs.getBoolean("ativo") == true) && (rs.getBoolean("estoque") == false) ) {
-                    throw new Exception("Este Tombamento de Micro já está cadastrado no sistema no nome de:" + rs.getString("nome") + ".");
+                    throw new Exception("Este Tombamento de Micro já está cadastrado no sistema no nome de: " + rs.getString("nome") + ".");
                 }
 
             }
