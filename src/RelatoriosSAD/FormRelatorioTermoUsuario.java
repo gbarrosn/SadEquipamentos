@@ -147,7 +147,7 @@ public class FormRelatorioTermoUsuario {
                     janelaSalvarTermo.setVisible(true);
                 }
             }
-            else if (usuario.getNotebook() == "sim") {
+            else if (usuario.getNotebook().equals("sim")) {
                 URL resource = getClass().getResource("/resources/termoNotebook.pdf");
                 assert resource != null;
                 String filePath = resource.getPath();
@@ -186,7 +186,7 @@ public class FormRelatorioTermoUsuario {
                     JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, configuracao);
                     janelaSalvarDevolucao.setVisible(true);
                 }
-                
+
             }
             else {
 
