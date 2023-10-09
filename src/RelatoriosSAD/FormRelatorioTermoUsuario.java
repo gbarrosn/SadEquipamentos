@@ -147,6 +147,19 @@ public class FormRelatorioTermoUsuario {
                     janelaSalvarTermo.setVisible(true);
                 }
             }
+            else if (usuario.getNotebook() == "sim") {
+                URL resource = getClass().getResource("/resources/termoNotebook.pdf");
+                assert resource != null;
+                String filePath = resource.getPath();
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(filePath));
+
+                //PDDOcument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/termoNotebook.pdf"));
+
+                if (document == null) {
+
+                }
+
+            }
             else {
 
                 URL resource = getClass().getResource("/resources/termo2monitores.pdf");
