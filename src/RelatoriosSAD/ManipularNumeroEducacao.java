@@ -17,7 +17,7 @@ public class ManipularNumeroEducacao {
         numeroStr = "140101." + numeroStr;
 
         // Separa a string em três partes
-        String parte1 = numeroStr.substring(0, 7);  // '120101.'
+        String parte1 = numeroStr.substring(0, 7);  // '140101.'
         String parte2 = numeroStr.substring(7, 13);  // Dígitos no meio
         String parte3 = numeroStr.substring(13);  // Últimos 4 dígitos
 

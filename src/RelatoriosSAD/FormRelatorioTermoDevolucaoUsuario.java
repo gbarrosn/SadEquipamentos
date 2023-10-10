@@ -66,7 +66,7 @@ public class FormRelatorioTermoDevolucaoUsuario {
                 tomboMicro = usuario.getTombamentoMicro() + " - SEFAZ";
             }
             else if (String.valueOf(usuario.getTombamentoMicro()).equals("1")){
-                tomboMicro = "Sem tombamento";
+                tomboMicro = "Não informado";
             }
 
             if (String.valueOf(usuario.getTombamentoMonitor()).length() == 4) {
@@ -80,7 +80,7 @@ public class FormRelatorioTermoDevolucaoUsuario {
                 tomboMonitor = usuario.getTombamentoMonitor() + " - SEFAZ";
             }
             else if (String.valueOf(usuario.getTombamentoMonitor()).equals("1")){
-                tomboMonitor = "Sem tombamento";
+                tomboMonitor = "Não informado";
             }
 
             if (usuario.getTombamentoMonitor1() != 1){
@@ -107,7 +107,7 @@ public class FormRelatorioTermoDevolucaoUsuario {
             String dataMes = dataString.substring(3, 5);
             String dataAno = dataString.substring(6, 10);
 
-            if (usuario.getTombamentoMonitor() == 1) {
+            if (usuario.getTombamentoMonitor() == 1 && usuario.getNotebook().equals("não")) {
                
                 PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/devolucao1monitor.pdf"));
 
