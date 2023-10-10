@@ -131,7 +131,48 @@ public class FormRelatorioTermoDevolucaoUsuario {
                     janelaSalvarDevolucao.setVisible(true);
                 }
 
-            } else {
+            } else if (usuario.getNotebook().equals("sim")) {
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/devolucaoNotebook.pdf"));
+
+                if (document == null) {
+                    System.out.println("Documento não carregado");
+                } else {
+                    System.out.println("Documento carregado com sucesso");
+                }
+
+                assert document != null;
+                PDAcroForm acroForm = document.getDocumentCatalog().getAcroForm();
+
+                acroForm.getField("text_nome").setValue(nome);
+                acroForm.getField("text_cesu").setValue(CESU);
+                acroForm.getField("text_tomboMicro").setValue(tomboMicro);
+                acroForm.getField("text_tomboMonitor").setValue(tomboMonitor);
+                acroForm.getField("text_serieMicro").setValue(serieMicro);
+                acroForm.getField("text_serieMonitor").setValue(serieMonitor);
+                acroForm.getField("text_modeloMicro").setValue(modeloMicro);
+                acroForm.getField("text_gerencia").setValue(gerencia);
+                acroForm.getField("text_cargo").setValue(cargo);
+                acroForm.getField("text_dataDia").setValue(dataDia);
+                acroForm.getField("text_dataMes").setValue(dataMes);
+                acroForm.getField("text_dataAno").setValue(dataAno);
+                acroForm.getField("textarea_config_equipamento").setValue("Notebook " +
+                        configuracao + "\n MOuse, Mochila");
+
+                if (cpf != null) {
+                    acroForm.getField("text_cpf").setValue(cpf);
+                    acroForm.setNeedAppearances(true);
+                    acroForm.flatten();
+                    JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, configuracao);
+                    janelaSalvarDevolucao.setVisible(true);
+                } else {
+                    acroForm.setNeedAppearances(true);
+                    acroForm.flatten();
+                    JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, configuracao);
+                    janelaSalvarDevolucao.setVisible(true);
+                }
+
+            }
+            else {
                 PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/devolucao2monitores.pdf"));
 
                 if (document == null) {
