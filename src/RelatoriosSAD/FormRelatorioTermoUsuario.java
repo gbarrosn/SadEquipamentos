@@ -31,8 +31,8 @@ public class FormRelatorioTermoUsuario {
 
             String nome = usuario.getNome();
             String CESU = String.valueOf(usuario.getEtiquetaCESU());
-            String tomboMonitor = ManipulaNumero.manipularNumero((int) usuario.getTombamentoMonitor());
-            String tomboMonitor1 = ManipulaNumero.manipularNumero((int) usuario.getTombamentoMonitor1());
+            String tomboMonitor = null;
+            String tomboMonitor1 = null;
             String serieMicro = usuario.getSerieMicro();
             String serieMonitor = usuario.getSerieMonitor();
             String serieMonitor1 = usuario.getSerieMonitor1();
