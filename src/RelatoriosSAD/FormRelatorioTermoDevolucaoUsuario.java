@@ -25,8 +25,9 @@ public class FormRelatorioTermoDevolucaoUsuario {
 
             String nome = usuario.getNome();
             String CESU = String.valueOf(usuario.getEtiquetaCESU());
-            String tomboMonitor = null;
-            String tomboMonitor1 = null;
+            String tomboMicro = ManipulaNumero.manipularNumero((int) usuario.getTombamentoMicro(), usuario.getGerencia().getIdGerencia());
+            String tomboMonitor = ManipulaNumero.manipularNumero((int) usuario.getTombamentoMonitor(), usuario.getGerencia().getIdGerencia());
+            String tomboMonitor1 = ManipulaNumero.manipularNumero((int) usuario.getTombamentoMonitor1(), usuario.getGerencia().getIdGerencia());
             String serieMicro = usuario.getSerieMicro();
             String serieMonitor = usuario.getSerieMonitor();
             String serieMonitor1 = usuario.getSerieMonitor1();
@@ -35,25 +36,6 @@ public class FormRelatorioTermoDevolucaoUsuario {
             String cargo = usuario.getCargo().getCargo();
             String configuracao = usuario.getConfigMicro().getConfiguracao();
             String cpf = usuario.getCpf();
-            String tomboMicro = null;
-
-            if (usuario.getProprietarioMonitor().getIdProprietario() == 15) {
-                tomboMicro = ManipularNumeroEducacao.manipularNumero((int) usuario.getTombamentoMicro());
-            } else {
-                tomboMicro = ManipulaNumero.manipularNumero((int) usuario.getTombamentoMicro());
-            }
-
-            if (usuario.getProprietarioMonitor().getIdProprietario() == 8) {
-                tomboMonitor = ManipularNumeroEducacao.manipularNumero((int) usuario.getTombamentoMonitor());
-            } else {
-                tomboMonitor = ManipulaNumero.manipularNumero((int) usuario.getTombamentoMonitor());
-            }
-
-            if (usuario.getProprietarioMonitor1().getIdProprietario() == 8) {
-                tomboMonitor1 = ManipularNumeroEducacao.manipularNumero((int) usuario.getTombamentoMonitor1());
-            } else {
-                tomboMonitor1 = ManipulaNumero.manipularNumero((int) usuario.getTombamentoMonitor1());
-            }
 
             if (String.valueOf(usuario.getTombamentoMicro()).length() == 4) {
                 tomboMicro = "0" + usuario.getTombamentoMicro() + " - SEPLAG";

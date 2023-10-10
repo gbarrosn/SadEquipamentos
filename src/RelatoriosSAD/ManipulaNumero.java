@@ -2,8 +2,16 @@ package RelatoriosSAD;
 
 public class ManipulaNumero {
 
-    public static String manipularNumero(int numero) {
-        // Transforma o número em uma string
+    public static String manipularNumero(int numero, int gerencia) {
+
+        String codigo_orgao = "";
+
+        if (gerencia == 9 || gerencia == 7){
+            codigo_orgao = "120101.";
+        }
+        else if (gerencia == 15  || gerencia == 8){
+            codigo_orgao = "140101.";
+        }
         String numeroStr = String.valueOf(numero);
 
         // Conta quantos dígitos possui
@@ -14,10 +22,10 @@ public class ManipulaNumero {
             numeroStr = "0" + numeroStr;
         }
         // Adiciona '120101.' no início da string
-        numeroStr = "120101." + numeroStr;
+        numeroStr = codigo_orgao + numeroStr;
 
         // Separa a string em três partes
-        String parte1 = numeroStr.substring(0, 7);  // '120101.'
+        String parte1 = numeroStr.substring(0, 7);  // '140101.'
         String parte2 = numeroStr.substring(7, 13);  // Dígitos no meio
         String parte3 = numeroStr.substring(13);  // Últimos 4 dígitos
 
@@ -27,8 +35,9 @@ public class ManipulaNumero {
         }
 
         // Retorna a string completa
-        return parte1 + parte2 + "."+parte3;
+        return parte1 + parte2 + "." + parte3;
     }
+
 
     public static void main(String[] args) {
 
