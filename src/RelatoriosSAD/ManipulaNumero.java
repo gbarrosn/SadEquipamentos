@@ -6,12 +6,15 @@ public class ManipulaNumero {
 
         String codigo_orgao = "";
 
-        if (gerencia == 9 || gerencia == 7){
+        if (gerencia == 9){
             codigo_orgao = "120101.";
-        }
-        else if (gerencia == 15  || gerencia == 8){
+        } else if (gerencia == 15 || gerencia == 12){
             codigo_orgao = "140101.";
+        } else if (gerencia == 11) {
+            codigo_orgao = "150101.";
         }
+
+
         String numeroStr = String.valueOf(numero);
 
         // Conta quantos dígitos possui
