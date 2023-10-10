@@ -172,7 +172,8 @@ public class FormRelatorioTermoUsuario {
                     acroForm.getField("text_dataDia").setValue(dataDia);
                     acroForm.getField("text_dataMes").setValue(dataMes);
                     acroForm.getField("text_dataAno").setValue(dataAno);
-                    acroForm.getField("textarea_config_equipamento").setValue("Notebook " + configuracao +"\n"+"Mochila, Mouse");
+                    acroForm.getField("textarea_config_equipamento").setValue("Notebook "
+                            + usuario.getModeloMicro().getModelo() + " " + configuracao +"\n"+"Mochila, Mouse");
 
                 if (cpf != null && cpf != "null") {
                     acroForm.getField("text_cpf").setValue(cpf);
