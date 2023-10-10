@@ -445,7 +445,7 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         Box_GerenciaUser = new javax.swing.JComboBox();
         ButtonExibirOrganograma = new javax.swing.JButton();
-        Campo_NomeUser1 = new javax.swing.JTextField();
+        Campo_CpfUser = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         jCheckBox_Ativo = new javax.swing.JCheckBox();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -457,6 +457,9 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(Campo_TomboMicro, new org.netbeans.lib.awtextra.AbsoluteConstraints(406, 220, 209, -1));
+        getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 441, 869, 2));
 
         jButtonLimparCampos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Icons/format_painter.png"))); // NOI18N
         jButtonLimparCampos.setText("Limpar Campos");
@@ -465,6 +468,8 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
                 jButtonLimparCamposActionPerformed(evt);
             }
         });
+        getContentPane().add(jButtonLimparCampos, new org.netbeans.lib.awtextra.AbsoluteConstraints(602, 449, 149, 39));
+        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 156, 866, 2));
 
         Button_Cadastrar1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Button_Cadastrar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Icons/arrow_left_32.png"))); // NOI18N
@@ -474,13 +479,16 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
                 Button_Cadastrar1ActionPerformed(evt);
             }
         });
+        getContentPane().add(Button_Cadastrar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(757, 449, 118, 39));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel6.setText("         Notebook:");
         jLabel6.setAlignmentX(0.5F);
         jLabel6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 170, 147, 35));
 
         jLabel2.setText("Nome:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 62, -1, -1));
 
         Box_ModeloMicro.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         Box_ModeloMicro.addItemListener(new java.awt.event.ItemListener() {
@@ -488,29 +496,41 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
                 Box_ModeloMicroItemStateChanged(evt);
             }
         });
+        getContentPane().add(Box_ModeloMicro, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 256, 241, -1));
+        getContentPane().add(Campo_HostNameMicro, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 220, 239, -1));
 
         jLabel7.setText("Host Name:");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 223, -1, -1));
 
         jLabel12.setText("Modelo:");
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 259, -1, -1));
 
         Box_SO.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(Box_SO, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 328, 243, -1));
 
         Box_MarcaMicro.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(Box_MarcaMicro, new org.netbeans.lib.awtextra.AbsoluteConstraints(406, 292, 209, -1));
 
         Box_ConfigMicro.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(Box_ConfigMicro, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 292, 243, -1));
 
         Box_Plataforma.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(Box_Plataforma, new org.netbeans.lib.awtextra.AbsoluteConstraints(724, 292, 160, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setText("            Usuário:");
         jLabel1.setAlignmentX(0.5F);
         jLabel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 6, 150, 32));
 
         Box_CargoUser.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(Box_CargoUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(485, 59, 175, -1));
 
         jLabel23.setText("CESU:");
+        getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(627, 223, -1, -1));
 
         jLabel15.setText("Plataforma:");
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(627, 295, -1, -1));
 
         Box_PavimentoUser.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         Box_PavimentoUser.addItemListener(new java.awt.event.ItemListener() {
@@ -523,28 +543,41 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
                 Box_PavimentoUserActionPerformed(evt);
             }
         });
+        getContentPane().add(Box_PavimentoUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 92, 289, -1));
+        getContentPane().add(Campo_NomeUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 59, 289, -1));
+        getContentPane().add(Campo_cmtech, new org.netbeans.lib.awtextra.AbsoluteConstraints(724, 220, 160, -1));
 
         Box_ProprietarioMicro.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(Box_ProprietarioMicro, new org.netbeans.lib.awtextra.AbsoluteConstraints(724, 256, 160, -1));
 
         jLabel10.setText("Configuração:");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 295, -1, -1));
 
         jLabel5.setText("Pavimento:");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 95, -1, -1));
 
         jLabel14.setText("Sistema:");
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 331, 60, -1));
 
         jLabel4.setText("Cargo:");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(412, 62, -1, -1));
+        getContentPane().add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 379, 869, -1));
 
         jLabel11.setText("Marca:");
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 295, -1, -1));
 
         jLabel9.setText("Série:");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 259, 40, -1));
 
         Campo_SerieMicro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Campo_SerieMicroActionPerformed(evt);
             }
         });
+        getContentPane().add(Campo_SerieMicro, new org.netbeans.lib.awtextra.AbsoluteConstraints(406, 256, 209, -1));
 
         jLabel13.setText("Proprietário:");
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(627, 259, -1, -1));
 
         Button_Alterar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Button_Alterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Icons/diskette_32.png"))); // NOI18N
@@ -554,18 +587,25 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
                 Button_AlterarActionPerformed(evt);
             }
         });
+        getContentPane().add(Button_Alterar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 449, 125, 39));
 
         jLabel8.setText("Tombo:");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 223, -1, -1));
 
         campoDescricao.setText("Descrição:");
+        getContentPane().add(campoDescricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(412, 126, -1, -1));
 
         jLabel26.setText("Office:");
+        getContentPane().add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 331, -1, -1));
 
         Box_Office.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(Box_Office, new org.netbeans.lib.awtextra.AbsoluteConstraints(406, 328, 209, -1));
 
         textoDataAlteracao.setText("Data da última alteração:");
+        getContentPane().add(textoDataAlteracao, new org.netbeans.lib.awtextra.AbsoluteConstraints(226, 12, -1, -1));
 
         jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Icons/clock_32.png"))); // NOI18N
+        getContentPane().add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(188, 6, -1, -1));
 
         campoExibirTermo.setText("Exibir Termo de Responsabilidade");
         campoExibirTermo.addActionListener(new java.awt.event.ActionListener() {
@@ -573,8 +613,10 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
                 campoExibirTermoActionPerformed(evt);
             }
         });
+        getContentPane().add(campoExibirTermo, new org.netbeans.lib.awtextra.AbsoluteConstraints(651, 394, 209, 35));
 
         checkPossuiTermo.setText("Possui Termo?");
+        getContentPane().add(checkPossuiTermo, new org.netbeans.lib.awtextra.AbsoluteConstraints(516, 400, -1, -1));
 
         ButtonExibirInformarObs.setText("Exibir/Registrar Observações");
         ButtonExibirInformarObs.addActionListener(new java.awt.event.ActionListener() {
@@ -582,10 +624,14 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
                 ButtonExibirInformarObsActionPerformed(evt);
             }
         });
+        getContentPane().add(ButtonExibirInformarObs, new org.netbeans.lib.awtextra.AbsoluteConstraints(318, 394, 186, 35));
+        getContentPane().add(campo_Garantia, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 399, 223, -1));
 
         jLabel22.setText("Garantia:");
+        getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 402, -1, -1));
 
         jLabel3.setText("Gerência:");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(412, 95, -1, -1));
 
         Box_GerenciaUser.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         Box_GerenciaUser.addItemListener(new java.awt.event.ItemListener() {
@@ -593,6 +639,7 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
                 Box_GerenciaUserItemStateChanged(evt);
             }
         });
+        getContentPane().add(Box_GerenciaUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(485, 92, 175, -1));
 
         ButtonExibirOrganograma.setText("Exibir organograma");
         ButtonExibirOrganograma.addActionListener(new java.awt.event.ActionListener() {
@@ -600,10 +647,14 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
                 ButtonExibirOrganogramaActionPerformed(evt);
             }
         });
+        getContentPane().add(ButtonExibirOrganograma, new org.netbeans.lib.awtextra.AbsoluteConstraints(699, 89, 165, 31));
+        getContentPane().add(Campo_CpfUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(699, 59, 180, -1));
 
         jLabel16.setText("Cpf:");
+        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(666, 62, -1, -1));
 
         jCheckBox_Ativo.setText("Usuário Inativo?");
+        getContentPane().add(jCheckBox_Ativo, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 176, -1, -1));
 
         jMenu1.setText("Opções");
 
@@ -642,199 +693,6 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         setJMenuBar(jMenuBar1);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel12)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Campo_HostNameMicro, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Box_SO, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Box_ConfigMicro, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Box_ModeloMicro, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(4, 4, 4)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel11)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel26))
-                .addGap(6, 6, 6)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Box_MarcaMicro, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Campo_TomboMicro)
-                    .addComponent(Campo_SerieMicro)
-                    .addComponent(Box_Office, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel23)
-                    .addComponent(jLabel15)
-                    .addComponent(jLabel13))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(Box_Plataforma, javax.swing.GroupLayout.Alignment.LEADING, 0, 160, Short.MAX_VALUE)
-                    .addComponent(Box_ProprietarioMicro, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Campo_cmtech))
-                .addGap(10, 10, 10))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(Button_Alterar, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(471, 471, 471)
-                        .addComponent(jButtonLimparCampos, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(Button_Cadastrar1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 869, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel22)
-                        .addGap(18, 18, 18)
-                        .addComponent(campo_Garantia, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(ButtonExibirInformarObs, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(checkPossuiTermo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(campoExibirTermo, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 869, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jCheckBox_Ativo))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 866, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(jLabel24)
-                        .addGap(6, 6, 6)
-                        .addComponent(textoDataAlteracao))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(42, 42, 42))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(Campo_NomeUser)
-                            .addComponent(Box_PavimentoUser, 0, 289, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addComponent(campoDescricao))
-                        .addGap(2, 2, 2)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Box_CargoUser, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel16))
-                            .addComponent(Box_GerenciaUser, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ButtonExibirOrganograma, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Campo_NomeUser1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 9, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel24)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(textoDataAlteracao)))
-                .addGap(21, 21, 21)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(Campo_NomeUser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Box_CargoUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel16)
-                    .addComponent(Campo_NomeUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jLabel3)
-                    .addComponent(Box_GerenciaUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ButtonExibirOrganograma, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Box_PavimentoUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(campoDescricao)
-                .addGap(12, 12, 12)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox_Ativo))
-                .addGap(15, 15, 15)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(Campo_HostNameMicro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel23)
-                    .addComponent(Campo_TomboMicro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Campo_cmtech, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jLabel12)
-                    .addComponent(Box_ModeloMicro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Box_ProprietarioMicro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9)
-                    .addComponent(Campo_SerieMicro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel13))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(Box_MarcaMicro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Box_ConfigMicro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Box_Plataforma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel15)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel11))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(Box_SO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel14)
-                    .addComponent(jLabel26)
-                    .addComponent(Box_Office, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(campo_Garantia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel22)
-                    .addComponent(campoExibirTermo, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(checkPossuiTermo)
-                    .addComponent(ButtonExibirInformarObs, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jButtonLimparCampos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Button_Cadastrar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Button_Alterar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1281,9 +1139,9 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
     private javax.swing.JButton ButtonExibirOrganograma;
     private javax.swing.JButton Button_Alterar;
     private javax.swing.JButton Button_Cadastrar1;
+    private javax.swing.JTextField Campo_CpfUser;
     private javax.swing.JTextField Campo_HostNameMicro;
     private javax.swing.JTextField Campo_NomeUser;
-    private javax.swing.JTextField Campo_NomeUser1;
     private javax.swing.JTextField Campo_SerieMicro;
     private javax.swing.JTextField Campo_TomboMicro;
     private javax.swing.JTextField Campo_cmtech;
