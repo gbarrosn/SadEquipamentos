@@ -447,6 +447,7 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
         ButtonExibirOrganograma = new javax.swing.JButton();
         Campo_NomeUser1 = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
+        jCheckBox_Ativo = new javax.swing.JCheckBox();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -602,6 +603,8 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
 
         jLabel16.setText("Cpf:");
 
+        jCheckBox_Ativo.setText("Usuário Inativo?");
+
         jMenu1.setText("Opções");
 
         jMenuItem1.setText("Limpar Campos");
@@ -708,7 +711,9 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
                         .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 869, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(32, 32, 32)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBox_Ativo))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(19, 19, 19)
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 866, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -779,7 +784,9 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
                 .addGap(12, 12, 12)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox_Ativo))
                 .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(Campo_HostNameMicro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1285,6 +1292,7 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
     private javax.swing.JTextField campo_Garantia;
     private javax.swing.JCheckBox checkPossuiTermo;
     private javax.swing.JButton jButtonLimparCampos;
+    private javax.swing.JCheckBox jCheckBox_Ativo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
