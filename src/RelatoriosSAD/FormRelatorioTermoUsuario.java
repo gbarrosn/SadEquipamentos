@@ -31,7 +31,6 @@ public class FormRelatorioTermoUsuario {
 
             String nome = usuario.getNome();
             String CESU = String.valueOf(usuario.getEtiquetaCESU());
-            String tomboMicro = ManipulaNumero.manipularNumero((int) usuario.getTombamentoMicro());
             String tomboMonitor = ManipulaNumero.manipularNumero((int) usuario.getTombamentoMonitor());
             String tomboMonitor1 = ManipulaNumero.manipularNumero((int) usuario.getTombamentoMonitor1());
             String serieMicro = usuario.getSerieMicro();
@@ -42,6 +41,14 @@ public class FormRelatorioTermoUsuario {
             String cargo = usuario.getCargo().getCargo();
             String configuracao = usuario.getConfigMicro().getConfiguracao();
             String cpf = usuario.getCpf();
+            String tomboMicro = null;
+
+            if (usuario.getProprietarioMicro().getIdProprietario() == 15) {
+                tomboMicro = ManipularNumeroEducacao.manipularNumero((int) usuario.getTombamentoMicro());
+            }
+            else {
+                tomboMicro = ManipulaNumero.manipularNumero((int) usuario.getTombamentoMicro());
+            }
 
             if (String.valueOf(usuario.getTombamentoMicro()).length() == 4) {
                 tomboMicro = "0" + usuario.getTombamentoMicro() + " - SEPLAG";

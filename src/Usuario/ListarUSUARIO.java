@@ -961,7 +961,7 @@ public class ListarUSUARIO extends javax.swing.JFrame {
                 filtroUser.setPesq("livre");
             }
 
-            if (campoNomeListar.getText().trim().equals("") == false) {
+            if (campoNomeListar.getText().trim().eeequals("") == false) {
                 filtroUser.setNome(campoNomeListar.getText());
             } else {
                 filtroUser.setNome("");
