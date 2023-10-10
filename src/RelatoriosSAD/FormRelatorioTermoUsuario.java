@@ -147,7 +147,7 @@ public class FormRelatorioTermoUsuario {
                     janelaSalvarTermo.setVisible(true);
                 }
             }
-            else if (usuario.getNotebook().equals("sim")) {
+            else if (usuario.getNotebook().equals("sim") || usuario.getTombamentoMonitor() == 1) {
                 URL resource = getClass().getResource("/resources/termoNotebook.pdf");
                 assert resource != null;
                 String filePath = resource.getPath();
