@@ -102,7 +102,7 @@ public class FormRelatorioTermoUsuario {
             String dataMes = dataString.substring(3, 5);
             String dataAno = dataString.substring(6, 10);
 
-            if (usuario.getTombamentoMonitor1() == 1) {
+            if (usuario.getTombamentoMonitor1() == 1 && usuario.getNotebook().equals("não")) {
                 URL resource = getClass().getResource("/resources/termo1monitor.pdf");
                 assert resource != null;
                 String filePath = resource.getPath();
@@ -147,7 +147,7 @@ public class FormRelatorioTermoUsuario {
                     janelaSalvarTermo.setVisible(true);
                 }
             }
-            else if (usuario.getNotebook().equals("sim") || usuario.getTombamentoMonitor() == 1) {
+            else if (usuario.getNotebook().equals("sim")) {
                 URL resource = getClass().getResource("/resources/termoNotebook.pdf");
                 assert resource != null;
                 String filePath = resource.getPath();
@@ -168,7 +168,7 @@ public class FormRelatorioTermoUsuario {
                     acroForm.getField("text_tomboMicro").setValue(tomboMicro);
                     acroForm.getField("text_serieMicro").setValue(serieMicro);
                     acroForm.getField("text_gerencia").setValue(gerencia);
-                    acroForm.getField("texrt_cargo").setValue(cargo);
+                    acroForm.getField("text_cargo").setValue(cargo);
                     acroForm.getField("text_dataDia").setValue(dataDia);
                     acroForm.getField("text_dataMes").setValue(dataMes);
                     acroForm.getField("text_dataAno").setValue(dataAno);
@@ -189,7 +189,7 @@ public class FormRelatorioTermoUsuario {
                 }
 
             }
-            else {
+            else if (usuario.getTombamentoMonitor1() != 1 && usuario.getNotebook().equals("não")) {
 
                 URL resource = getClass().getResource("/resources/termo2monitores.pdf");
                 assert resource != null;
