@@ -49,7 +49,12 @@ public class FormRelatorioTermoDevolucaoUsuario {
                 tomboMonitor = ManipulaNumero.manipularNumero((int) usuario.getTombamentoMonitor());
             }
 
-            
+            if (usuario.getProprietarioMonitor1().getIdProprietario() == 8) {
+                tomboMonitor1 = ManipularNumeroEducacao.manipularNumero((int) usuario.getTombamentoMonitor1());
+            } else {
+                tomboMonitor1 = ManipulaNumero.manipularNumero((int) usuario.getTombamentoMonitor1());
+            }
+
             if (String.valueOf(usuario.getTombamentoMicro()).length() == 4) {
                 tomboMicro = "0" + usuario.getTombamentoMicro() + " - SEPLAG";
             }
