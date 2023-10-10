@@ -25,7 +25,6 @@ public class FormRelatorioTermoDevolucaoUsuario {
 
             String nome = usuario.getNome();
             String CESU = String.valueOf(usuario.getEtiquetaCESU());
-            String tomboMicro = ManipulaNumero.manipularNumero((int) usuario.getTombamentoMicro());
             String tomboMonitor = ManipulaNumero.manipularNumero((int) usuario.getTombamentoMonitor());
             String tomboMonitor1 = ManipulaNumero.manipularNumero((int) usuario.getTombamentoMonitor1());
             String serieMicro = usuario.getSerieMicro();
@@ -36,6 +35,14 @@ public class FormRelatorioTermoDevolucaoUsuario {
             String cargo = usuario.getCargo().getCargo();
             String configuracao = usuario.getConfigMicro().getConfiguracao();
             String cpf = usuario.getCpf();
+            String tomboMicro = null;
+
+            if (usuario.getProprietarioMonitor().getIdProprietario() == 15) {
+                tomboMicro = ManipularNumeroEducacao.manipularNumero((int) usuario.getTombamentoMicro());
+            } else {
+                tomboMicro = ManipulaNumero.manipularNumero((int) usuario.getTombamentoMicro());
+            }
+
 
             if (String.valueOf(usuario.getTombamentoMicro()).length() == 4) {
                 tomboMicro = "0" + usuario.getTombamentoMicro() + " - SEPLAG";
@@ -156,7 +163,7 @@ public class FormRelatorioTermoDevolucaoUsuario {
                 acroForm.getField("text_dataMes").setValue(dataMes);
                 acroForm.getField("text_dataAno").setValue(dataAno);
                 acroForm.getField("textarea_config_equipamento").setValue("Notebook " +
-                        configuracao + "\n MOuse, Mochila");
+                        configuracao + "\n Mouse, Mochila");
 
                 if (cpf != null) {
                     acroForm.getField("text_cpf").setValue(cpf);
