@@ -105,6 +105,13 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
         Box_SO.setSelectedItem(selecionadoUser.getOsMicro().getOs());
         jCheckBox_Ativo.setSelected(!selecionadoUser.getAtivo());
         Campo_CpfUser.setText(selecionadoUser.getCpf());
+
+        Box_MarcaMonitor.setSelectedItem(selecionadoUser.getMarcaMonitor().getMarca());
+        Box_ModeloMonitor.setSelectedItem(selecionadoUser.getModeloMonitor().getModelo());
+        Campo_SerieMonitor.setText(selecionadoUser.getSerieMonitor());
+        Campo_TomboMonitor.setText(selecionadoUser.getTombamentoMonitor() + "");
+        Box_ProprietarioMonitor.setSelectedItem(selecionadoUser.getProprietarioMonitor().getProprietario());
+        
         //Carregando combo com dados do Monitor do Usuário selecionado: 
 
         campo_Garantia.setText(selecionadoUser.getGarantia());
