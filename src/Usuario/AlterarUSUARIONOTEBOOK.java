@@ -102,11 +102,13 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
         Box_MarcaMicro.setSelectedItem(selecionadoUser.getMarcaMicro().getMarca());
         Box_ProprietarioMicro.setSelectedItem(selecionadoUser.getProprietarioMicro().getProprietario());
         Box_SO.setSelectedItem(selecionadoUser.getOsMicro().getOs());
+        jCheckBox_Ativo.setSelected(selecionadoUser.getAtivo());
+        Campo_CpfUser.setText(selecionadoUser.getCpf());
         //Carregando combo com dados do Monitor do Usuário selecionado: 
 
         campo_Garantia.setText(selecionadoUser.getGarantia());
         //campoOBS.setText(selecionadoUser.getObs());
-        Campo_NovoTomboMicro.setText(selecionadoUser.getNovoTomboMicro());
+
 
         //atribui valor a variável global selecionadoNota
         this.selecionadoUser = selecionadoUser;
@@ -842,8 +844,6 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
 
             alterarUser.setGarantia(campo_Garantia.getText().toUpperCase());
 
-            alterarUser.setNovoTomboMicro(Campo_NovoTomboMicro.getText().toUpperCase());
-
             alterarUser.setTermo_responsabilidade(checkPossuiTermo.isSelected());
 
             //String campoGarantia = campo_Garantia.getText().toUpperCase();
@@ -908,9 +908,9 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
         Campo_HostNameMicro.setText("");
         Campo_NomeUser.setText("");
         Campo_SerieMicro.setText("");
-
+        Campo_CpfUser.setText("");
         Campo_TomboMicro.setText("");
-
+        jCheckBox_Ativo.setSelected(false);
         Campo_cmtech.setText("");
         campo_Garantia.setText("");
     }//GEN-LAST:event_jMenuItem1ActionPerformed
