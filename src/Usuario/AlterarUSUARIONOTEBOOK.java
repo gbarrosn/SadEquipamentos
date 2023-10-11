@@ -1102,6 +1102,7 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
         // TODO add your handling code here:
         AlterarUSUARIO monitorExtra = new AlterarUSUARIO(selecionadoUser, logado);
         monitorExtra.setVisible(true);
+        dispose();
     }//GEN-LAST:event_ButtonMonitorExtraActionPerformed
 
     /**
