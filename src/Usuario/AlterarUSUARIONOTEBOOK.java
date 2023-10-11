@@ -450,7 +450,7 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
         Campo_CpfUser = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         jCheckBox_Ativo = new javax.swing.JCheckBox();
-        ButtonAdicionarMonitor = new javax.swing.JButton();
+        ButtonMonitorExtra = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -659,13 +659,13 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
         jCheckBox_Ativo.setText("Usuário Inativo?");
         getContentPane().add(jCheckBox_Ativo, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 176, -1, -1));
 
-        ButtonAdicionarMonitor.setText("Adicionar Monitor Extra");
-        ButtonAdicionarMonitor.addActionListener(new java.awt.event.ActionListener() {
+        ButtonMonitorExtra.setText("Adicionar Monitor Extra");
+        ButtonMonitorExtra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonAdicionarMonitorActionPerformed(evt);
+                ButtonMonitorExtraActionPerformed(evt);
             }
         });
-        getContentPane().add(ButtonAdicionarMonitor, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 330, 210, 30));
+        getContentPane().add(ButtonMonitorExtra, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 330, 210, 30));
 
         jMenu1.setText("Opções");
 
@@ -1098,9 +1098,11 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_campoExibirTermoActionPerformed
 
-    private void ButtonAdicionarMonitorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAdicionarMonitorActionPerformed
+    private void ButtonMonitorExtraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonMonitorExtraActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ButtonAdicionarMonitorActionPerformed
+        AlterarUSUARIO monitorExtra = new AlterarUSUARIO(selecionadoUser, logado);
+        monitorExtra.setVisible(true);
+    }//GEN-LAST:event_ButtonMonitorExtraActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1151,9 +1153,9 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
     private javax.swing.JComboBox Box_Plataforma;
     private javax.swing.JComboBox Box_ProprietarioMicro;
     private javax.swing.JComboBox Box_SO;
-    private javax.swing.JButton ButtonAdicionarMonitor;
     private javax.swing.JButton ButtonExibirInformarObs;
     private javax.swing.JButton ButtonExibirOrganograma;
+    private javax.swing.JButton ButtonMonitorExtra;
     private javax.swing.JButton Button_Alterar;
     private javax.swing.JButton Button_Cadastrar1;
     private javax.swing.JTextField Campo_CpfUser;

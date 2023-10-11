@@ -729,6 +729,8 @@ public class CadastrarUSUARIONOTEBOOK extends javax.swing.JFrame {
 
     private void ButtonMonitorExtraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonMonitorExtraActionPerformed
         // TODO add your handling code here:
+        AlterarUSUARIO alterar = new AlterarUSUARIO();
+        alterar.setVisible(true);
     }//GEN-LAST:event_ButtonMonitorExtraActionPerformed
 
     private ArrayList<Gerencia> allGerencias;
