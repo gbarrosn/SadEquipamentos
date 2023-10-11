@@ -237,14 +237,10 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         Campo_HostNameMicro = new javax.swing.JTextField();
         Box_ModeloMonitor = new javax.swing.JComboBox();
-        jLabel27 = new javax.swing.JLabel();
         Campo_SerieMonitor = new javax.swing.JTextField();
-        Campo_NovoTomboMonitor = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
         campoDescricao = new javax.swing.JLabel();
-        Campo_NovoTomboMicro = new javax.swing.JTextField();
         ButtonExibirOrganograma = new javax.swing.JButton();
         jLabel26 = new javax.swing.JLabel();
         Box_Office = new javax.swing.JComboBox();
@@ -280,6 +276,9 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
         Campo_SerieMicro = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         campoPossuiTermo = new javax.swing.JCheckBox();
+        Campo_CpfUser = new javax.swing.JTextField();
+        jLabel24 = new javax.swing.JLabel();
+        ButtonRemoverMonitorExtra = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -288,13 +287,17 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setText("            Usuário:");
         jLabel1.setAlignmentX(0.5F);
         jLabel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 6, 150, 29));
 
         jLabel22.setText("Garantia:");
+        getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 516, -1, -1));
+        getContentPane().add(campo_Garantia, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 513, 263, -1));
 
         Button_Cadastrar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Button_Cadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Icons/diskette_32.png"))); // NOI18N
@@ -304,6 +307,9 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
                 Button_CadastrarActionPerformed(evt);
             }
         });
+        getContentPane().add(Button_Cadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 558, 125, -1));
+        getContentPane().add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 509, 925, -1));
+        getContentPane().add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 164, 1, 0));
 
         Button_Cadastrar1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Button_Cadastrar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Icons/arrow_left_32.png"))); // NOI18N
@@ -313,6 +319,7 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
                 Button_Cadastrar1ActionPerformed(evt);
             }
         });
+        getContentPane().add(Button_Cadastrar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(839, 558, 112, -1));
 
         jButtonLimparCampos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Icons/format_painter.png"))); // NOI18N
         jButtonLimparCampos.setText("Limpar Campos");
@@ -321,15 +328,20 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
                 jButtonLimparCamposActionPerformed(evt);
             }
         });
+        getContentPane().add(jButtonLimparCampos, new org.netbeans.lib.awtextra.AbsoluteConstraints(656, 558, -1, -1));
+        getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 549, 885, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel6.setText("      Microcomputador:");
+        jLabel6.setText("      Notebook:");
         jLabel6.setAlignmentX(0.5F);
         jLabel6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 167, 159, 35));
 
         jLabel2.setText("Nome:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 50, -1, -1));
 
         jLabel3.setText("Gerência:");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(368, 89, -1, -1));
 
         Box_ModeloMicro.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Modelo do Micro" }));
         Box_ModeloMicro.addItemListener(new java.awt.event.ItemListener() {
@@ -342,6 +354,7 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
                 Box_ModeloMicroMouseClicked(evt);
             }
         });
+        getContentPane().add(Box_ModeloMicro, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 253, 241, -1));
 
         Box_GerenciaUser.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Gerência" }));
         Box_GerenciaUser.addItemListener(new java.awt.event.ItemListener() {
@@ -354,10 +367,13 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
                 Box_GerenciaUserMouseClicked(evt);
             }
         });
+        getContentPane().add(Box_GerenciaUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(445, 86, 190, -1));
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel16.setText("            Monitor:");
         jLabel16.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 388, 150, 33));
+        getContentPane().add(Campo_HostNameMicro, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 217, 239, -1));
 
         Box_ModeloMonitor.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Modelo do Monitor" }));
         Box_ModeloMonitor.addItemListener(new java.awt.event.ItemListener() {
@@ -370,16 +386,17 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
                 Box_ModeloMonitorMouseClicked(evt);
             }
         });
-
-        jLabel27.setText("Novo Tombo:");
+        getContentPane().add(Box_ModeloMonitor, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 467, 266, -1));
+        getContentPane().add(Campo_SerieMonitor, new org.netbeans.lib.awtextra.AbsoluteConstraints(114, 435, 266, -1));
 
         jLabel7.setText("Host Name:");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 220, -1, -1));
 
         jLabel8.setText("Tombo:");
-
-        jLabel28.setText("Novo Tombo:");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(399, 220, -1, -1));
 
         campoDescricao.setText("Descrição:");
+        getContentPane().add(campoDescricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(368, 120, -1, -1));
 
         ButtonExibirOrganograma.setText("Exibir organograma");
         ButtonExibirOrganograma.addActionListener(new java.awt.event.ActionListener() {
@@ -387,8 +404,10 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
                 ButtonExibirOrganogramaActionPerformed(evt);
             }
         });
+        getContentPane().add(ButtonExibirOrganograma, new org.netbeans.lib.awtextra.AbsoluteConstraints(685, 83, 170, 31));
 
         jLabel26.setText("Office:");
+        getContentPane().add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(399, 331, -1, -1));
 
         Box_Office.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Versão do Pacote Office" }));
         Box_Office.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -396,8 +415,10 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
                 Box_OfficeMouseClicked(evt);
             }
         });
+        getContentPane().add(Box_Office, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 328, 220, -1));
 
         jLabel12.setText("Modelo:");
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 256, -1, -1));
 
         Box_SO.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Sistema Operacional" }));
         Box_SO.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -405,6 +426,7 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
                 Box_SOMouseClicked(evt);
             }
         });
+        getContentPane().add(Box_SO, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 328, 243, -1));
 
         Box_MarcaMicro.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Marca do Micro" }));
         Box_MarcaMicro.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -412,6 +434,7 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
                 Box_MarcaMicroMouseClicked(evt);
             }
         });
+        getContentPane().add(Box_MarcaMicro, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 289, 220, -1));
 
         Box_ConfigMicro.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Configuração" }));
         Box_ConfigMicro.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -419,8 +442,10 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
                 Box_ConfigMicroMouseClicked(evt);
             }
         });
+        getContentPane().add(Box_ConfigMicro, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 289, 243, -1));
 
         jLabel18.setText("Série:");
+        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 439, -1, 20));
 
         Box_ProprietarioMonitor.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Proprietário do Monitor" }));
         Box_ProprietarioMonitor.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -428,8 +453,10 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
                 Box_ProprietarioMonitorMouseClicked(evt);
             }
         });
+        getContentPane().add(Box_ProprietarioMonitor, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 467, 149, -1));
 
         jLabel17.setText("Tombo:");
+        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(401, 438, -1, -1));
 
         Box_Plataforma.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Plataforma do Micro" }));
         Box_Plataforma.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -437,6 +464,12 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
                 Box_PlataformaMouseClicked(evt);
             }
         });
+        Box_Plataforma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Box_PlataformaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Box_Plataforma, new org.netbeans.lib.awtextra.AbsoluteConstraints(768, 217, 163, -1));
 
         Box_CargoUser.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Cargo" }));
         Box_CargoUser.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -444,10 +477,13 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
                 Box_CargoUserMouseClicked(evt);
             }
         });
+        getContentPane().add(Box_CargoUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(445, 47, 190, -1));
 
         jLabel23.setText("CESU:");
+        getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 256, -1, -1));
 
         jLabel15.setText("Plataforma:");
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 220, -1, -1));
 
         Box_PavimentoUser.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Pavimento" }));
         Box_PavimentoUser.addItemListener(new java.awt.event.ItemListener() {
@@ -465,6 +501,9 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
                 Box_PavimentoUserActionPerformed(evt);
             }
         });
+        getContentPane().add(Box_PavimentoUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 86, 220, -1));
+        getContentPane().add(Campo_NomeUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 47, 220, -1));
+        getContentPane().add(Campo_cmtech, new org.netbeans.lib.awtextra.AbsoluteConstraints(768, 253, 163, -1));
 
         Box_ProprietarioMicro.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Proprietário do Micro" }));
         Box_ProprietarioMicro.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -472,12 +511,18 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
                 Box_ProprietarioMicroMouseClicked(evt);
             }
         });
+        getContentPane().add(Box_ProprietarioMicro, new org.netbeans.lib.awtextra.AbsoluteConstraints(772, 289, 163, -1));
 
         jLabel10.setText("Configuração:");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 292, -1, -1));
 
         jLabel5.setText("Pavimento:");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 89, -1, -1));
+        getContentPane().add(Campo_TomboMonitor, new org.netbeans.lib.awtextra.AbsoluteConstraints(457, 432, 232, -1));
+        getContentPane().add(Campo_TomboMicro, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 217, 220, -1));
 
         jLabel19.setText("Modelo:");
+        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 470, -1, -1));
 
         Box_MarcaMonitor.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Marca do Monitor" }));
         Box_MarcaMonitor.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -485,28 +530,52 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
                 Box_MarcaMonitorMouseClicked(evt);
             }
         });
+        getContentPane().add(Box_MarcaMonitor, new org.netbeans.lib.awtextra.AbsoluteConstraints(459, 467, 232, -1));
 
         jLabel14.setText("Sistema:");
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 331, 60, -1));
 
-        jLabel4.setText("Cargo:");
+        jLabel4.setText("Cpf:");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(645, 50, 30, -1));
+        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(72, 153, 879, 2));
+        getContentPane().add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 374, 879, 2));
 
         jLabel11.setText("Marca:");
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(399, 292, -1, -1));
 
         jLabel20.setText("Marca:");
+        getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(403, 473, -1, -1));
 
         jLabel9.setText("Série:");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(399, 256, 50, -1));
 
         jLabel21.setText("Proprietário:");
+        getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(701, 470, -1, -1));
 
         Campo_SerieMicro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Campo_SerieMicroActionPerformed(evt);
             }
         });
+        getContentPane().add(Campo_SerieMicro, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 253, 220, -1));
 
         jLabel13.setText("Proprietário:");
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 292, -1, -1));
 
         campoPossuiTermo.setText("Possui Termo?");
+        getContentPane().add(campoPossuiTermo, new org.netbeans.lib.awtextra.AbsoluteConstraints(403, 514, -1, -1));
+        getContentPane().add(Campo_CpfUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(685, 47, 220, -1));
+
+        jLabel24.setText("Cargo:");
+        getContentPane().add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(368, 50, -1, -1));
+
+        ButtonRemoverMonitorExtra.setText("Remover Monitor Extra");
+        ButtonRemoverMonitorExtra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonRemoverMonitorExtraActionPerformed(evt);
+            }
+        });
+        getContentPane().add(ButtonRemoverMonitorExtra, new org.netbeans.lib.awtextra.AbsoluteConstraints(725, 325, 210, 31));
 
         jMenu1.setText("Opções");
 
@@ -537,294 +606,6 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         setJMenuBar(jMenuBar1);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(jSeparator3, javax.swing.GroupLayout.DEFAULT_SIZE, 1, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jSeparator5, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(22, 22, 22)
-                                            .addComponent(jLabel5)
-                                            .addGap(10, 10, 10)
-                                            .addComponent(Box_PavimentoUser, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(jLabel3)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(Box_GerenciaUser, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(10, 10, 10)
-                                            .addComponent(ButtonExibirOrganograma, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(436, 436, 436)
-                                            .addComponent(campoDescricao))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(22, 22, 22)
-                                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(22, 22, 22)
-                                            .addComponent(jLabel10)
-                                            .addGap(10, 10, 10)
-                                            .addComponent(Box_ConfigMicro, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(jLabel11)
-                                            .addGap(10, 10, 10)
-                                            .addComponent(Box_MarcaMicro, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(jLabel13)
-                                            .addGap(20, 20, 20)
-                                            .addComponent(Box_ProprietarioMicro, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(22, 22, 22)
-                                            .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(22, 22, 22)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(jLabel18)
-                                                    .addGap(28, 28, 28)
-                                                    .addComponent(Campo_SerieMonitor, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addGap(21, 21, 21)
-                                                    .addComponent(jLabel17)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Campo_TomboMonitor, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addGap(13, 13, 13)
-                                                    .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Campo_NovoTomboMonitor, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(jLabel19)
-                                                    .addGap(18, 18, 18)
-                                                    .addComponent(Box_ModeloMonitor, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addGap(21, 21, 21)
-                                                    .addComponent(jLabel20)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                    .addComponent(Box_MarcaMonitor, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addGap(10, 10, 10)
-                                                    .addComponent(jLabel21)
-                                                    .addGap(10, 10, 10)
-                                                    .addComponent(Box_ProprietarioMonitor, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                        .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 879, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(22, 22, 22)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLabel15))
-                                            .addGap(24, 24, 24)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(Box_SO, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                    .addComponent(jLabel26)
-                                                    .addGap(10, 10, 10)
-                                                    .addComponent(Box_Office, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addComponent(Box_Plataforma, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(22, 22, 22)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(jLabel7)
-                                                    .addGap(24, 24, 24)
-                                                    .addComponent(Campo_HostNameMicro, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addGap(20, 20, 20)
-                                                    .addComponent(jLabel8)
-                                                    .addGap(4, 4, 4)
-                                                    .addComponent(Campo_TomboMicro, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addGap(18, 18, 18)
-                                                    .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(jLabel12)
-                                                    .addGap(42, 42, 42)
-                                                    .addComponent(Box_ModeloMicro, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addGap(18, 18, 18)
-                                                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addGap(4, 4, 4)
-                                                    .addComponent(Campo_SerieMicro, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addGap(21, 21, 21)
-                                                    .addComponent(jLabel23)))
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(Campo_cmtech)
-                                                .addComponent(Campo_NovoTomboMicro, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(22, 22, 22)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(jLabel2)
-                                                    .addGap(33, 33, 33)
-                                                    .addComponent(Campo_NomeUser, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addGap(18, 18, 18)
-                                                    .addComponent(jLabel4)
-                                                    .addGap(31, 31, 31)
-                                                    .addComponent(Box_CargoUser, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                    .addGap(6, 6, 6))
-                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 879, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Button_Cadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(497, 497, 497)
-                                .addComponent(jButtonLimparCampos)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(Button_Cadastrar1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 885, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(22, 22, 22))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(51, 51, 51)
-                .addComponent(jLabel22)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(campo_Garantia, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(campoPossuiTermo)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(174, 174, 174)
-                        .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel22)
-                            .addComponent(campo_Garantia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(campoPossuiTermo))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 24, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Campo_NomeUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Box_CargoUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(3, 3, 3)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel4))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(3, 3, 3)
-                                .addComponent(jLabel5))
-                            .addComponent(Box_PavimentoUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(jLabel3))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(Box_GerenciaUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(ButtonExibirOrganograma, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(7, 7, 7)
-                        .addComponent(campoDescricao)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Campo_HostNameMicro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(Campo_TomboMicro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel28)
-                                .addComponent(Campo_NovoTomboMicro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(3, 3, 3)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel7)
-                                    .addComponent(jLabel8))))
-                        .addGap(11, 11, 11)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Box_ModeloMicro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Campo_SerieMicro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Campo_cmtech, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(3, 3, 3)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel12)
-                                    .addComponent(jLabel9)
-                                    .addComponent(jLabel23))))
-                        .addGap(11, 11, 11)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Box_ConfigMicro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Box_MarcaMicro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Box_ProprietarioMicro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(3, 3, 3)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel10)
-                                    .addComponent(jLabel11)
-                                    .addComponent(jLabel13))))
-                        .addGap(11, 11, 11)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Box_Office, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(3, 3, 3)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel14)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jLabel26)
-                                        .addComponent(Box_SO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(12, 12, 12)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel15)
-                            .addComponent(Box_Plataforma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(14, 14, 14)
-                        .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(11, 11, 11)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(3, 3, 3)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jLabel17)
-                                        .addComponent(Campo_SerieMonitor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addComponent(Campo_TomboMonitor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(1, 1, 1)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel27)
-                                    .addComponent(Campo_NovoTomboMonitor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(8, 8, 8)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(3, 3, 3)
-                                .addComponent(jLabel19))
-                            .addComponent(Box_ModeloMonitor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(jLabel20))
-                            .addComponent(Box_MarcaMonitor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(3, 3, 3)
-                                .addComponent(jLabel21))
-                            .addComponent(Box_ProprietarioMonitor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)))
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(19, 19, 19)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButtonLimparCampos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Button_Cadastrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(Button_Cadastrar1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(17, 17, 17))
-        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1550,6 +1331,14 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
         listarMarcaMicro();
     }//GEN-LAST:event_Box_MarcaMicroMouseClicked
 
+    private void ButtonRemoverMonitorExtraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonRemoverMonitorExtraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ButtonRemoverMonitorExtraActionPerformed
+
+    private void Box_PlataformaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Box_PlataformaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Box_PlataformaActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -1604,12 +1393,12 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
     private javax.swing.JComboBox Box_ProprietarioMonitor;
     private javax.swing.JComboBox Box_SO;
     private javax.swing.JButton ButtonExibirOrganograma;
+    private javax.swing.JButton ButtonRemoverMonitorExtra;
     private javax.swing.JButton Button_Cadastrar;
     private javax.swing.JButton Button_Cadastrar1;
+    private javax.swing.JTextField Campo_CpfUser;
     private javax.swing.JTextField Campo_HostNameMicro;
     private javax.swing.JTextField Campo_NomeUser;
-    private javax.swing.JTextField Campo_NovoTomboMicro;
-    private javax.swing.JTextField Campo_NovoTomboMonitor;
     private javax.swing.JTextField Campo_SerieMicro;
     private javax.swing.JTextField Campo_SerieMonitor;
     private javax.swing.JTextField Campo_TomboMicro;
@@ -1635,9 +1424,8 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
