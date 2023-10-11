@@ -1403,7 +1403,7 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
 
         MarcaMonitor marcaMonitor = new MarcaMonitor();
         marcaMonitor.setIdMarca(8);
-        
+
         userSemMonitorExtra.setMarcaMonitor(marcaMonitor);
         userSemMonitorExtra.setModeloMonitor(modeloMonitor);
         userSemMonitorExtra.setProprietarioMonitor(null);
