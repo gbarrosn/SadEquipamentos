@@ -196,7 +196,7 @@
                       <EmptySpace min="13" pref="13" max="-2" attributes="0"/>
                       <Component id="Box_Office" min="-2" pref="209" max="-2" attributes="0"/>
                       <EmptySpace min="35" pref="35" max="-2" attributes="0"/>
-                      <Component id="ButtonMonitorExtra" min="-2" pref="210" max="-2" attributes="0"/>
+                      <Component id="ButtonRemoverMonitorExtra" min="-2" pref="210" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
@@ -353,7 +353,7 @@
                   <Component id="Box_Office" min="-2" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
                       <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
-                      <Component id="ButtonMonitorExtra" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="ButtonRemoverMonitorExtra" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
@@ -759,12 +759,12 @@
         <Property name="text" type="java.lang.String" value="Usu&#xe1;rio Inativo?"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="ButtonMonitorExtra">
+    <Component class="javax.swing.JButton" name="ButtonRemoverMonitorExtra">
       <Properties>
         <Property name="text" type="java.lang.String" value="Remover Monitor Extra"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonMonitorExtraActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonRemoverMonitorExtraActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JSeparator" name="jSeparator6">

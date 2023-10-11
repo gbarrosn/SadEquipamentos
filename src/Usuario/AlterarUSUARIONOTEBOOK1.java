@@ -62,34 +62,6 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
         }
     }
 
-    void ListarMarcaMonitor() {
-        try {
-            //*********************** ComboBox MarcaMonitor:
-            try {
-                MarcaMonitor comboMarcaMonitor = new MarcaMonitor();
-
-                comboMarcaMonitor.setMarca("");
-                allMarcasMonitores = Fachada.getInstancia().listarMarcaMonitor(comboMarcaMonitor);
-
-                DefaultComboBoxModel listaComboMarcasMonitores = new DefaultComboBoxModel();
-
-                listaComboMarcasMonitores.addElement("Marca do Monitor");
-
-                for (int i = 0; i < allMarcasMonitores.size(); i++) {
-                    MarcaMonitor nomeComboMarcaMonitor = new MarcaMonitor();
-                    nomeComboMarcaMonitor = allMarcasMonitores.get(i);
-                    listaComboMarcasMonitores.addElement(nomeComboMarcaMonitor.getMarca());
-                }
-                Box_MarcaMonitor.setModel(listaComboMarcasMonitores);
-
-            } catch (Exception e) {
-                throw new Exception("Não existe nenhuma Marca de Monitor cadastrada no banco de dados " + e.getMessage());
-            }
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(rootPane, e.getMessage());
-        }
-    }
-
     public AlterarUSUARIONOTEBOOK1(Usuario selecionadoUser) {
 
     }
@@ -479,7 +451,7 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
         Campo_CpfUser = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         jCheckBox_Ativo = new javax.swing.JCheckBox();
-        ButtonMonitorExtra = new javax.swing.JButton();
+        ButtonRemoverMonitorExtra = new javax.swing.JButton();
         jSeparator6 = new javax.swing.JSeparator();
         jLabel17 = new javax.swing.JLabel();
         Box_ModeloMonitor = new javax.swing.JComboBox();
@@ -649,10 +621,10 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
 
         jCheckBox_Ativo.setText("Usuário Inativo?");
 
-        ButtonMonitorExtra.setText("Remover Monitor Extra");
-        ButtonMonitorExtra.addActionListener(new java.awt.event.ActionListener() {
+        ButtonRemoverMonitorExtra.setText("Remover Monitor Extra");
+        ButtonRemoverMonitorExtra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonMonitorExtraActionPerformed(evt);
+                ButtonRemoverMonitorExtraActionPerformed(evt);
             }
         });
 
@@ -855,7 +827,7 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
                         .addGap(13, 13, 13)
                         .addComponent(Box_Office, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(35, 35, 35)
-                        .addComponent(ButtonMonitorExtra, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(ButtonRemoverMonitorExtra, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 869, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -979,7 +951,7 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
                     .addComponent(Box_Office, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(2, 2, 2)
-                        .addComponent(ButtonMonitorExtra, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(ButtonRemoverMonitorExtra, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(10, 10, 10)
                 .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
@@ -1412,16 +1384,71 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_campoExibirTermoActionPerformed
 
-    private void ButtonMonitorExtraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonMonitorExtraActionPerformed
+    private void ButtonRemoverMonitorExtraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonRemoverMonitorExtraActionPerformed
         // TODO add your handling code here:
-        AlterarUSUARIO1 monitorExtra = new AlterarUSUARIO1(selecionadoUser, logado);
-        monitorExtra.setVisible(true);
+        AlterarUSUARIONOTEBOOK alterar = new AlterarUSUARIONOTEBOOK(selecionadoUser, this.logado);
+        alterar.setVisible(true);
         dispose();
-    }//GEN-LAST:event_ButtonMonitorExtraActionPerformed
+    }//GEN-LAST:event_ButtonRemoverMonitorExtraActionPerformed
 
     private void Box_ModeloMonitorItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_Box_ModeloMonitorItemStateChanged
-        act_when_modeloMonitorItemStateChanged();
+        try {
+            if (Box_ModeloMonitor.getSelectedItem().equals("Modelo do Monitor")) {
+                listarMarcaMonitor();
+            } else {
+                MarcaMonitor filtroMarcaMonitor = new MarcaMonitor();
+                try {
+                    filtroMarcaMonitor.setMarca("");
+                    int SelecionadoModelo = Box_ModeloMonitor.getSelectedIndex() - 1;
+                    ModeloMonitor modelo = new ModeloMonitor();
+                    modelo = (allModelosMonitores.get(SelecionadoModelo));
+                    filtroMarcaMonitor.setIdMarca(modelo.getMarca().getIdMarca());
+                    allMarcasMonitores = Fachada.getInstancia().listarMarcaMonitor(filtroMarcaMonitor);
+                    DefaultComboBoxModel listaCombo = new DefaultComboBoxModel();
+                    listaCombo.addElement("Marca do Monitor");
+                    for (int i = 0; i < allMarcasMonitores.size(); i++) {
+                        MarcaMonitor nomeCombo = new MarcaMonitor();
+                        nomeCombo = allMarcasMonitores.get(i);
+                        listaCombo.addElement(nomeCombo.getMarca());
+                    }
+                    Box_MarcaMonitor.setModel(listaCombo);
+                    Box_MarcaMonitor.setSelectedIndex(1);
+                } catch (Exception e) {
+                    throw new Exception(e.getMessage());
+                }
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, "Erro - " + e.getMessage());
+        }
     }//GEN-LAST:event_Box_ModeloMonitorItemStateChanged
+
+    private void listarMarcaMonitor() {
+        try {
+            //*********************** ComboBox MarcaMonitor:
+            try {
+                MarcaMonitor comboMarcaMonitor = new MarcaMonitor();
+
+                comboMarcaMonitor.setMarca("");
+                allMarcasMonitores = Fachada.getInstancia().listarMarcaMonitor(comboMarcaMonitor);
+
+                DefaultComboBoxModel listaComboMarcasMonitores = new DefaultComboBoxModel();
+
+                listaComboMarcasMonitores.addElement("Marca do Monitor");
+
+                for (int i = 0; i < allMarcasMonitores.size(); i++) {
+                    MarcaMonitor nomeComboMarcaMonitor = new MarcaMonitor();
+                    nomeComboMarcaMonitor = allMarcasMonitores.get(i);
+                    listaComboMarcasMonitores.addElement(nomeComboMarcaMonitor.getMarca());
+                }
+                Box_MarcaMonitor.setModel(listaComboMarcasMonitores);
+
+            } catch (Exception e) {
+                throw new Exception("Não existe nenhuma Marca de Monitor cadastrada no banco de dados " + e.getMessage());
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, e.getMessage());
+        }
+    }
 
     private void Box_ModeloMonitorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Box_ModeloMonitorMouseClicked
         populateModeloMonitorComboBox();
@@ -1493,7 +1520,7 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
     private javax.swing.JComboBox Box_SO;
     private javax.swing.JButton ButtonExibirInformarObs;
     private javax.swing.JButton ButtonExibirOrganograma;
-    private javax.swing.JButton ButtonMonitorExtra;
+    private javax.swing.JButton ButtonRemoverMonitorExtra;
     private javax.swing.JButton Button_Alterar;
     private javax.swing.JButton Button_Cadastrar1;
     private javax.swing.JTextField Campo_CpfUser;

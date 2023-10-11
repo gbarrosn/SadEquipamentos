@@ -806,10 +806,10 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
                 .addGap(12, 12, 12)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Button_Cadastrar)
-                    .addComponent(Button_Cadastrar1)
-                    .addComponent(jButtonLimparCampos))
+                    .addComponent(jButtonLimparCampos)
+                    .addComponent(Button_Cadastrar1))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 

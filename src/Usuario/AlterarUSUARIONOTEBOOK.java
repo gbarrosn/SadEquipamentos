@@ -1100,8 +1100,8 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
 
     private void ButtonMonitorExtraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonMonitorExtraActionPerformed
         // TODO add your handling code here:
-        AlterarUSUARIO1 monitorExtra = new AlterarUSUARIO1(selecionadoUser, logado);
-        monitorExtra.setVisible(true);
+        AlterarUSUARIONOTEBOOK1 alterar = new AlterarUSUARIONOTEBOOK1(this.selecionadoUser, this.logado);
+        alterar.setVisible(true);
         dispose();
     }//GEN-LAST:event_ButtonMonitorExtraActionPerformed
 
