@@ -41,6 +41,7 @@ import static Usuario.ListarUSUARIO.jButtonListarFiltros;
  */
 public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
 
+
     /**
      * Creates new form FormCadastrarUsuario
      */
