@@ -6,7 +6,7 @@ public class ManipulaNumero {
 
         String codigo_orgao = "";
 
-        if (gerencia == 9){
+        if (gerencia == 9 || gerencia == 7){
             codigo_orgao = "120101.";
         } else if (gerencia == 15 || gerencia == 12){
             codigo_orgao = "140101.";
