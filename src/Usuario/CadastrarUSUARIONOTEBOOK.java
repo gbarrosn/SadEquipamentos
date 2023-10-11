@@ -149,11 +149,11 @@ public class CadastrarUSUARIONOTEBOOK extends javax.swing.JFrame {
         Box_Office = new javax.swing.JComboBox();
         jLabel3 = new javax.swing.JLabel();
         Box_GerenciaUser = new javax.swing.JComboBox();
-        ButtonMonitorExtra = new javax.swing.JButton();
+        ButtonExibirOrganograma = new javax.swing.JButton();
         campoPossuiTermo = new javax.swing.JCheckBox();
         Campo_NomeUser = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
-        ButtonExibirOrganograma1 = new javax.swing.JButton();
+        ButtonMonitorExtra = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -322,13 +322,13 @@ public class CadastrarUSUARIONOTEBOOK extends javax.swing.JFrame {
         });
         getContentPane().add(Box_GerenciaUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(437, 91, 147, -1));
 
-        ButtonMonitorExtra.setText("Adicionar Monitor Ao Notebook");
-        ButtonMonitorExtra.addActionListener(new java.awt.event.ActionListener() {
+        ButtonExibirOrganograma.setText("Exibir organograma");
+        ButtonExibirOrganograma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonMonitorExtraActionPerformed(evt);
+                ButtonExibirOrganogramaActionPerformed(evt);
             }
         });
-        getContentPane().add(ButtonMonitorExtra, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 330, 260, 31));
+        getContentPane().add(ButtonExibirOrganograma, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 90, 180, 31));
 
         campoPossuiTermo.setText("Possui Termo?");
         getContentPane().add(campoPossuiTermo, new org.netbeans.lib.awtextra.AbsoluteConstraints(371, 391, -1, -1));
@@ -337,13 +337,13 @@ public class CadastrarUSUARIONOTEBOOK extends javax.swing.JFrame {
         jLabel16.setText("Cargo:");
         getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 55, -1, -1));
 
-        ButtonExibirOrganograma1.setText("Exibir organograma");
-        ButtonExibirOrganograma1.addActionListener(new java.awt.event.ActionListener() {
+        ButtonMonitorExtra.setText("Adicionar Monitor Extra");
+        ButtonMonitorExtra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonExibirOrganograma1ActionPerformed(evt);
+                ButtonMonitorExtraActionPerformed(evt);
             }
         });
-        getContentPane().add(ButtonExibirOrganograma1, new org.netbeans.lib.awtextra.AbsoluteConstraints(636, 88, 180, 31));
+        getContentPane().add(ButtonMonitorExtra, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 330, 210, 31));
 
         jMenu1.setText("Opções");
 
@@ -715,7 +715,7 @@ public class CadastrarUSUARIONOTEBOOK extends javax.swing.JFrame {
         textogerencia.setText("Descrição:  " + descricao);
     }//GEN-LAST:event_Box_GerenciaUserItemStateChanged
 
-    private void ButtonMonitorExtraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonMonitorExtraActionPerformed
+    private void ButtonExibirOrganogramaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonExibirOrganogramaActionPerformed
         try {
             String urlPadrao = ("src\\resources\\organograma2015.pdf");
             File file = new File(urlPadrao);
@@ -725,11 +725,11 @@ public class CadastrarUSUARIONOTEBOOK extends javax.swing.JFrame {
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(rootPane, "Nenhum organograma encontrado no sistema!");
         }
-    }//GEN-LAST:event_ButtonMonitorExtraActionPerformed
+    }//GEN-LAST:event_ButtonExibirOrganogramaActionPerformed
 
-    private void ButtonExibirOrganograma1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonExibirOrganograma1ActionPerformed
+    private void ButtonMonitorExtraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonMonitorExtraActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ButtonExibirOrganograma1ActionPerformed
+    }//GEN-LAST:event_ButtonMonitorExtraActionPerformed
 
     private ArrayList<Gerencia> allGerencias;
     private ArrayList<Cargo> allCargos;
@@ -1056,7 +1056,7 @@ public class CadastrarUSUARIONOTEBOOK extends javax.swing.JFrame {
     private javax.swing.JComboBox Box_Plataforma;
     private javax.swing.JComboBox Box_ProprietarioMicro;
     private javax.swing.JComboBox Box_SO;
-    private javax.swing.JButton ButtonExibirOrganograma1;
+    private javax.swing.JButton ButtonExibirOrganograma;
     private javax.swing.JButton ButtonMonitorExtra;
     private javax.swing.JButton Button_Cadastrar;
     private javax.swing.JButton Button_Cadastrar1;

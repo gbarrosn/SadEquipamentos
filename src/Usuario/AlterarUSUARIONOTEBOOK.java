@@ -439,7 +439,7 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
         Box_Office = new javax.swing.JComboBox();
         textoDataAlteracao = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
-        ButtonMonitorExtra = new javax.swing.JButton();
+        campoExibirTermo = new javax.swing.JButton();
         checkPossuiTermo = new javax.swing.JCheckBox();
         ButtonExibirInformarObs = new javax.swing.JButton();
         campo_Garantia = new javax.swing.JTextField();
@@ -450,7 +450,7 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
         Campo_CpfUser = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         jCheckBox_Ativo = new javax.swing.JCheckBox();
-        campoExibirTermo1 = new javax.swing.JButton();
+        ButtonAdicionarMonitor = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -610,13 +610,13 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
         jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Icons/clock_32.png"))); // NOI18N
         getContentPane().add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(188, 6, -1, -1));
 
-        ButtonMonitorExtra.setText("Adicionar Monitor ao Notebook");
-        ButtonMonitorExtra.addActionListener(new java.awt.event.ActionListener() {
+        campoExibirTermo.setText("Exibir Termo de Responsabilidade");
+        campoExibirTermo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonMonitorExtraActionPerformed(evt);
+                campoExibirTermoActionPerformed(evt);
             }
         });
-        getContentPane().add(ButtonMonitorExtra, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 330, 250, 35));
+        getContentPane().add(campoExibirTermo, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 390, 209, 35));
 
         checkPossuiTermo.setText("Possui Termo?");
         getContentPane().add(checkPossuiTermo, new org.netbeans.lib.awtextra.AbsoluteConstraints(516, 400, -1, -1));
@@ -659,13 +659,13 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
         jCheckBox_Ativo.setText("Usuário Inativo?");
         getContentPane().add(jCheckBox_Ativo, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 176, -1, -1));
 
-        campoExibirTermo1.setText("Exibir Termo de Responsabilidade");
-        campoExibirTermo1.addActionListener(new java.awt.event.ActionListener() {
+        ButtonAdicionarMonitor.setText("Adicionar Monitor Extra");
+        ButtonAdicionarMonitor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoExibirTermo1ActionPerformed(evt);
+                ButtonAdicionarMonitorActionPerformed(evt);
             }
         });
-        getContentPane().add(campoExibirTermo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(651, 394, 230, 35));
+        getContentPane().add(ButtonAdicionarMonitor, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 330, 210, 30));
 
         jMenu1.setText("Opções");
 
@@ -1087,7 +1087,7 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_ButtonExibirOrganogramaActionPerformed
 
-    private void ButtonMonitorExtraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonMonitorExtraActionPerformed
+    private void campoExibirTermoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoExibirTermoActionPerformed
         try {
             String urlPadrao = ("\\\\sadfs01\\GTINF\\USINF\\USINF 2015\\TERMO DE RESPONSABILIDADE\\Termos de Responsabilidade - Digitalizados\\");
             File file = new File(urlPadrao + this.selecionadoUser.getNome() + ".pdf");
@@ -1096,11 +1096,11 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(rootPane, "Nenhum Termo encontrado para o usuário de nome: " + this.selecionadoUser.getNome());
         }
-    }//GEN-LAST:event_ButtonMonitorExtraActionPerformed
+    }//GEN-LAST:event_campoExibirTermoActionPerformed
 
-    private void campoExibirTermo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoExibirTermo1ActionPerformed
+    private void ButtonAdicionarMonitorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAdicionarMonitorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoExibirTermo1ActionPerformed
+    }//GEN-LAST:event_ButtonAdicionarMonitorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1151,9 +1151,9 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
     private javax.swing.JComboBox Box_Plataforma;
     private javax.swing.JComboBox Box_ProprietarioMicro;
     private javax.swing.JComboBox Box_SO;
+    private javax.swing.JButton ButtonAdicionarMonitor;
     private javax.swing.JButton ButtonExibirInformarObs;
     private javax.swing.JButton ButtonExibirOrganograma;
-    private javax.swing.JButton ButtonMonitorExtra;
     private javax.swing.JButton Button_Alterar;
     private javax.swing.JButton Button_Cadastrar1;
     private javax.swing.JTextField Campo_CpfUser;
@@ -1163,7 +1163,7 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
     private javax.swing.JTextField Campo_TomboMicro;
     private javax.swing.JTextField Campo_cmtech;
     private javax.swing.JLabel campoDescricao;
-    private javax.swing.JButton campoExibirTermo1;
+    private javax.swing.JButton campoExibirTermo;
     private javax.swing.JTextField campo_Garantia;
     private javax.swing.JCheckBox checkPossuiTermo;
     private javax.swing.JButton jButtonLimparCampos;
