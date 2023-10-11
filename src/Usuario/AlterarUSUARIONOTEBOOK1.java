@@ -1387,14 +1387,17 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
     private void ButtonRemoverMonitorExtraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonRemoverMonitorExtraActionPerformed
         // TODO add your handling code here:
 
-        selecionadoUser.setModeloMonitor(null);
-        selecionadoUser.setMarcaMonitor(null);
-        selecionadoUser.setProprietarioMonitor(null);
-        selecionadoUser.setSerieMonitor(null);
-        selecionadoUser.setTombamentoMonitor(1);
+        Usuario userSemMonitorExtra = new Usuario();
+        userSemMonitorExtra = selecionadoUser.criarCopia();
+
+        userSemMonitorExtra.setMarcaMonitor(null);
+        userSemMonitorExtra.setModeloMonitor(null);
+        userSemMonitorExtra.setProprietarioMonitor(null);
+        userSemMonitorExtra.setSerieMonitor(null);
+        userSemMonitorExtra.setTombamentoMonitor(1);
 
         try {
-            Fachada.getInstancia().alterarUsuario(selecionadoUser, selecionadoUser);
+            Fachada.getInstancia().alterarUsuario(userSemMonitorExtra, selecionadoUser);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
