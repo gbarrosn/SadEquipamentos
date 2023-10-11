@@ -38,7 +38,7 @@ import javax.swing.*;
  *
  * @author Posseidon
  */
-public final class AlterarUSUARIO extends javax.swing.JFrame {
+public final class AlterarUSUARIO1 extends javax.swing.JFrame {
 
     /**
      * Creates new form FormCadastrarUsuario
@@ -66,7 +66,7 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
     
 
 
-    public AlterarUSUARIO() {
+    public AlterarUSUARIO1() {
         initComponents();
         setTitle("Formulário de alteração de cadastro de Usuário.");
     }
@@ -81,12 +81,12 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
         }
     }
 
-    public AlterarUSUARIO(Usuario selecionadoUser) {
+    public AlterarUSUARIO1(Usuario selecionadoUser) {
 
         initComponents();
     }
 
-    public AlterarUSUARIO(Usuario selecionadoUser, LoginUser logado) {
+    public AlterarUSUARIO1(Usuario selecionadoUser, LoginUser logado) {
 
         initComponents();
         setLocationRelativeTo(null);
