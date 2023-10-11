@@ -703,9 +703,9 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
         Campo_HostNameMicro.setText("");
         Campo_NomeUser.setText("");
         Campo_SerieMicro.setText("");
-
+        Campo_CpfUser.setText("");
         Campo_TomboMicro.setText("");
-
+        jCheckBox_Ativo.setSelected(false);
         Campo_cmtech.setText("");
         campo_Garantia.setText("");
     }//GEN-LAST:event_jButtonLimparCamposActionPerformed
@@ -846,6 +846,9 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
 
             alterarUser.setTermo_responsabilidade(checkPossuiTermo.isSelected());
 
+            alterarUser.setCpf(Campo_CpfUser.getText());
+
+            alterarUser.setAtivo(!jCheckBox_Ativo.isSelected());
             //String campoGarantia = campo_Garantia.getText().toUpperCase();
             alterarUser.setGarantia(campo_Garantia.getText().toUpperCase());
 
