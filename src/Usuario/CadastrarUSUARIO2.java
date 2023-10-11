@@ -67,8 +67,6 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
         campo_Garantia.setText("N/I");
         Campo_SerieMicro.setText("N/I");
         Campo_SerieMonitor.setText("N/I");
-        Campo_NovoTomboMicro.setText("N/I");
-        Campo_NovoTomboMonitor.setText("N/I");
         campoPossuiTermo.setSelected(false);
 
         Campo_TomboMicro.setText(1 + "");
@@ -90,8 +88,6 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
         Campo_SerieMicro.setText("N/I");
         Campo_SerieMonitor.setText("N/I");
 
-        Campo_NovoTomboMicro.setText("N/I");
-        Campo_NovoTomboMonitor.setText("N/I");
         campoPossuiTermo.setSelected(false);
 
         Campo_TomboMicro.setText(1 + "");
@@ -308,7 +304,7 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Button_Cadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 558, 125, -1));
-        getContentPane().add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 509, 925, -1));
+        getContentPane().add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 502, 925, 10));
         getContentPane().add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 164, 1, 0));
 
         Button_Cadastrar1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -737,10 +733,6 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
             user.setSerieMonitor(Campo_SerieMonitor.getText().toUpperCase());
 
             user.setGarantia(campo_Garantia.getText().toUpperCase());
-
-            user.setNovoTomboMicro(Campo_NovoTomboMicro.getText().toUpperCase());
-
-            user.setNovoTomboMonitor(Campo_NovoTomboMonitor.getText().toUpperCase());
 
             user.setTermo_responsabilidade(campoPossuiTermo.isSelected());
 
@@ -1333,6 +1325,7 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
 
     private void ButtonRemoverMonitorExtraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonRemoverMonitorExtraActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_ButtonRemoverMonitorExtraActionPerformed
 
     private void Box_PlataformaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Box_PlataformaActionPerformed
