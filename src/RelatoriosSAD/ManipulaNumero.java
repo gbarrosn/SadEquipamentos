@@ -28,7 +28,7 @@ public class ManipulaNumero {
         numeroStr = codigo_orgao + numeroStr;
 
         // Separa a string em três partes
-        String parte1 = numeroStr.substring(0, 7);  // '140101.'
+        String parte1 = numeroStr.substring(0, 7);  // 'codigo do orgao + .'
         String parte2 = numeroStr.substring(7, 13);  // Dígitos no meio
         String parte3 = numeroStr.substring(13);  // Últimos 4 dígitos
 
