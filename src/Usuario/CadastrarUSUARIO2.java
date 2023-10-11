@@ -382,8 +382,8 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
                 Box_ModeloMonitorMouseClicked(evt);
             }
         });
-        getContentPane().add(Box_ModeloMonitor, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 467, 266, -1));
-        getContentPane().add(Campo_SerieMonitor, new org.netbeans.lib.awtextra.AbsoluteConstraints(114, 435, 266, -1));
+        getContentPane().add(Box_ModeloMonitor, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 467, 230, -1));
+        getContentPane().add(Campo_SerieMonitor, new org.netbeans.lib.awtextra.AbsoluteConstraints(114, 435, 230, -1));
 
         jLabel7.setText("Host Name:");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 220, -1, -1));
@@ -524,6 +524,11 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
         Box_MarcaMonitor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Box_MarcaMonitorMouseClicked(evt);
+            }
+        });
+        Box_MarcaMonitor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Box_MarcaMonitorActionPerformed(evt);
             }
         });
         getContentPane().add(Box_MarcaMonitor, new org.netbeans.lib.awtextra.AbsoluteConstraints(459, 467, 232, -1));
@@ -1335,6 +1340,10 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
     private void Box_PlataformaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Box_PlataformaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Box_PlataformaActionPerformed
+
+    private void Box_MarcaMonitorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Box_MarcaMonitorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Box_MarcaMonitorActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
