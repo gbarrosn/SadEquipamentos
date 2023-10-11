@@ -1391,7 +1391,7 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
         selecionadoUser.setMarcaMonitor(null);
         selecionadoUser.setProprietarioMonitor(null);
         selecionadoUser.setSerieMonitor(null);
-        selecionadoUser.setTombamentoMonitor(null);
+        selecionadoUser.setTombamentoMonitor(1);
 
         try {
             Fachada.getInstancia().alterarUsuario(selecionadoUser, selecionadoUser);
