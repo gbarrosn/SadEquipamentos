@@ -1454,6 +1454,34 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
         populateModeloMonitorComboBox();
     }//GEN-LAST:event_Box_ModeloMonitorMouseClicked
 
+    private void populateModeloMonitorComboBox() {
+        try {
+            //*********************** ComboBox ModeloMonitor:
+            try {
+                ModeloMonitor comboModeloMonitor = new ModeloMonitor();
+
+                comboModeloMonitor.setModelo("");
+                allModelosMonitores = Fachada.getInstancia().listarModeloMonitor(comboModeloMonitor);
+
+                DefaultComboBoxModel listaComboModelosMonitores = new DefaultComboBoxModel();
+
+                listaComboModelosMonitores.addElement("Modelo do Monitor");
+
+                for (int i = 0; i < allModelosMonitores.size(); i++) {
+                    ModeloMonitor nomeComboModeloMonitor = new ModeloMonitor();
+                    nomeComboModeloMonitor = allModelosMonitores.get(i);
+                    listaComboModelosMonitores.addElement(nomeComboModeloMonitor.getModelo());
+                }
+                Box_ModeloMonitor.setModel(listaComboModelosMonitores);
+
+            } catch (Exception e) {
+                throw new Exception("Não existe nenhum Modelo de Monitor cadastrado no banco de dados " + e.getMessage());
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, e.getMessage());
+        }
+    }
+
     private void Box_ModeloMonitorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Box_ModeloMonitorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Box_ModeloMonitorActionPerformed
