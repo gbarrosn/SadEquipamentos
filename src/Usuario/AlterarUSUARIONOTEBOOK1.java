@@ -1401,12 +1401,15 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
         ModeloMonitor modeloMonitor = new ModeloMonitor();
         modeloMonitor.setIdModelo(31);
 
+        ProprietarioMonitor proprietarioMonitor = new ProprietarioMonitor();
+        proprietarioMonitor.setIdProprietario(7);
+
         MarcaMonitor marcaMonitor = new MarcaMonitor();
         marcaMonitor.setIdMarca(8);
 
         userSemMonitorExtra.setMarcaMonitor(marcaMonitor);
         userSemMonitorExtra.setModeloMonitor(modeloMonitor);
-        userSemMonitorExtra.setProprietarioMonitor(null);
+        userSemMonitorExtra.setProprietarioMonitor(proprietarioMonitor);
         userSemMonitorExtra.setSerieMonitor("");
         userSemMonitorExtra.setTombamentoMonitor(1);
 
