@@ -1393,14 +1393,21 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
 
     private void ButtonRemoverMonitorExtraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonRemoverMonitorExtraActionPerformed
         // TODO add your handling code here:
+        //TODO isso é gambiarra, tem que implementar algum campo que informe se tem monitor ou não e daí fazer a remoção
 
         Usuario userSemMonitorExtra = new Usuario();
         userSemMonitorExtra = selecionadoUser.criarCopia();
 
-        userSemMonitorExtra.setMarcaMonitor(null);
-        userSemMonitorExtra.setModeloMonitor(null);
+        ModeloMonitor modeloMonitor = new ModeloMonitor();
+        modeloMonitor.setIdModelo(31);
+
+        MarcaMonitor marcaMonitor = new MarcaMonitor();
+        marcaMonitor.setIdMarca(8);
+        
+        userSemMonitorExtra.setMarcaMonitor(marcaMonitor);
+        userSemMonitorExtra.setModeloMonitor(modeloMonitor);
         userSemMonitorExtra.setProprietarioMonitor(null);
-        userSemMonitorExtra.setSerieMonitor(null);
+        userSemMonitorExtra.setSerieMonitor("");
         userSemMonitorExtra.setTombamentoMonitor(1);
 
         try {
