@@ -54,8 +54,7 @@ public class CadastrarUSUARIONOTEBOOK extends javax.swing.JFrame {
 
         campo_Garantia.setText("N/I");
         Campo_SerieMicro.setText("N/I");
-
-        Campo_NovoTomboMicro.setText("N/I");
+        Campo_CpfUser.setText("");
         campoPossuiTermo.setSelected(false);
         Campo_TomboMicro.setText(1 + "");
 
@@ -89,7 +88,6 @@ public class CadastrarUSUARIONOTEBOOK extends javax.swing.JFrame {
         campo_Garantia.setText("N/I");
         Campo_SerieMicro.setText("N/I");
 
-        Campo_NovoTomboMicro.setText("N/I");
         campoPossuiTermo.setSelected(false);
         Campo_TomboMicro.setText(1 + "");
 
@@ -153,7 +151,7 @@ public class CadastrarUSUARIONOTEBOOK extends javax.swing.JFrame {
         Box_GerenciaUser = new javax.swing.JComboBox();
         ButtonExibirOrganograma = new javax.swing.JButton();
         campoPossuiTermo = new javax.swing.JCheckBox();
-        Campo_NomeUser1 = new javax.swing.JTextField();
+        Campo_NomeUser = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -333,7 +331,7 @@ public class CadastrarUSUARIONOTEBOOK extends javax.swing.JFrame {
 
         campoPossuiTermo.setText("Possui Termo?");
         getContentPane().add(campoPossuiTermo, new org.netbeans.lib.awtextra.AbsoluteConstraints(371, 391, -1, -1));
-        getContentPane().add(Campo_NomeUser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(107, 52, 236, -1));
+        getContentPane().add(Campo_NomeUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(107, 52, 236, -1));
 
         jLabel16.setText("Cargo:");
         getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 55, -1, -1));
@@ -489,13 +487,13 @@ public class CadastrarUSUARIONOTEBOOK extends javax.swing.JFrame {
             //Recebendo campos Strings:
             user.setNome(Campo_NomeUser.getText().toUpperCase());
 
+            user.setCpf(Campo_CpfUser.getText().toUpperCase());
+
             user.setNomepc(Campo_HostNameMicro.getText().toUpperCase());
 
             user.setSerieMicro(Campo_SerieMicro.getText().toUpperCase());
 
             user.setGarantia(campo_Garantia.getText().toUpperCase());
-
-            user.setNovoTomboMicro(Campo_NovoTomboMicro.getText().toUpperCase());
 
             user.setTermo_responsabilidade(campoPossuiTermo.isSelected());
 
@@ -574,7 +572,7 @@ public class CadastrarUSUARIONOTEBOOK extends javax.swing.JFrame {
         Campo_HostNameMicro.setText("");
         Campo_NomeUser.setText("");
         Campo_SerieMicro.setText("");
-
+        Campo_CpfUser.setText("");
         Campo_TomboMicro.setText("");
 
         Campo_cmtech.setText("");
@@ -586,7 +584,7 @@ public class CadastrarUSUARIONOTEBOOK extends javax.swing.JFrame {
         Campo_HostNameMicro.setText("");
         Campo_NomeUser.setText("");
         Campo_SerieMicro.setText("");
-
+        Campo_CpfUser.setText("");
         Campo_TomboMicro.setText("");
 
         Campo_cmtech.setText("");
@@ -1050,7 +1048,7 @@ public class CadastrarUSUARIONOTEBOOK extends javax.swing.JFrame {
     private javax.swing.JButton Button_Cadastrar1;
     private javax.swing.JTextField Campo_CpfUser;
     private javax.swing.JTextField Campo_HostNameMicro;
-    private javax.swing.JTextField Campo_NomeUser1;
+    private javax.swing.JTextField Campo_NomeUser;
     private javax.swing.JTextField Campo_SerieMicro;
     private javax.swing.JTextField Campo_TomboMicro;
     private javax.swing.JTextField Campo_cmtech;
