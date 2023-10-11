@@ -1490,6 +1490,34 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
         populateProprietarioMonitorComboBox();
     }//GEN-LAST:event_Box_ProprietarioMonitorMouseClicked
 
+    private void populateProprietarioMonitorComboBox() {
+        try {
+            //*********************** ComboBox ProprietarioMonitor:
+            try {
+                ProprietarioMonitor comboProprietarioMonitor = new ProprietarioMonitor();
+
+                comboProprietarioMonitor.setProprietario("");
+                allProprietariosMonitores = Fachada.getInstancia().listarProprietarioMonitor(comboProprietarioMonitor);
+
+                DefaultComboBoxModel listaComboProprietariosMonitores = new DefaultComboBoxModel();
+
+                listaComboProprietariosMonitores.addElement("Proprietário do Monitor");
+
+                for (int i = 0; i < allProprietariosMonitores.size(); i++) {
+                    ProprietarioMonitor nomeComboProprietarioMonitor = new ProprietarioMonitor();
+                    nomeComboProprietarioMonitor = allProprietariosMonitores.get(i);
+                    listaComboProprietariosMonitores.addElement(nomeComboProprietarioMonitor.getProprietario());
+                }
+                Box_ProprietarioMonitor.setModel(listaComboProprietariosMonitores);
+
+            } catch (Exception e) {
+                throw new Exception("Não existe nenhum Proprietário de Monitor cadastrado no banco de dados " + e.getMessage());
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, e.getMessage());
+        }
+    }
+
     private void Box_MarcaMonitorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Box_MarcaMonitorMouseClicked
         listarMarcaMonitor();
     }//GEN-LAST:event_Box_MarcaMonitorMouseClicked
