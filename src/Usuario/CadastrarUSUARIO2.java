@@ -734,6 +734,8 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
 
             user.setGarantia(campo_Garantia.getText().toUpperCase());
 
+            user.setCpf(Campo_CpfUser.getText());
+
             user.setTermo_responsabilidade(campoPossuiTermo.isSelected());
 
             //String campoObs = campoOBS.getText();
@@ -1325,7 +1327,9 @@ public class CadastrarUSUARIO2 extends javax.swing.JFrame {
 
     private void ButtonRemoverMonitorExtraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonRemoverMonitorExtraActionPerformed
         // TODO add your handling code here:
-        
+        CadastrarUSUARIONOTEBOOK cadastro = new CadastrarUSUARIONOTEBOOK(this.logado);
+        cadastro.setVisible(true);
+        dispose();
     }//GEN-LAST:event_ButtonRemoverMonitorExtraActionPerformed
 
     private void Box_PlataformaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Box_PlataformaActionPerformed
