@@ -62,6 +62,34 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
         }
     }
 
+    void ListarMarcaMonitor() {
+        try {
+            //*********************** ComboBox MarcaMonitor:
+            try {
+                MarcaMonitor comboMarcaMonitor = new MarcaMonitor();
+
+                comboMarcaMonitor.setMarca("");
+                allMarcasMonitores = Fachada.getInstancia().listarMarcaMonitor(comboMarcaMonitor);
+
+                DefaultComboBoxModel listaComboMarcasMonitores = new DefaultComboBoxModel();
+
+                listaComboMarcasMonitores.addElement("Marca do Monitor");
+
+                for (int i = 0; i < allMarcasMonitores.size(); i++) {
+                    MarcaMonitor nomeComboMarcaMonitor = new MarcaMonitor();
+                    nomeComboMarcaMonitor = allMarcasMonitores.get(i);
+                    listaComboMarcasMonitores.addElement(nomeComboMarcaMonitor.getMarca());
+                }
+                Box_MarcaMonitor.setModel(listaComboMarcasMonitores);
+
+            } catch (Exception e) {
+                throw new Exception("Não existe nenhuma Marca de Monitor cadastrada no banco de dados " + e.getMessage());
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, e.getMessage());
+        }
+    }
+
     public AlterarUSUARIONOTEBOOK1(Usuario selecionadoUser) {
 
     }
@@ -990,12 +1018,6 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
                     .addComponent(Button_Cadastrar1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        Campo_SerieMonitor1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Campo_SerieMonitor1ActionPerformed(evt);
-            }
-        });
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
