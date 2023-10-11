@@ -102,7 +102,7 @@ public class AlterarUSUARIONOTEBOOK extends javax.swing.JFrame {
         Box_MarcaMicro.setSelectedItem(selecionadoUser.getMarcaMicro().getMarca());
         Box_ProprietarioMicro.setSelectedItem(selecionadoUser.getProprietarioMicro().getProprietario());
         Box_SO.setSelectedItem(selecionadoUser.getOsMicro().getOs());
-        jCheckBox_Ativo.setSelected(selecionadoUser.getAtivo());
+        jCheckBox_Ativo.setSelected(!selecionadoUser.getAtivo());
         Campo_CpfUser.setText(selecionadoUser.getCpf());
         //Carregando combo com dados do Monitor do Usuário selecionado: 
 
