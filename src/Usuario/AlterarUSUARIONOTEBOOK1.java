@@ -1414,11 +1414,7 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
         userSemMonitorExtra.setSerieMonitor("");
         userSemMonitorExtra.setTombamentoMonitor(1);
 
-        try {
-            Fachada.getInstancia().alterarUsuario(userSemMonitorExtra, selecionadoUser);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+
         JOptionPane.showMessageDialog(rootPane, "Monitor extra removido com sucesso!");
 
         AlterarUSUARIONOTEBOOK alterar = new AlterarUSUARIONOTEBOOK(selecionadoUser, this.logado);
