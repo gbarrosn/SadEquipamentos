@@ -23,9 +23,6 @@ public class NegocioUsuario implements InterfaceUsuario {
         }
         
         //***********************************************************
-        if ((user.getNovoTomboMicro().trim().equalsIgnoreCase(""))) {
-                throw new Exception("Preencha o campo Novo Tombo do Micro!");
-        }
         
         if ((user.getNotebook().equals("não"))) {
             if ((user.getNovoTomboMonitor().trim().equalsIgnoreCase(""))) {
