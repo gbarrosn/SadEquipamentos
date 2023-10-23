@@ -106,13 +106,13 @@ public class FormRelatorioTermoUsuario {
             String dataMes = dataString.substring(3, 5);
             String dataAno = dataString.substring(6, 10);
 
-            if (usuario.getTombamentoMonitor1() == 1 && usuario.getNotebook().equals("não")) {
+            if (usuario.getTombamentoMonitor1() == 1 && usuario.getNotebook().equals("não")) { /*
                 URL resource = getClass().getResource("/resources/termo1monitor.pdf");
                 assert resource != null;
                 String filePath = resource.getPath();
-                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(filePath));
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(filePath)); */
 
-                //PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/termo1monitor.pdf"));
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/termo1monitor.pdf"));
 
                 if (document == null) {
                     System.out.println("Documento não carregado.");
@@ -151,13 +151,13 @@ public class FormRelatorioTermoUsuario {
                     janelaSalvarTermo.setVisible(true);
                 }
             }
-            else if (usuario.getNotebook().equals("sim")) {
+            else if (usuario.getNotebook().equals("sim")) { /*
                 URL resource = getClass().getResource("/resources/termoNotebook.pdf");
                 assert resource != null;
                 String filePath = resource.getPath();
-                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(filePath));
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(filePath)); */
 
-                //PDDOcument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/termoNotebook.pdf"));
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/termoNotebook.pdf"));
 
                 if (document == null) {
                     System.out.println("Documento não carregado");
@@ -193,14 +193,14 @@ public class FormRelatorioTermoUsuario {
                 }
 
             }
-            else if (usuario.getTombamentoMonitor1() != 1 && usuario.getNotebook().equals("não")) {
+            else if (usuario.getTombamentoMonitor1() != 1 && usuario.getNotebook().equals("não")) {/*
 
                 URL resource = getClass().getResource("/resources/termo2monitores.pdf");
                 assert resource != null;
                 String filePath = resource.getPath();
-                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(filePath));
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(filePath)); */
 
-                //PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/termo2monitores.pdf"));
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/termo2monitores.pdf"));
 
                 if (document == null) {
                     System.out.println("Documento não carregado");
