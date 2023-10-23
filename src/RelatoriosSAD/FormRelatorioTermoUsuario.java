@@ -112,7 +112,7 @@ public class FormRelatorioTermoUsuario {
                 String filePath = resource.getPath();
                 PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(filePath)); */
 
-                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/termo1monitor.pdf"));
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("/resources/termo1monitor.pdf"));
 
                 if (document == null) {
                     System.out.println("Documento não carregado.");
@@ -157,7 +157,7 @@ public class FormRelatorioTermoUsuario {
                 String filePath = resource.getPath();
                 PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(filePath)); */
 
-                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/termoNotebook.pdf"));
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("/resources/termoNotebook.pdf"));
 
                 if (document == null) {
                     System.out.println("Documento não carregado");
@@ -200,7 +200,7 @@ public class FormRelatorioTermoUsuario {
                 String filePath = resource.getPath();
                 PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(filePath)); */
 
-                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/termo2monitores.pdf"));
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("/resources/termo2monitores.pdf"));
 
                 if (document == null) {
                     System.out.println("Documento não carregado");
