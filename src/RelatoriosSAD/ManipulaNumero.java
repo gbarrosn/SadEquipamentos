@@ -4,7 +4,7 @@ public class ManipulaNumero {
 
     public static String manipularNumero(int numero, int gerencia) {
 
-        String codigo_orgao = "";
+        String codigo_orgao = "120101.";
 
         if (gerencia == 9 || gerencia == 7){
             codigo_orgao = "120101.";
