@@ -13,7 +13,7 @@ package Monitor.ProprietarioMonitor;
 public class ProprietarioMonitor {
     private int idProprietario;
     private String proprietario;
-
+    private String codigoProprietario;
     /**
      * @return the proprietario
      */
@@ -43,17 +43,13 @@ public class ProprietarioMonitor {
     }
 
     /**
-     * @return the idProprietario
+     * @return the codigoTomboProprietario
      */
-    public int getIdProprietario1() {
-        return idProprietario;
-    }
+    public String getCodigoProprietario() {return codigoProprietario;}
 
     /**
-     * @param idProprietario1 the idProprietario to set
+     * @param codigoProprietario the codigoProprietario to set
      */
-    public void setIdProprietario1(int idProprietario1) {
-        this.idProprietario = idProprietario1;
-    }
+    public void setCodigoProprietario(String codigoProprietario) {this.codigoProprietario = codigoProprietario;}
 
 }
