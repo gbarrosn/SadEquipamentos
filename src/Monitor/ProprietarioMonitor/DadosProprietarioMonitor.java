@@ -52,6 +52,7 @@ public class DadosProprietarioMonitor extends ConectarSQL implements InterfacePr
             Statement conex = conectar();
             String sql = "UPDATE Proprietario_Monitor SET ";
             sql+= "proprietario_monitor='"+alterarProprietarioMonitor.getProprietario()+"' ";
+            sql+= "codigo_tombo='"+alterarProprietarioMonitor.getCodigoProprietario()+"' ";
             sql+= " WHERE id_proprietario_monitor="+selecionadoProprietarioMonitor.getIdProprietario()+";" ;
             
             
