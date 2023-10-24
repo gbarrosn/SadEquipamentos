@@ -33,7 +33,7 @@ public class DadosProprietarioMonitor extends ConectarSQL implements InterfacePr
         }
         
             
-        String sql = "INSERT INTO Proprietario_Monitor (proprietario_monitor, codigo_tombo)";
+        String sql = "INSERT INTO Proprietario_Monitor (proprietario_monitor, codigo_tombo_monitor)";
         sql += "VALUES ('"+proprietarioMonitor.getProprietario()+  "," + proprietarioMonitor.getCodigoProprietario() + "');";
         
             conex.execute(sql);
@@ -52,7 +52,7 @@ public class DadosProprietarioMonitor extends ConectarSQL implements InterfacePr
             Statement conex = conectar();
             String sql = "UPDATE Proprietario_Monitor SET ";
             sql+= "proprietario_monitor='"+alterarProprietarioMonitor.getProprietario()+"' ";
-            sql+= "codigo_tombo='"+alterarProprietarioMonitor.getCodigoProprietario()+"' ";
+            sql+= "codigo_tombo_monitor='"+alterarProprietarioMonitor.getCodigoProprietario()+"' ";
             sql+= " WHERE id_proprietario_monitor="+selecionadoProprietarioMonitor.getIdProprietario()+";" ;
             
             
@@ -106,7 +106,7 @@ public class DadosProprietarioMonitor extends ConectarSQL implements InterfacePr
                     ProprietarioMonitor proprietarioMonitor = new ProprietarioMonitor();
                     proprietarioMonitor.setIdProprietario(rs.getInt("id_proprietario_monitor"));
                     proprietarioMonitor.setProprietario(rs.getString("proprietario_monitor"));
-                    proprietarioMonitor.setCodigoProprietario(rs.getString("codigo_tombo"));
+                    proprietarioMonitor.setCodigoProprietario(rs.getString("codigo_tombo_monitor"));
                             
                     listaProprietarioMonitor.add(proprietarioMonitor);
                   

@@ -33,7 +33,7 @@ public class DadosProprietarioMicro extends ConectarSQL implements InterfaceProp
         }
         
             
-        String sql = "INSERT INTO Proprietario_Micro (proprietario_micro, codigo_tombo)";
+        String sql = "INSERT INTO Proprietario_Micro (proprietario_micro, codigo_tombo_micro)";
         sql += "VALUES ('"+proprietarioMicro.getProprietario()+  "," + proprietarioMicro.getCodigoProprietario() + "');";
         
             conex.execute(sql);
@@ -69,7 +69,7 @@ public class DadosProprietarioMicro extends ConectarSQL implements InterfaceProp
                     ProprietarioMicro proprietarioMicro = new ProprietarioMicro();
                     proprietarioMicro.setIdProprietario(rs.getInt("id_proprietario_micro"));
                     proprietarioMicro.setProprietario(rs.getString("proprietario_micro"));
-                    proprietarioMicro.setCodigoProprietario(rs.getString("codigo_tombo"));
+                    proprietarioMicro.setCodigoProprietario(rs.getString("codigo_tombo_micro"));
                             
                   listaProprietarioMicro.add(proprietarioMicro);    
                   
@@ -92,7 +92,7 @@ public class DadosProprietarioMicro extends ConectarSQL implements InterfaceProp
             Statement conex = conectar();
             String sql = "UPDATE Proprietario_Micro SET ";
             sql+= "proprietario_micro='"+alterarProprietarioMicro.getProprietario()+"' ";
-            sql+= "codigo_tombo='"+alterarProprietarioMicro.getCodigoProprietario()+"' ";
+            sql+= "codigo_tombo_micro='"+alterarProprietarioMicro.getCodigoProprietario()+"' ";
             sql+= " WHERE id_proprietario_micro="+selecionadoProprietarioMicro.getIdProprietario()+";" ;
             
             
