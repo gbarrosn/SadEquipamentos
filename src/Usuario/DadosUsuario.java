@@ -447,6 +447,7 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
                 ProprietarioMicro proprietarioMicro = new ProprietarioMicro();
                 proprietarioMicro.setIdProprietario(rs.getInt("id_proprietario_micro"));
                 proprietarioMicro.setProprietario(rs.getString("proprietario_micro"));
+                proprietarioMicro.setCodigoProprietario(rs.getString("codigo_tombo_micro"));
                 user.setProprietarioMicro(proprietarioMicro);
                 //SO:
                 OS os = new OS();
@@ -467,6 +468,7 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
                 ProprietarioMonitor proprietarioMonitor = new ProprietarioMonitor();
                 proprietarioMonitor.setIdProprietario(rs.getInt("id_proprietario_monitor"));
                 proprietarioMonitor.setProprietario(rs.getString("proprietario_monitor"));
+                proprietarioMonitor.setCodigoProprietario(rs.getString("codigo_tombo_monitor"));
                 user.setProprietarioMonitor(proprietarioMonitor);
 
                 //Modelo Monitor2:
@@ -483,6 +485,7 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
                 ProprietarioMonitor proprietarioMonitor1 = new ProprietarioMonitor();
                 proprietarioMonitor1.setIdProprietario(rs.getInt("id_proprietario_monitor2"));
                 proprietarioMonitor1.setProprietario(rs.getString("proprietario_monitor"));
+                proprietarioMonitor1.setCodigoProprietario(rs.getString("codigo_tombo_monitor"));
                 user.setProprietarioMonitor1(proprietarioMonitor1);
 
                 user.setCpf(rs.getString("cpf"));
