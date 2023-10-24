@@ -13,6 +13,7 @@ package Micro.ProprietarioMicro;
 public class ProprietarioMicro {
     private int idProprietario;
     private String proprietario;
+    private String codigoProprietario;
 
     /**
      * @return the proprietario
@@ -41,5 +42,15 @@ public class ProprietarioMicro {
     public void setIdProprietario(int idProprietario) {
         this.idProprietario = idProprietario;
     }
+
+    /**
+     * @return the codigoTomboProprietario
+     */
+    public String getCodigoProprietario() {return codigoProprietario;}
+
+    /**
+     * @param codigoProprietario the codigoProprietario to set
+     */
+    public void setCodigoProprietario(String codigoProprietario) {this.codigoProprietario = codigoProprietario;}
 
 }
