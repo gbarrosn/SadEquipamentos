@@ -112,7 +112,7 @@ public class FormRelatorioTermoUsuario {
                 String filePath = resource.getPath();
                 PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(filePath)); */
 
-                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("/resources/termo1monitor.pdf"));
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/termo1monitor.pdf"));
 
                 if (document == null) {
                     System.out.println("Documento não carregado.");
@@ -151,13 +151,13 @@ public class FormRelatorioTermoUsuario {
                     janelaSalvarTermo.setVisible(true);
                 }
             }
-            else if (usuario.getNotebook().equals("sim") && usuario.getTombamentoMonitor() != 1) { /*
+            else if (usuario.getNotebook().equals("sim") && usuario.getTombamentoMonitor() == 1) { /*
                 URL resource = getClass().getResource("/resources/termoNotebook.pdf");
                 assert resource != null;
                 String filePath = resource.getPath();
                 PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(filePath)); */
 
-                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("/resources/termoNotebook.pdf"));
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/termoNotebook.pdf"));
 
                 if (document == null) {
                     System.out.println("Documento não carregado");
@@ -200,7 +200,7 @@ public class FormRelatorioTermoUsuario {
                 String filePath = resource.getPath();
                 PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(filePath)); */
 
-                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("/resources/termo2monitores.pdf"));
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/termo2monitores.pdf"));
 
                 if (document == null) {
                     System.out.println("Documento não carregado");

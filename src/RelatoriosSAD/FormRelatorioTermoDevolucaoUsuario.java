@@ -91,7 +91,7 @@ public class FormRelatorioTermoDevolucaoUsuario {
 
             if (usuario.getTombamentoMonitor() == 1 && usuario.getNotebook().equals("não")) {
                
-                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("/resources/devolucao1monitor.pdf"));
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/devolucao1monitor.pdf"));
 
                 if (document == null) {
 
@@ -132,7 +132,7 @@ public class FormRelatorioTermoDevolucaoUsuario {
                 }
 
             } else if (usuario.getNotebook().equals("sim")) {
-                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("/resources/devolucaoNotebook.pdf"));
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/devolucaoNotebook.pdf"));
 
                 if (document == null) {
                     System.out.println("Documento não carregado");
@@ -173,7 +173,7 @@ public class FormRelatorioTermoDevolucaoUsuario {
 
             }
             else {
-                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("/resources/devolucao2monitores.pdf"));
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/devolucao2monitores.pdf"));
 
                 if (document == null) {
                     System.out.println("Documento não carregado");
