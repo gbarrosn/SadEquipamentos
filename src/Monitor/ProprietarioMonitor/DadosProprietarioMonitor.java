@@ -106,6 +106,7 @@ public class DadosProprietarioMonitor extends ConectarSQL implements InterfacePr
                     ProprietarioMonitor proprietarioMonitor = new ProprietarioMonitor();
                     proprietarioMonitor.setIdProprietario(rs.getInt("id_proprietario_monitor"));
                     proprietarioMonitor.setProprietario(rs.getString("proprietario_monitor"));
+                    proprietarioMonitor.setCodigoProprietario(rs.getString("codigo_tombo"));
                             
                     listaProprietarioMonitor.add(proprietarioMonitor);
                   
