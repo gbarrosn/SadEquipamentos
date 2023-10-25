@@ -95,6 +95,7 @@ public class CadastrarProprietarioMonitor extends javax.swing.JFrame {
         try{
         ProprietarioMonitor proprietarioMonitor = new ProprietarioMonitor();
         proprietarioMonitor.setProprietario(campoDescr.getText());
+        proprietarioMonitor.setCodigoProprietario(campoCodigo.getText());
         
         Fachada.getInstancia().cadastrarProprietarioMonitor(proprietarioMonitor);
         JOptionPane.showMessageDialog(rootPane, "Proprietário: \""+proprietarioMonitor.getProprietario()+"\" cadastrado com sucesso!");
