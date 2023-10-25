@@ -34,7 +34,7 @@ public class DadosProprietarioMonitor extends ConectarSQL implements InterfacePr
         
             
         String sql = "INSERT INTO Proprietario_Monitor (proprietario_monitor, codigo_tombo_monitor)";
-        sql += "VALUES ('"+proprietarioMonitor.getProprietario()+  "," + proprietarioMonitor.getCodigoProprietario() + "');";
+        sql += "VALUES ('"+proprietarioMonitor.getProprietario()+  "', '" + proprietarioMonitor.getCodigoProprietario() + "');";
         
             conex.execute(sql);
         } catch (SQLException e) {
