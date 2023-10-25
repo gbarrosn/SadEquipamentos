@@ -18,7 +18,11 @@ public class NegocioProprietarioMonitor implements InterfaceProprietarioMonitor{
     public void cadastrarProprietarioMonitor(ProprietarioMonitor proprietarioMonitor) throws Exception {
      if (proprietarioMonitor.getProprietario().trim().equals("")){
             throw new Exception ("Informe a descrição do Proprietário do Monitor!");
-        }
+     } else if (proprietarioMonitor.getCodigoProprietario().trim().equals("")){
+         throw new Exception ("Informe o codigo do tombamento do órgão!");
+     } else if (proprietarioMonitor.getCodigoProprietario().trim().length() != 7){
+         throw new Exception ("O código do tombo deve serguir o seguinte padrão : '120101.' Não esqueça do ponto");
+     }
         
         DadosProprietarioMonitor newDados = new DadosProprietarioMonitor();
         newDados.cadastrarProprietarioMonitor(proprietarioMonitor);
