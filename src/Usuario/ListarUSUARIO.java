@@ -889,6 +889,7 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+        System.gc();
         // TODO add your handling code here:
 
 
@@ -925,6 +926,7 @@ public class ListarUSUARIO extends javax.swing.JFrame {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+        System.gc();
 
         // TODO add your handling code here:
 
