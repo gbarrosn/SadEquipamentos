@@ -132,6 +132,7 @@ public class CadastrarProprietarioMicro extends javax.swing.JFrame {
         try {
             ProprietarioMicro proprietarioMicro = new ProprietarioMicro();
             proprietarioMicro.setProprietario(campoDescr.getText());
+            proprietarioMicro.setCodigoProprietario(campoCodigo.getText());
 
             Fachada.getInstancia().cadastrarProprietarioMicro(proprietarioMicro);
             JOptionPane.showMessageDialog(rootPane, "Proprietário: \"" + proprietarioMicro.getProprietario() + "\" cadastrado com sucesso!");

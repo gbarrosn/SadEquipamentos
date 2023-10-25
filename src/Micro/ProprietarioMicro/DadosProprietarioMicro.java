@@ -34,7 +34,7 @@ public class DadosProprietarioMicro extends ConectarSQL implements InterfaceProp
         
             
         String sql = "INSERT INTO Proprietario_Micro (proprietario_micro, codigo_tombo_micro)";
-        sql += "VALUES ('"+proprietarioMicro.getProprietario()+  "," + proprietarioMicro.getCodigoProprietario() + "');";
+        sql += "VALUES ('"+proprietarioMicro.getProprietario()+  "', '" + proprietarioMicro.getCodigoProprietario() + "');";
         
             conex.execute(sql);
         } catch (SQLException e) {
