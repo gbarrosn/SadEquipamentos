@@ -139,11 +139,15 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
             sql += ",usuario_alteracao='" + alterarUser.getUsuarioAlteracao() + "'";
             sql +=",novo_tombo_micro='"+ "1" + "'";
             sql +=",possui_termo='"+ alterarUser.getTermo_responsabilidade().toString() + "',";
-            sql += "id_modelo_monitor2='"+alterarUser.getModeloMonitor1().getIdModelo()+"'";
-            sql += ",id_marca_monitor2='"+alterarUser.getMarcaMonitor1().getIdMarca()+"',";
-            sql += "id_proprietario_monitor2='"+alterarUser.getProprietarioMonitor1().getIdProprietario()+"',";
-            sql += "tombo_monitor2='"+alterarUser.getTombamentoMonitor1()+"',";
-            sql += "serie_monitor2='"+alterarUser.getSerieMonitor1()+"',";
+
+            if ((alterarUser.getModeloMonitor1() != null)) {
+                sql += "id_modelo_monitor2='" + alterarUser.getModeloMonitor1().getIdModelo() + "'";
+                sql += ",id_marca_monitor2='" + alterarUser.getMarcaMonitor1().getIdMarca() + "',";
+                sql += "id_proprietario_monitor2='" + alterarUser.getProprietarioMonitor1().getIdProprietario() + "',";
+                sql += "tombo_monitor2='" + alterarUser.getTombamentoMonitor1() + "',";
+                sql += "serie_monitor2='" + alterarUser.getSerieMonitor1() + "',";
+            }
+            
             sql += "cpf='"+alterarUser.getCpf()+"',";
             sql += "ativo='"+alterarUser.getAtivo()+"',";
 
