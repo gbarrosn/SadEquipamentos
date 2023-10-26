@@ -4,12 +4,8 @@
  * and open the template in the editor.
  */
 package Usuario;
-import java.io.ByteArrayOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.io.ByteArrayInputStream;
 
-import RelatoriosSAD.FormRelatorioTermoDevolucaoUsuario;
+import RelatoriosSAD.GerarDevolucaoUsuario;
 import Geral.Fachada;
 import Graficos.*;
 import Login.LoginUser;
@@ -22,9 +18,8 @@ import Micro.ProprietarioMicro.ProprietarioMicro;
 import Monitor.MarcaMonitor.MarcaMonitor;
 import Monitor.ModeloMonitor.ModeloMonitor;
 import Principal.TelaPrincipal;
-import RelatoriosSAD.DadosRelatorios;
 import RelatoriosSAD.FormRelatorioCompleto;
-import RelatoriosSAD.FormRelatorioTermoUsuario;
+import RelatoriosSAD.GerarTermoUsuario;
 import RelatoriosSAD.FormRelatorios;
 import SADpe.Cargo.Cargo;
 import SADpe.Gerencia.Gerencia;
@@ -42,11 +37,6 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import com.cete.dynamicpdf.*;
-import com.cete.dynamicpdf.pageelements.Label;
-import com.cete.dynamicpdf.pageelements.PageNumberingLabel;
-import com.cete.dynamicpdf.pageelements.Row;
-import com.cete.dynamicpdf.pageelements.Table;
 
 /**
  *
@@ -877,7 +867,7 @@ public class ListarUSUARIO extends javax.swing.JFrame {
 
         // TODO add your handling code here:
         // use the method gerarRelatorio into RelatoriosSAD.FormRelatorioTermoUsuario to get the data
-        FormRelatorioTermoDevolucaoUsuario relatorioDevolucao = new FormRelatorioTermoDevolucaoUsuario(selecionadoUser);
+        GerarDevolucaoUsuario relatorioDevolucao = new GerarDevolucaoUsuario(selecionadoUser);
         relatorioDevolucao.gerarTermoDevolucao();
         Usuario devolucaoUser = selecionadoUser.criarCopia();
         devolucaoUser.setEstoque(true);
@@ -914,7 +904,7 @@ public class ListarUSUARIO extends javax.swing.JFrame {
 
         // TODO add your handling code here:
         // use the method gerarRelatorio into RelatoriosSAD.FormRelatorioTermoUsuario to get the data
-        FormRelatorioTermoUsuario relatorioTermo = new FormRelatorioTermoUsuario(selecionadoUsuario);
+        GerarTermoUsuario relatorioTermo = new GerarTermoUsuario(selecionadoUsuario);
         relatorioTermo.gerarRelatorio();
 
         Usuario termoUser = selecionadoUsuario.criarCopia();
