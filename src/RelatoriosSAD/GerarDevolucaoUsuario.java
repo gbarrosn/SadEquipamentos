@@ -212,7 +212,7 @@ public class GerarDevolucaoUsuario {
                     janelaSalvarDevolucao.setVisible(true);
                 }
             }
-
+        System.gc();
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Erro ao gerar termo de devolução: " + e);

@@ -238,6 +238,8 @@ public class GerarTermoUsuario {
 
                 }
 
+            System.gc();
+
         } catch (Exception e) {
             e.printStackTrace();
             JOptionPane.showMessageDialog(null, "Erro ao gerar relatório - " + e.getMessage());
