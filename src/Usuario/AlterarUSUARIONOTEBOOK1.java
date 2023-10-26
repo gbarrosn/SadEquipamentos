@@ -217,27 +217,11 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
     public void comboBoxListagem() {
 
         try {
-            //*********************** ComboBox Versão do Pacote Office:
-            try {
-                VersaoOffice comboVersaoOffice = new VersaoOffice();
 
-                comboVersaoOffice.setDescricao("");
-                allVersaoOffice = Fachada.getInstancia().listarVersaoOffice(comboVersaoOffice);
 
-                DefaultComboBoxModel listaCombo = new DefaultComboBoxModel();
+            //*********************** ComboBox Gerência:
+//            listarGerencia(10000);
 
-                listaCombo.addElement("Versão do Pacote Office");
-
-                for (int i = 0; i < allVersaoOffice.size(); i++) {
-                    VersaoOffice nomeCombo = new VersaoOffice();
-                    nomeCombo = allVersaoOffice.get(i);
-                    listaCombo.addElement(nomeCombo.getDescricao());
-                }
-                Box_Office.setModel(listaCombo);
-
-            } catch (Exception e) {
-                throw new Exception("Não existe nenhuma Versão do Pacote Office cadastrada no banco de dados.");
-            }
             //*********************** ComboBox Pavimento:
             try {
                 Pavimento comboPavimento = new Pavimento();
@@ -258,6 +242,28 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
 
             } catch (Exception e) {
                 throw new Exception("Não existe nenhumo Pavimento cadastrado no banco de dados " + e.getMessage());
+            }
+
+            //*********************** ComboBox Versão do Pacote Office:
+            try {
+                VersaoOffice comboVersaoOffice = new VersaoOffice();
+
+                comboVersaoOffice.setDescricao("");
+                allVersaoOffice = Fachada.getInstancia().listarVersaoOffice(comboVersaoOffice);
+
+                DefaultComboBoxModel listaCombo = new DefaultComboBoxModel();
+
+                listaCombo.addElement("Versão do Pacote Office");
+
+                for (int i = 0; i < allVersaoOffice.size(); i++) {
+                    VersaoOffice nomeCombo = new VersaoOffice();
+                    nomeCombo = allVersaoOffice.get(i);
+                    listaCombo.addElement(nomeCombo.getDescricao());
+                }
+                Box_Office.setModel(listaCombo);
+
+            } catch (Exception e) {
+                throw new Exception("Não existe nenhuma Versão do Pacote Office cadastrada no banco de dados.");
             }
 
             //*********************** ComboBox Configuração:
@@ -291,6 +297,7 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
                 m.setMarca("");
                 comboModeloMicro.setMarca(m);
 
+
                 allModelosMicros = Fachada.getInstancia().listarModeloMicro(comboModeloMicro);
                 DefaultComboBoxModel listaComboModeloMicro = new DefaultComboBoxModel();
                 listaComboModeloMicro.addElement("Modelo do Micro");
@@ -311,7 +318,6 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
                 OS comboOS = new OS();
 
                 comboOS.setOs("");
-
                 allOs = Fachada.getInstancia().listarOS(comboOS);
 
                 DefaultComboBoxModel listaComboOS = new DefaultComboBoxModel();
@@ -371,6 +377,54 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
 
             } catch (Exception e) {
                 throw new Exception("Não existe nenhum Proprietario de Micros cadastrado no banco de dados " + e.getMessage());
+            }
+
+            //*********************** ComboBox ModeloMonitor:
+            try {
+                ModeloMonitor comboModeloMonitor = new ModeloMonitor();
+
+                comboModeloMonitor.setModelo("");
+                MarcaMonitor m = new MarcaMonitor();
+                m.setIdMarca(0);
+                m.setMarca("");
+                comboModeloMonitor.setMarca(m);
+                allModelosMonitores = Fachada.getInstancia().listarModeloMonitor(comboModeloMonitor);
+
+                DefaultComboBoxModel listaComboModeloMonitor = new DefaultComboBoxModel();
+
+                listaComboModeloMonitor.addElement("Modelo do Monitor");
+
+                for (int i = 0; i < allModelosMonitores.size(); i++) {
+                    ModeloMonitor nomeComboModeloMonitor = new ModeloMonitor();
+                    nomeComboModeloMonitor = allModelosMonitores.get(i);
+                    listaComboModeloMonitor.addElement(nomeComboModeloMonitor.getModelo());
+                }
+                Box_ModeloMonitor.setModel(listaComboModeloMonitor);
+
+            } catch (Exception e) {
+                throw new Exception("Não existe nenhum Modelo de Monitor cadastrado no banco de dados " + e.getMessage());
+            }
+
+            //*********************** ComboBox ProprietarioMonitor:
+            try {
+                ProprietarioMonitor comboProprietarioMonitor = new ProprietarioMonitor();
+
+                comboProprietarioMonitor.setProprietario("");
+                allProprietariosMonitores = Fachada.getInstancia().listarProprietarioMonitor(comboProprietarioMonitor);
+
+                DefaultComboBoxModel listaComboProprietarioMonitor = new DefaultComboBoxModel();
+
+                listaComboProprietarioMonitor.addElement("Proprietario do Monitor");
+
+                for (int i = 0; i < allProprietariosMonitores.size(); i++) {
+                    ProprietarioMonitor nomeComboProprietarioMonitor = new ProprietarioMonitor();
+                    nomeComboProprietarioMonitor = allProprietariosMonitores.get(i);
+                    listaComboProprietarioMonitor.addElement(nomeComboProprietarioMonitor.getProprietario());
+                }
+                Box_ProprietarioMonitor.setModel(listaComboProprietarioMonitor);
+
+            } catch (Exception e) {
+                throw new Exception("Não existe nenhum Proprietario de Monitores cadastrado no banco de dados " + e.getMessage());
             }
 
             //*********************** ComboBox Cargo:
@@ -1437,9 +1491,9 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
                     allMarcasMonitores = Fachada.getInstancia().listarMarcaMonitor(filtroMarcaMonitor);
                     DefaultComboBoxModel listaCombo = new DefaultComboBoxModel();
                     listaCombo.addElement("Marca do Monitor");
-                    for (int i = 0; i < allMarcasMonitores.size(); i++) {
+                    for (MarcaMonitor allMarcas : allMarcasMonitores) {
                         MarcaMonitor nomeCombo = new MarcaMonitor();
-                        nomeCombo = allMarcasMonitores.get(i);
+                        nomeCombo = allMarcas;
                         listaCombo.addElement(nomeCombo.getMarca());
                     }
                     Box_MarcaMonitor.setModel(listaCombo);
@@ -1453,7 +1507,7 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_Box_ModeloMonitorItemStateChanged
 
-    private void listarMarcaMonitor() {
+    void listarMarcaMonitor() {
         try {
             //*********************** ComboBox MarcaMonitor:
             try {
@@ -1482,36 +1536,9 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
     }
 
     private void Box_ModeloMonitorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Box_ModeloMonitorMouseClicked
-        populateModeloMonitorComboBox();
+        //TODO
     }//GEN-LAST:event_Box_ModeloMonitorMouseClicked
 
-    private void populateModeloMonitorComboBox() {
-        try {
-            //*********************** ComboBox ModeloMonitor:
-            try {
-                ModeloMonitor comboModeloMonitor = new ModeloMonitor();
-
-                comboModeloMonitor.setModelo("");
-                allModelosMonitores = Fachada.getInstancia().listarModeloMonitor(comboModeloMonitor);
-
-                DefaultComboBoxModel listaComboModelosMonitores = new DefaultComboBoxModel();
-
-                listaComboModelosMonitores.addElement("Modelo do Monitor");
-
-                for (int i = 0; i < allModelosMonitores.size(); i++) {
-                    ModeloMonitor nomeComboModeloMonitor = new ModeloMonitor();
-                    nomeComboModeloMonitor = allModelosMonitores.get(i);
-                    listaComboModelosMonitores.addElement(nomeComboModeloMonitor.getModelo());
-                }
-                Box_ModeloMonitor.setModel(listaComboModelosMonitores);
-
-            } catch (Exception e) {
-                throw new Exception("Não existe nenhum Modelo de Monitor cadastrado no banco de dados " + e.getMessage());
-            }
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(rootPane, e.getMessage());
-        }
-    }
 
     private void Box_ModeloMonitorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Box_ModeloMonitorActionPerformed
         // TODO add your handling code here:
