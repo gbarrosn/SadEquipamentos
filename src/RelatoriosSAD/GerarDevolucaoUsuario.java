@@ -129,6 +129,7 @@ public class GerarDevolucaoUsuario {
                     JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, configuracao);
                     janelaSalvarDevolucao.setVisible(true);
                 }
+                document.close();
 
             } else if (usuario.getNotebook().equals("sim")) {
                 PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/devolucaoNotebook.pdf"));
@@ -169,6 +170,7 @@ public class GerarDevolucaoUsuario {
                     JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, configuracao);
                     janelaSalvarDevolucao.setVisible(true);
                 }
+                document.close();
 
             }
             else {
@@ -211,6 +213,7 @@ public class GerarDevolucaoUsuario {
                     JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, configuracao);
                     janelaSalvarDevolucao.setVisible(true);
                 }
+                document.close();
             }
         System.gc();
 
