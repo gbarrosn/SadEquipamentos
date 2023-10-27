@@ -17,6 +17,10 @@ import java.util.Date;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.plaf.FileChooserUI;
+
+/**
+ * @author gabriel.barrosn
+ */
 public class JanelaSalvarTermo extends javax.swing.JFrame {
 
     /**

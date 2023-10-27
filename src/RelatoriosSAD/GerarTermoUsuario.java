@@ -15,6 +15,10 @@ import java.util.Date;
 PDDocument(COSDocument doc)
 Constructor that uses an existing document. The COSDocument that is passed in must be valid.
  */
+
+/**
+ * @author gabriel.barrosn
+ */
 public class GerarTermoUsuario {
     private final Usuario usuario;
 

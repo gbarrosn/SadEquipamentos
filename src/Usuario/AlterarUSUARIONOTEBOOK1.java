@@ -34,6 +34,9 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import static Usuario.ListarUSUARIO.jButtonListarFiltros;
+/**
+ * @author gabriel.barrosn
+ */
 
 /**
  *

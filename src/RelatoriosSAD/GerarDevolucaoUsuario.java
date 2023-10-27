@@ -11,6 +11,9 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * @author gabriel.barrosn
+ */
 public class GerarDevolucaoUsuario {
 
     private final Usuario usuario;

@@ -1,5 +1,8 @@
 package RelatoriosSAD;
 
+/**
+ * @author gabriel.barrosn
+ */
 public class ManipulaNumero {
 
     public static String manipularNumero(int numero, String codigo_orgao) {

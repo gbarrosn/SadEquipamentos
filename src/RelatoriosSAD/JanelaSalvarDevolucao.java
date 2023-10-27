@@ -15,6 +15,9 @@ import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
+/**
+ * @author gabriel.barrosn
+ */
 public class JanelaSalvarDevolucao extends javax.swing.JFrame {
 
     private PDDocument documento;
