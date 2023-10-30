@@ -152,7 +152,7 @@ public class GerarTermoUsuario {
                     JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome, configuracao);
                     janelaSalvarTermo.setVisible(true);
                 }
-                document.close();
+
             }
             else if (usuario.getNotebook().equals("sim") && usuario.getTombamentoMonitor() == 1) {
              /*   URL resource = getClass().getResource("/resources/termoNotebook.pdf");
@@ -194,7 +194,7 @@ public class GerarTermoUsuario {
                     JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, configuracao);
                     janelaSalvarDevolucao.setVisible(true);
                 }
-                document.close();
+
             }
             else if (usuario.getTombamentoMonitor1() != 1 && usuario.getNotebook().equals("não")) {
 
@@ -240,7 +240,7 @@ public class GerarTermoUsuario {
                         JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome, configuracao);
                         janelaSalvarTermo.setVisible(true);
                     }
-                    document.close();
+                    
                 }
 
             System.gc();

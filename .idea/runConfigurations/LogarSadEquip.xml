@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="LogarSadEquip" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="Login.LogarSadEquip" />
+    <module name="SadEquipamentos_2" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
