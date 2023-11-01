@@ -197,11 +197,11 @@ public class GerarTermoUsuario {
 
             }
             else if (usuario.getNotebook().equals("sim") && usuario.getTombamentoMonitor() != 1) {
-                URL resource = getClass().getResource("/resources/termo1monitor.pdf");
+            /*    URL resource = getClass().getResource("/resources/termo1monitor.pdf");
                 assert resource != null;
                 String filePath = resource.getPath();
-                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(filePath));
-                //PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/termo1monitor.pdf"));
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(filePath));*/
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/termo1monitor.pdf"));
 
                 if (document == null) {
                     System.out.println("Documento não carregado");
