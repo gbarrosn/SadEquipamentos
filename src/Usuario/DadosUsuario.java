@@ -74,11 +74,13 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
             conex.setString(26, "1");
             conex.setBoolean(27, user.getTermo_responsabilidade());
             conex.setString(28, user.getEtiquetaSAD());
-            conex.setInt(29, user.getModeloMonitor1().getIdModelo());
-            conex.setInt(30, user.getMarcaMonitor1().getIdMarca());
-            conex.setInt(31, user.getProprietarioMonitor1().getIdProprietario());
-            conex.setLong(32, user.getTombamentoMonitor1());
-            conex.setString(33, user.getSerieMonitor1());
+	    if (user.getModeloMonitor1 != null) {
+            	conex.setInt(29, user.getModeloMonitor1().getIdModelo());
+            	conex.setInt(30, user.getMarcaMonitor1().getIdMarca());
+            	conex.setInt(31, user.getProprietarioMonitor1().getIdProprietario());
+            	conex.setLong(32, user.getTombamentoMonitor1());
+            	conex.setString(33, user.getSerieMonitor1());
+	    }
             conex.setString(34, user.getCpf());
             conex.setInt(35, 1);
             conex.setInt(36, 1);
