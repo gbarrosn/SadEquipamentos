@@ -28,7 +28,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Posseidon
+ * @author gabriel.barrosn
  */
 public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
 
@@ -44,12 +44,7 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
             sql += "id_marca_monitor, id_proprietario_monitor,garantia,cmtech,notebook,id_versao_office,data_alteracao,usuario_alteracao,";
             sql += "novo_tombo_micro,novo_tombo_monitor,possui_termo, etq_sad, id_modelo_monitor2, id_marca_monitor2, ";
             sql += "id_proprietario_monitor2, tombo_monitor2, serie_monitor2, cpf, estoque, ativo)";
-            sql += "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?";
-	    if (user.getModeloMonitor1() != null) {
-		    sql += "?,?,?,?,?)";
-	    } else {
-		    sql += ")";
-	    }
+            sql += "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
             PreparedStatement conex = conectarSQL.prepareStatement(sql);
             conex.setString(1, user.getNome());
             conex.setInt(2, user.getGerencia().getIdGerencia());
@@ -88,11 +83,16 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
             	conex.setString(34, user.getCpf());
             	conex.setInt(35, 1);
             	conex.setInt(36, 1);
-	    } else {
-		conex.setString(29, user.getCpf());
-            	conex.setInt(30, 1);
-            	conex.setInt(31, 1);
-	    }
+	    } else if (user.getModeloMonitor1() == null) {
+             	conex.setInt(29,31);
+            	conex.setInt(30,8);
+            	conex.setInt(31,7);
+            	conex.setLong(32,1);
+            	conex.setString(33,"N/I");
+            	conex.setString(34, user.getCpf());
+            	conex.setInt(35, 1);
+            	conex.setInt(36, 1);
+	  }
 
             conex.executeUpdate();
 
@@ -157,7 +157,7 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
                 sql += "id_proprietario_monitor2='" + alterarUser.getProprietarioMonitor1().getIdProprietario() + "',";
                 sql += "tombo_monitor2='" + alterarUser.getTombamentoMonitor1() + "',";
                 sql += "serie_monitor2='" + alterarUser.getSerieMonitor1() + "',";
-            }
+            } 
             
             sql += "cpf='"+alterarUser.getCpf()+"',";
             sql += "ativo='"+alterarUser.getAtivo()+"',";

@@ -1170,7 +1170,7 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
             //Proprietário Monitor:
             try {
                 ProprietarioMonitor novoprop = new ProprietarioMonitor();
-                novoprop.setIdProprietario(5);
+                novoprop.setIdProprietario(Box_ProprietarioMonitor.getSelectedIndex() - 1);
                 alterarUser.setProprietarioMonitor(novoprop);
             } catch (Exception e) {
                 throw new Exception("Proprietário monitor - ERRO");
@@ -1180,7 +1180,7 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
             //Modelo Monitor:
             try {
                 ModeloMonitor novomod = new ModeloMonitor();
-                novomod.setIdModelo(12);
+                novomod.setIdModelo(Box_ModeloMonitor.getSelectedIndex() - 1);
                 alterarUser.setModeloMonitor(novomod);
             } catch (Exception e) {
                 throw new Exception("Modelo monitor - ERRO");
@@ -1189,7 +1189,7 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
             //Marca Monitor:
             try{
             MarcaMonitor novomar = new MarcaMonitor();
-            novomar.setIdMarca(6);
+            novomar.setIdMarca(Box_MarcaMonitor.getSelectedIndex() - 1);
             alterarUser.setMarcaMonitor(novomar);
             } catch (Exception e ) {
                 throw new Exception("Marca monitor - ERRO");
