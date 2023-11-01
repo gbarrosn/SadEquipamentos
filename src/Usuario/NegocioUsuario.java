@@ -142,7 +142,7 @@ public class NegocioUsuario implements InterfaceUsuario {
         }
         
         //VALIDAÇÃO PARA NOTEBOOK
-        if ((alterarUser.getNotebook().equals("não"))) {
+        if (alterarUser.getNotebook().equals("não") && alterarUser.getModeloMonitor() == null) {
 
             if (alterarUser.getTombamentoMonitor() <= 0) {
                 throw new Exception("Campo Obrigatório: Preencha corretamente o campo Tombamento do Monitor! (use apenas números inteiros)");
@@ -185,12 +185,12 @@ public class NegocioUsuario implements InterfaceUsuario {
         }
         //Strings - Serie Monitor:
 
-        if ((alterarUser.getNotebook().equals("não"))) {
+        if (alterarUser.getNotebook().equals("não") && alterarUser.getModeloMonitor() == null){
             if (alterarUser.getSerieMonitor() == null) {
                 throw new Exception("Preencha o campo Série Monitor");
             }
         }
-        if ((alterarUser.getNotebook().equals("não"))) {
+        if (alterarUser.getNotebook().equals("não") && alterarUser.getModeloMonitor() == null){
             if (alterarUser.getSerieMonitor().trim().equals("") == true) {
                 throw new Exception("Preencha o campo Série Monitor");
             }

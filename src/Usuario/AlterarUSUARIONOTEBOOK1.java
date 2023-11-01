@@ -109,14 +109,12 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
         Box_SO.setSelectedItem(selecionadoUser.getOsMicro().getOs());
         jCheckBox_Ativo.setSelected(!selecionadoUser.getAtivo());
         Campo_CpfUser.setText(selecionadoUser.getCpf());
-/*
         Box_MarcaMonitor.setSelectedItem(selecionadoUser.getMarcaMonitor().getMarca());
         Box_ModeloMonitor.setSelectedItem(selecionadoUser.getModeloMonitor().getModelo());
         Campo_SerieMonitor.setText(selecionadoUser.getSerieMonitor());
         Campo_TomboMonitor.setText(selecionadoUser.getTombamentoMonitor() + "");
         Box_ProprietarioMonitor.setSelectedItem(selecionadoUser.getProprietarioMonitor().getProprietario());
-        */
-        //Carregando combo com dados do Monitor do Usuário selecionado: 
+        //Carregando combo com dados do Monitor do Usuário selecionado:
 
         campo_Garantia.setText(selecionadoUser.getGarantia());
         //campoOBS.setText(selecionadoUser.getObs());
@@ -1169,9 +1167,8 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
 
             //Proprietário Monitor:
             try {
-                ProprietarioMonitor novoprop = new ProprietarioMonitor();
-                novoprop.setIdProprietario(Box_ProprietarioMonitor.getSelectedIndex() - 1);
-                alterarUser.setProprietarioMonitor(novoprop);
+                int SelecionadoProprietarioMonitor = Box_ProprietarioMonitor.getSelectedIndex() - 1;
+                alterarUser.setProprietarioMonitor(allProprietariosMonitores.get(SelecionadoProprietarioMonitor));
             } catch (Exception e) {
                 throw new Exception("Proprietário monitor - ERRO");
             }
@@ -1179,18 +1176,16 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
                 
             //Modelo Monitor:
             try {
-                ModeloMonitor novomod = new ModeloMonitor();
-                novomod.setIdModelo(Box_ModeloMonitor.getSelectedIndex() - 1);
-                alterarUser.setModeloMonitor(novomod);
+                int SelecionadoModeloMonitor = Box_ModeloMonitor.getSelectedIndex() - 1;
+                alterarUser.setModeloMonitor(allModelosMonitores.get(SelecionadoModeloMonitor));
             } catch (Exception e) {
                 throw new Exception("Modelo monitor - ERRO");
             }
 
             //Marca Monitor:
             try{
-            MarcaMonitor novomar = new MarcaMonitor();
-            novomar.setIdMarca(Box_MarcaMonitor.getSelectedIndex() - 1);
-            alterarUser.setMarcaMonitor(novomar);
+                int SelecionadoMarcaMonitor = Box_MarcaMonitor.getSelectedIndex() - 1;
+                alterarUser.setMarcaMonitor(allMarcasMonitores.get(SelecionadoMarcaMonitor));
             } catch (Exception e ) {
                 throw new Exception("Marca monitor - ERRO");
             }
@@ -1205,6 +1200,8 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
             alterarUser.setGarantia(campo_Garantia.getText().toUpperCase());
 
             alterarUser.setTermo_responsabilidade(checkPossuiTermo.isSelected());
+
+            alterarUser.setSerieMonitor(Campo_SerieMonitor.getText().toUpperCase());
 
             alterarUser.setCpf(Campo_CpfUser.getText());
 
@@ -1237,6 +1234,18 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
                 }
             }
 
+            //Tombo Monitor:
+            try {
+                String tomboMonitorPC = Campo_TomboMonitor.getText();
+                long tomboMonitorPCIntParse = Long.parseLong(tomboMonitorPC);
+                alterarUser.setTombamentoMonitor(tomboMonitorPCIntParse);
+            } catch (NumberFormatException e) {
+                if (Campo_TomboMonitor.getText().trim().equals("") == true) {
+                    throw new Exception("Preencha o campo Tombamento do Monitor!(Obrigatório).");
+                } else {
+                    throw new Exception("Erro - Campo Tombamento do Monitor: Preencha apenas com números.");
+                }
+            }
             //Etiqueta CMTECH:
             try {
                 String etiqueta = Campo_cmtech.getText();
