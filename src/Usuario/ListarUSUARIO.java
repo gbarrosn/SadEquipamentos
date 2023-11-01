@@ -323,7 +323,7 @@ public class ListarUSUARIO extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Nome", "Pavimento", "Gerência", "Cargo", "Tombo Micro", "Host Name", "CMTECH", "Etiqueta SAD", "Proprietário"
+                "Nome", "Pavimento", "Gerência", "Cargo", "Tombo Micro", "Host Name", "CESU", "Etiqueta SAD", "Proprietário"
             }
         ) {
             Class[] types = new Class [] {
@@ -1523,7 +1523,7 @@ public class ListarUSUARIO extends javax.swing.JFrame {
                 ;
 
             };
-            tabelaDeUsuarios.setColumnIdentifiers(new String[]{"Nome", "Pavimento", "Gerência", "Cargo", "Tombo Micro", "Host Name", "CMTECH", "Etiqueta Sad", "Proprietário"});
+            tabelaDeUsuarios.setColumnIdentifiers(new String[]{"Nome", "Pavimento", "Gerência", "Cargo", "Tombo Micro", "Host Name", "CESU", "Etiqueta Sad", "Proprietário"});
 
             for (Usuario user : listaDeUsuarios) {
                 tabelaDeUsuarios.addRow(new String[]{user.getNome(), user.getPavimentoUsuario().getPavimento(), user.getGerencia().getSiglaGerencia(),
@@ -1546,8 +1546,7 @@ public class ListarUSUARIO extends javax.swing.JFrame {
             TodosUsuarios.getColumnModel().getColumn(7).setMaxWidth(100);
             TodosUsuarios.getColumnModel().getColumn(8).setMinWidth(80);
             TodosUsuarios.getColumnModel().getColumn(8).setMaxWidth(100);
-
-            textoTotal.setText("Total: " + listaDeUsuarios.size());
+textoTotal.setText("Total: " + listaDeUsuarios.size());
 
         } catch (Exception e) {
 
