@@ -5,7 +5,7 @@ import org.apache.pdfbox.Loader;
 import org.apache.pdfbox.io.RandomAccessReadBufferedFile;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
-
+import java.net.URL;
 import javax.swing.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -195,6 +195,48 @@ public class GerarTermoUsuario {
                     janelaSalvarDevolucao.setVisible(true);
                 }
 
+            }
+            else if (usuario.getNotebook().equals("sim") && usuario.getTombamentoMonitor() != 1) {
+                URL resource = getClass().getResource("/resources/termo1monitor.pdf");
+                assert resource != null;
+                String filePath = resource.getPath();
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(filePath));
+                //PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/termo1monitor.pdf"));
+
+                if (document == null) {
+                    System.out.println("Documento não carregado");
+                } else {
+                    System.out.println("Documento carregado com sucesso");
+                }
+                assert document != null;
+                PDAcroForm acroForm = document.getDocumentCatalog().getAcroForm();
+
+                acroForm.getField("text_nome").setValue(nome);
+                acroForm.getField("text_cesu").setValue(CESU);
+                acroForm.getField("text_tomboMicro").setValue(tomboMicro);
+                acroForm.getField("text_serieMicro").setValue(serieMicro);
+                acroForm.getField("text_gerencia").setValue(gerencia);
+                acroForm.getField("text_cargo").setValue(cargo);
+                acroForm.getField("text_dataDia").setValue(dataDia);
+                acroForm.getField("text_dataMes").setValue(dataMes);
+                acroForm.getField("text_dataAno").setValue(dataAno);
+                acroForm.getField("textarea_config_equipamento").setValue("Notebook "
+                        + usuario.getModeloMicro().getModelo() + " " + configuracao +"\n"+"Mochila, Mouse");
+                acroForm.getField("text_tomboMonitor").setValue(tomboMonitor);
+                acroForm.getField("text_serieMonitor").setValue(serieMonitor);
+
+                if (cpf != null && cpf != "null") {
+                    acroForm.getField("text_cpf").setValue(cpf);
+                    acroForm.setNeedAppearances(true);
+                    acroForm.flatten();
+                    JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, configuracao);
+                    janelaSalvarDevolucao.setVisible(true);
+                } else {
+                    acroForm.setNeedAppearances(true);
+                    acroForm.flatten();
+                    JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, configuracao);
+                    janelaSalvarDevolucao.setVisible(true);
+                }
             }
             else if (usuario.getTombamentoMonitor1() != 1 && usuario.getNotebook().equals("não")) {
 
