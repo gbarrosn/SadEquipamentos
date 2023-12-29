@@ -40,7 +40,7 @@ import static Usuario.ListarUSUARIO.jButtonListarFiltros;
 
 /**
  *
- * @author Posseidon
+ * @author gabriel.barrosn
  */
 public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
 
@@ -123,19 +123,6 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
         //atribui valor a variável global selecionadoNota
         this.selecionadoUser = selecionadoUser;
 
-        /*
-         try {
-
-         String urlPadrao = ("\\\\sadfs01\\GTINF\\USINF\\USINF 2015\\TERMO DE RESPONSABILIDADE\\Termos de Responsabilidade - Digitalizados\\");
-         File file = new File(urlPadrao + selecionadoUser.getNome() + ".pdf");
-
-         if (file.exists() == true) {
-         checkPossuiTermo.setSelected(true);
-         }
-         } catch (Exception ex) {
-         checkPossuiTermo.setSelected(false);
-         }
-         */
     }
 
     //ARRAYS DO COMBO BOX LISTAGEM

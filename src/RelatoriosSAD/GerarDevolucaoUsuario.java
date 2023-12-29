@@ -28,9 +28,15 @@ public class GerarDevolucaoUsuario {
 
             String nome = usuario.getNome();
             String CESU = String.valueOf(usuario.getEtiquetaCESU());
+<<<<<<< HEAD:src/RelatoriosSAD/GerarDevolucaoUsuario.java
             String tomboMicro = ManipulaNumero.manipularNumero((int) usuario.getTombamentoMicro(), usuario.getProprietarioMicro().getCodigoProprietario());
             String tomboMonitor = ManipulaNumero.manipularNumero((int) usuario.getTombamentoMonitor(), usuario.getProprietarioMonitor().getCodigoProprietario());
             String tomboMonitor1 = ManipulaNumero.manipularNumero((int) usuario.getTombamentoMonitor1(), usuario.getProprietarioMonitor1().getCodigoProprietario());
+=======
+            String tomboMicro = ManipulaNumero.manipularNumero((int) usuario.getTombamentoMicro(), usuario.getProprietarioMonitor().getIdProprietario());
+            String tomboMonitor = ManipulaNumero.manipularNumero((int) usuario.getTombamentoMonitor(), usuario.getProprietarioMonitor().getIdProprietario());
+            String tomboMonitor1 = ManipulaNumero.manipularNumero((int) usuario.getTombamentoMonitor1(), usuario.getProprietarioMonitor1().getIdProprietario());
+>>>>>>> 8f22325 (fix bug do tombo):src/RelatoriosSAD/FormRelatorioTermoDevolucaoUsuario.java
             String serieMicro = usuario.getSerieMicro();
             String serieMonitor = usuario.getSerieMonitor();
             String serieMonitor1 = usuario.getSerieMonitor1();
