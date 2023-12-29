@@ -1483,7 +1483,7 @@ public class AlterarUSUARIONOTEBOOK1 extends javax.swing.JFrame {
 
         JOptionPane.showMessageDialog(rootPane, "Monitor extra removido com sucesso!");
 
-        AlterarUSUARIONOTEBOOK alterar = new AlterarUSUARIONOTEBOOK(selecionadoUser, this.logado);
+        AlterarUSUARIONOTEBOOK alterar = new AlterarUSUARIONOTEBOOK(userSemMonitorExtra, this.logado);
         alterar.setVisible(true);
         dispose();
     }//GEN-LAST:event_ButtonRemoverMonitorExtraActionPerformed
