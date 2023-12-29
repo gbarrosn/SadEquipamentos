@@ -188,13 +188,13 @@ public class GerarTermoUsuario {
                     acroForm.getField("text_cpf").setValue(cpf);
                     acroForm.setNeedAppearances(true);
                     acroForm.flatten();
-                    JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, configuracao);
-                    janelaSalvarDevolucao.setVisible(true);
+                    JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome, configuracao);
+                    janelaSalvarTermo.setVisible(true);
                 } else {
                     acroForm.setNeedAppearances(true);
                     acroForm.flatten();
-                    JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, configuracao);
-                    janelaSalvarDevolucao.setVisible(true);
+                    JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome, configuracao);
+                    janelaSalvarTermo.setVisible(true);
                 }
 
             }
