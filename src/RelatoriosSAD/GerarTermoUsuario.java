@@ -5,6 +5,8 @@ import org.apache.pdfbox.Loader;
 import org.apache.pdfbox.io.RandomAccessReadBufferedFile;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
+
+import java.io.File;
 import java.net.URL;
 import javax.swing.*;
 import java.text.DateFormat;
@@ -114,7 +116,7 @@ public class GerarTermoUsuario {
                 String filePath = resource.getPath();
                 PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(filePath));
 */
-                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/termo1monitor.pdf"));
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources" + File.separator + "termo1monitor.pdf"));
 
                 if (document == null) {
                     System.out.println("Documento não carregado.");
@@ -160,7 +162,7 @@ public class GerarTermoUsuario {
                 String filePath = resource.getPath();
                 PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(filePath));*/
 
-                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/termoNotebook.pdf"));
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources" + File.separator + "termoNotebook.pdf"));
 
                 if (document == null) {
                     System.out.println("Documento não carregado");
@@ -201,7 +203,7 @@ public class GerarTermoUsuario {
                 assert resource != null;
                 String filePath = resource.getPath();
                 PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(filePath));*/
-                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/termo1monitor.pdf"));
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources" + File.separator + "termo1monitor.pdf"));
 
                 if (document == null) {
                     System.out.println("Documento não carregado");
@@ -245,7 +247,7 @@ public class GerarTermoUsuario {
                 String filePath = resource.getPath();
                 PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(filePath));*/
 
-                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/termo2monitores.pdf"));
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources" + File.separator + "termo2monitores.pdf"));
 
                 if (document == null) {
                     System.out.println("Documento não carregado");

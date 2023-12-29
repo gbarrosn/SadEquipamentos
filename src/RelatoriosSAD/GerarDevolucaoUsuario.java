@@ -7,6 +7,7 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
 
 import javax.swing.*;
+import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -93,7 +94,7 @@ public class GerarDevolucaoUsuario {
 
             if (usuario.getTombamentoMonitor() == 1 && usuario.getNotebook().equals("não")) {
                
-                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/devolucao1monitor.pdf"));
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources" + File.separator + "devolucao1monitor.pdf"));
 
                 if (document == null) {
 
@@ -134,7 +135,7 @@ public class GerarDevolucaoUsuario {
                 }
 
             } else if (usuario.getNotebook().equals("sim")) {
-                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/devolucaoNotebook.pdf"));
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources" + File.separator + "devolucaoNotebook.pdf"));
 
                 if (document == null) {
                     System.out.println("Documento não carregado");
@@ -175,7 +176,7 @@ public class GerarDevolucaoUsuario {
 
             }
             else {
-                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources/devolucao2monitores.pdf"));
+                PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("resources" + File.separator + "devolucao2monitores.pdf"));
 
                 if (document == null) {
                     System.out.println("Documento não carregado");
