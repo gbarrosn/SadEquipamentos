@@ -12,7 +12,6 @@ public class ManipulaNumero {
             // Conta quantos dígitos possui
             int qtdDigitos = numeroStr.length();
 
-<<<<<<< HEAD
             int qtdZero = 10 - qtdDigitos;
             for (int i = 0; i < qtdZero; i++) {
                 numeroStr = "0" + numeroStr;
@@ -34,19 +33,9 @@ public class ManipulaNumero {
             return parte1 + parte2 + "." + parte3;
         } catch (Exception e) {
             throw new RuntimeException(e);
-=======
-        if (gerencia == 9 || gerencia == 7){
-            codigo_orgao = "120101.";
-        } else if (gerencia == 15 || gerencia == 12){
-            codigo_orgao = "140101.";
-        } else if (gerencia == 11) {
-            codigo_orgao = "150101.";
-        } else {
-            codigo_orgao = "120101.";
->>>>>>> 8f22325 (fix bug do tombo)
         }
     }
-    
+
 
     public static void main(String[] args) {
 
