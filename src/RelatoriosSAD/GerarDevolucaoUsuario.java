@@ -30,7 +30,13 @@ public class GerarDevolucaoUsuario {
             String CESU = String.valueOf(usuario.getEtiquetaCESU());
             String tomboMicro = ManipulaNumero.manipularNumero((int) usuario.getTombamentoMicro(), usuario.getProprietarioMicro().getCodigoProprietario());
             String tomboMonitor = ManipulaNumero.manipularNumero((int) usuario.getTombamentoMonitor(), usuario.getProprietarioMonitor().getCodigoProprietario());
+            if (tomboMonitor.startsWith("120101.") && tomboMonitor.endsWith("2024")) {
+                tomboMonitor = tomboMonitor.replace("120101.", "SAD.");
+            }
             String tomboMonitor1 = ManipulaNumero.manipularNumero((int) usuario.getTombamentoMonitor1(), usuario.getProprietarioMonitor1().getCodigoProprietario());
+            if (tomboMonitor1.startsWith("120101.") && tomboMonitor1.endsWith("2024")) {
+                tomboMonitor1 = tomboMonitor1.replace("120101.", "SAD.");
+            }
             String serieMicro = usuario.getSerieMicro();
             String serieMonitor = usuario.getSerieMonitor();
             String serieMonitor1 = usuario.getSerieMonitor1();
