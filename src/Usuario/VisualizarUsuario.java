@@ -1061,7 +1061,7 @@ public class VisualizarUsuario extends javax.swing.JFrame {
         try {
             String urlPadrao = ("\\\\sadfs01\\GTINF\\USINF\\Sistema SAD Equipamentos\\Termos de Responsabilidade\\");
             File file = new File(urlPadrao + "Termo de Responsabilidade - " + this.selecionadoUser.getNome()
-                    + " - " + this.selecionadoUser.getConfigMicro().getConfiguracao()+ ".pdf");
+                    + " - " + this.selecionadoUser.getEtiquetaCESU()+ ".pdf");
 
             Desktop.getDesktop().open(file);
         } catch (Exception ex) {
