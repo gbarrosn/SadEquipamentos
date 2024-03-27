@@ -151,12 +151,12 @@ public class GerarTermoUsuario {
                     acroForm.getField("text_cpf").setValue(cpf);
                     acroForm.setNeedAppearances(false);
                     acroForm.flatten();
-                    JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome, configuracao);
+                    JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome, CESU);
                     janelaSalvarTermo.setVisible(true);
                 } else {
                     acroForm.setNeedAppearances(false);
                     acroForm.flatten();
-                    JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome, configuracao);
+                    JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome, CESU);
                     janelaSalvarTermo.setVisible(true);
                 }
 
@@ -193,12 +193,12 @@ public class GerarTermoUsuario {
                     acroForm.getField("text_cpf").setValue(cpf);
                     acroForm.setNeedAppearances(true);
                     acroForm.flatten();
-                    JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome, configuracao);
+                    JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome, CESU);
                     janelaSalvarTermo.setVisible(true);
                 } else {
                     acroForm.setNeedAppearances(true);
                     acroForm.flatten();
-                    JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome, configuracao);
+                    JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome, CESU);
                     janelaSalvarTermo.setVisible(true);
                 }
 
@@ -236,12 +236,12 @@ public class GerarTermoUsuario {
                     acroForm.getField("text_cpf").setValue(cpf);
                     acroForm.setNeedAppearances(true);
                     acroForm.flatten();
-                    JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, configuracao);
+                    JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, CESU);
                     janelaSalvarDevolucao.setVisible(true);
                 } else {
                     acroForm.setNeedAppearances(true);
                     acroForm.flatten();
-                    JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, configuracao);
+                    JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, CESU);
                     janelaSalvarDevolucao.setVisible(true);
                 }
             }
@@ -281,12 +281,12 @@ public class GerarTermoUsuario {
                         acroForm.getField("text_cpf").setValue(cpf);
                         acroForm.setNeedAppearances(false);
                         acroForm.flatten();
-                        JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome, configuracao);
+                        JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome, CESU);
                         janelaSalvarTermo.setVisible(true);
                     } else {
                         acroForm.setNeedAppearances(false);
                         acroForm.flatten();
-                        JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome, configuracao);
+                        JanelaSalvarTermo janelaSalvarTermo = new JanelaSalvarTermo(document, nome, CESU);
                         janelaSalvarTermo.setVisible(true);
                     }
                     

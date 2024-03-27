@@ -131,12 +131,12 @@ public class GerarDevolucaoUsuario {
                     acroForm.getField("text_cpf").setValue(cpf);
                     acroForm.setNeedAppearances(true);
                     acroForm.flatten();
-                    JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, configuracao);
+                    JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, CESU);
                     janelaSalvarDevolucao.setVisible(true);
                 } else {
                     acroForm.setNeedAppearances(true);
                     acroForm.flatten();
-                    JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, configuracao);
+                    JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, CESU);
                     janelaSalvarDevolucao.setVisible(true);
                 }
 
@@ -171,12 +171,12 @@ public class GerarDevolucaoUsuario {
                     acroForm.getField("text_cpf").setValue(cpf);
                     acroForm.setNeedAppearances(true);
                     acroForm.flatten();
-                    JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, configuracao);
+                    JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, CESU);
                     janelaSalvarDevolucao.setVisible(true);
                 } else {
                     acroForm.setNeedAppearances(true);
                     acroForm.flatten();
-                    JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, configuracao);
+                    JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, CESU);
                     janelaSalvarDevolucao.setVisible(true);
                 }
 
@@ -213,12 +213,12 @@ public class GerarDevolucaoUsuario {
                     acroForm.getField("text_cpf").setValue(cpf);
                     acroForm.setNeedAppearances(true);
                     acroForm.flatten();
-                    JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, configuracao);
+                    JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, CESU);
                     janelaSalvarDevolucao.setVisible(true);
                 } else {
                     acroForm.setNeedAppearances(true);
                     acroForm.flatten();
-                    JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, configuracao);
+                    JanelaSalvarDevolucao janelaSalvarDevolucao = new JanelaSalvarDevolucao(document, nome, CESU);
                     janelaSalvarDevolucao.setVisible(true);
                 }
             }
