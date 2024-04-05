@@ -933,7 +933,7 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
         getContentPane().add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 348, 150, 33));
         getContentPane().add(Campo_TomboMonitor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(761, 387, 128, -1));
 
-        jLabel31.setText("Modelo:");
+        jLabel31.setText("Modelo2:");
         getContentPane().add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(477, 420, -1, -1));
 
         Box_MarcaMonitor1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -945,7 +945,7 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
         getContentPane().add(Box_MarcaMonitor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(763, 417, 126, -1));
         getContentPane().add(Campo_SerieMonitor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(554, 387, 152, -1));
 
-        jLabel32.setText("Série:");
+        jLabel32.setText("Série2:");
         getContentPane().add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(477, 388, -1, 20));
 
         Box_ProprietarioMonitor1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -959,10 +959,10 @@ public final class AlterarUSUARIO extends javax.swing.JFrame {
         jLabel33.setText("Tombo:");
         getContentPane().add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(712, 390, -1, -1));
 
-        jLabel34.setText("Marca:");
+        jLabel34.setText("Marca 2:");
         getContentPane().add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(712, 420, -1, -1));
 
-        jLabel35.setText("Proprietário:");
+        jLabel35.setText("Proprietário2:");
         getContentPane().add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(477, 450, -1, -1));
 
         Box_ModeloMonitor1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));

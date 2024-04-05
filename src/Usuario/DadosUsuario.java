@@ -217,9 +217,9 @@ public class DadosUsuario extends ConectarSQL implements InterfaceUsuario {
                     "INNER JOIN Plataforma ON Usuario.id_plataforma = Plataforma.id_plataforma " +
                     "INNER JOIN Proprietario_Micro ON Usuario.id_proprietario_micro = Proprietario_Micro.id_proprietario_micro " +
                     "INNER JOIN Sistema ON Usuario.id_so = Sistema.id_so " +
-                    "INNER JOIN Modelo_Monitor ON Usuario.id_modelo_monitor = Modelo_Monitor.id_modelo_monitor " +
-                    "INNER JOIN Marca_Monitor ON Usuario.id_marca_monitor = Marca_Monitor.id_marca_monitor " +
-                    "INNER JOIN Proprietario_Monitor ON Usuario.id_proprietario_monitor = Proprietario_Monitor.id_proprietario_monitor " +
+                    "LEFT JOIN Modelo_Monitor ON Usuario.id_modelo_monitor = Modelo_Monitor.id_modelo_monitor " +
+                    "LEFT JOIN Marca_Monitor ON Usuario.id_marca_monitor = Marca_Monitor.id_marca_monitor " +
+                    "LEFT JOIN Proprietario_Monitor ON Usuario.id_proprietario_monitor = Proprietario_Monitor.id_proprietario_monitor " +
                     "INNER JOIN Versao_Office ON Usuario.id_versao_office = Versao_Office.id_versao_office " +
                     "LEFT JOIN Modelo_Monitor AS Modelo_Monitor2 ON Usuario.id_modelo_monitor2 = Modelo_Monitor2.id_modelo_monitor " +
                     "LEFT JOIN Marca_Monitor AS Marca_Monitor2 ON Usuario.id_marca_monitor2 = Marca_Monitor2.id_marca_monitor " +
