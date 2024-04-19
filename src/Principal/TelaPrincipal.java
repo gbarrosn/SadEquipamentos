@@ -917,7 +917,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         if (this.logado == null) {
             JOptionPane.showMessageDialog(rootPane, "Falha ao identificar o usuário. Ação negada!");
-        } else if (this.logado.getAdm().equals("SIM")) {
+        } else if (this.logado.getAdm().equals("SIM")) { //TODO criar um novo tipo de usuário, que será do patrimônio. se for do patrimonio vai direto abrir outra tela, que só acessa os bens móveis
             ListarLoginUser novo = new ListarLoginUser(this.logado);
             novo.setVisible(true);
             dispose();
