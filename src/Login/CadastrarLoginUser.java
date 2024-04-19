@@ -165,7 +165,7 @@ public class CadastrarLoginUser extends javax.swing.JFrame {
             loginUser.setSenha(senhaPadrao.hashCode() + "");
 
             if (jCheckBoxAlmoxarifado.isSelected() == true) {
-                loginUser.setAdm("ALMOXARIFADO");
+                loginUser.setAdm("ALMOXARIFADO"); //TODO adicionar o usuário do patrimônio
             } else {
                 if (campoADM.isSelected() == true) {
                     loginUser.setAdm("SIM");

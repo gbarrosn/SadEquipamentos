@@ -219,7 +219,7 @@ public class ListarLoginUser extends javax.swing.JFrame {
             listaDeLogins = Fachada.getInstancia().listarLogins(filtroLoginUser);
                     
             DefaultTableModel tabela = new DefaultTableModel();
-            tabela.setColumnIdentifiers(new String [] {"","Login","Administrador?"});
+            tabela.setColumnIdentifiers(new String [] {"","Login","Administrador?"}); //TODO: patrimônio
                       
             int qtdADM=0;
             for (LoginUser este: listaDeLogins){

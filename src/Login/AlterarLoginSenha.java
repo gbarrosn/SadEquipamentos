@@ -49,7 +49,7 @@ public class AlterarLoginSenha extends javax.swing.JFrame {
         setTitle("Alterar Login");
         setLocationRelativeTo(null);
         campoLogin.setText(selecionadoLoginUser.getLogin());
-        if (selecionadoLoginUser.getAdm().equals("SIM")) {
+        if (selecionadoLoginUser.getAdm().equals("SIM")) { // TODO: adicionar o usuário patrimônio
             campoADM.setSelected(true);
         } else {
             campoADM.setSelected(false);
