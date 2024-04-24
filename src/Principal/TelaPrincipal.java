@@ -221,6 +221,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuItem23 = new javax.swing.JMenuItem();
         jMenuItem25 = new javax.swing.JMenuItem();
         jMenu12 = new javax.swing.JMenu();
+        jMenuItem36 = new javax.swing.JMenuItem();
+        jMenuItem37 = new javax.swing.JMenuItem();
 
         jMenu1.setText("jMenu1");
 
@@ -651,6 +653,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(jMenuRelatorio);
 
         jMenu12.setText("Cadastrar Bens Móveis");
+
+        jMenuItem36.setText("Cadastro de Bens");
+        jMenu12.add(jMenuItem36);
+
+        jMenuItem37.setText("Listagem de Bens");
+        jMenu12.add(jMenuItem37);
+
         jMenuBar1.add(jMenu12);
 
         setJMenuBar(jMenuBar1);
@@ -945,7 +954,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         if (this.logado == null) {
             JOptionPane.showMessageDialog(rootPane, "Falha ao identificar o usuário. Ação negada!");
-        } else if (this.logado.getAdm().equals("SIM")) { //TODO criar um novo tipo de usuário, que será do patrimônio. se for do patrimonio vai direto abrir outra tela, que só acessa os bens móveis
+        } else if (this.logado.getAdm().equals("SIM")) { 
             ListarLoginUser novo = new ListarLoginUser(this.logado);
             novo.setVisible(true);
             dispose();
@@ -1085,6 +1094,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem33;
     private javax.swing.JMenuItem jMenuItem34;
     private javax.swing.JMenuItem jMenuItem35;
+    private javax.swing.JMenuItem jMenuItem36;
+    private javax.swing.JMenuItem jMenuItem37;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
