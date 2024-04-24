@@ -928,9 +928,17 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButtonListagemRapidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonListagemRapidaActionPerformed
-        ListarUSUARIO listaAtual = new ListarUSUARIO(this.logado);
-        listaAtual.setVisible(true);
-        dispose();
+        if (this.logado.getAdm().equals("SIM")) {
+            ListarUSUARIO listaAtual = new ListarUSUARIO(this.logado);
+            listaAtual.setVisible(true);
+            dispose();
+        } else if (this.logado.equals("PATRIMONIO")) { //TODO: criar tela de cadastro de bens móveis (igual o cadastro de usuario de pc)
+            /*ListarBensMoveis listaBens = new ListarBensMoveis(this.logado);
+            listaBens.setVisible(true);
+            dispose();*/
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "Seu perfil de usuário atual não tem permissão para acessar esta funcionalidade.");
+        }
     }//GEN-LAST:event_jButtonListagemRapidaActionPerformed
 
     private void jMenuItem32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem32ActionPerformed
