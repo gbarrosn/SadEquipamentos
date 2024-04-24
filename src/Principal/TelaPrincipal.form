@@ -33,7 +33,7 @@
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="jMenuArquivo">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Arquivo |"/>
+            <Property name="text" type="java.lang.String" value="Arquivo"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem32">
@@ -101,7 +101,7 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Usu&#xe1;rio |"/>
+            <Property name="text" type="java.lang.String" value="Usu&#xe1;rio"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="FormCadastrar">
@@ -135,7 +135,7 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu3">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Ger&#xea;ncia |"/>
+            <Property name="text" type="java.lang.String" value="Ger&#xea;ncia"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
@@ -161,7 +161,7 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu5">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Cargo |"/>
+            <Property name="text" type="java.lang.String" value="Cargo"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem3">
@@ -187,7 +187,7 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu6">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Pavimento |"/>
+            <Property name="text" type="java.lang.String" value="Pavimento"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem5">
@@ -213,7 +213,7 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenuEquipamentos">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Equipamentos |"/>
+            <Property name="text" type="java.lang.String" value="Equipamentos"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem34">
@@ -239,7 +239,7 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu4">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Configura&#xe7;&#xe3;o de M&#xe1;quina |"/>
+            <Property name="text" type="java.lang.String" value="Configura&#xe7;&#xe3;o de M&#xe1;quina"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem7">
@@ -265,7 +265,7 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu7">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Marca |"/>
+            <Property name="text" type="java.lang.String" value="Marca"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem12">
@@ -310,7 +310,7 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu9">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Modelo |"/>
+            <Property name="text" type="java.lang.String" value="Modelo"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem13">
@@ -355,7 +355,7 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu10">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Plataforma |"/>
+            <Property name="text" type="java.lang.String" value="Plataforma"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem17">
@@ -381,7 +381,7 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu11">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Propriet&#xe1;rio |"/>
+            <Property name="text" type="java.lang.String" value="Propriet&#xe1;rio"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem19">
@@ -426,7 +426,7 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu14">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Sistema |"/>
+            <Property name="text" type="java.lang.String" value="Sistema"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem26">
@@ -495,6 +495,11 @@
             </MenuItem>
           </SubComponents>
         </Menu>
+        <Menu class="javax.swing.JMenu" name="jMenu12">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cadastrar Bens M&#xf3;veis"/>
+          </Properties>
+        </Menu>
       </SubComponents>
     </Menu>
   </NonVisualComponents>
@@ -557,7 +562,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                      <Component id="jLabel1" pref="350" max="32767" attributes="0"/>
+                      <Component id="jLabel1" pref="351" max="32767" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">

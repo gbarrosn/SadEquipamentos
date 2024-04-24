@@ -130,6 +130,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         }else if (!logado.getAdm().equals("ALMOXARIFADO") && !!logado.getAdm().equals("ADM")) {
            jButtonEquipamentos.setEnabled(true);
            jMenuEquipamentos.setEnabled(true);
+           jMenu12.setEnabled(false);
         } 
     }
 
@@ -204,6 +205,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuRelatorio = new javax.swing.JMenu();
         jMenuItem23 = new javax.swing.JMenuItem();
         jMenuItem25 = new javax.swing.JMenuItem();
+        jMenu12 = new javax.swing.JMenu();
 
         jMenu1.setText("jMenu1");
 
@@ -254,7 +256,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jMenuArquivo.setText("Arquivo |");
+        jMenuArquivo.setText("Arquivo");
 
         jMenuItem32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Icons/gear_32.png"))); // NOI18N
         jMenuItem32.setText("Gerenciar Usuários do Sistema (Requer Login de Administrador)");
@@ -305,7 +307,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenuArquivo);
 
-        jMenu2.setText("Usuário |");
+        jMenu2.setText("Usuário");
 
         FormCadastrar.setText("Cadastro de Usuários");
         FormCadastrar.addActionListener(new java.awt.event.ActionListener() {
@@ -334,7 +336,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
-        jMenu3.setText("Gerência |");
+        jMenu3.setText("Gerência");
 
         jMenuItem1.setText("Cadastro de Gerências");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
@@ -355,7 +357,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu3);
 
-        jMenu5.setText("Cargo |");
+        jMenu5.setText("Cargo");
 
         jMenuItem3.setText("Cadastro de Cargos");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
@@ -376,7 +378,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu5);
 
-        jMenu6.setText("Pavimento |");
+        jMenu6.setText("Pavimento");
 
         jMenuItem5.setText("Cadastro de Pavimentos");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
@@ -397,7 +399,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu6);
 
-        jMenuEquipamentos.setText("Equipamentos |");
+        jMenuEquipamentos.setText("Equipamentos");
 
         jMenuItem34.setText("Cadastro de Equipamentos");
         jMenuItem34.addActionListener(new java.awt.event.ActionListener() {
@@ -418,7 +420,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenuEquipamentos);
 
-        jMenu4.setText("Configuração de Máquina |");
+        jMenu4.setText("Configuração de Máquina");
 
         jMenuItem7.setText("Cadastro de Configurações de Máquina");
         jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
@@ -439,7 +441,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu4);
 
-        jMenu7.setText("Marca |");
+        jMenu7.setText("Marca");
 
         jMenuItem12.setText("Cadastro de Marcas de Micros");
         jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
@@ -477,7 +479,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu7);
 
-        jMenu9.setText("Modelo |");
+        jMenu9.setText("Modelo");
 
         jMenuItem13.setText("Cadastro de Modelos de Micros");
         jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
@@ -515,7 +517,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu9);
 
-        jMenu10.setText("Plataforma |");
+        jMenu10.setText("Plataforma");
 
         jMenuItem17.setText("Cadastro de Plataformas");
         jMenuItem17.addActionListener(new java.awt.event.ActionListener() {
@@ -536,7 +538,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu10);
 
-        jMenu11.setText("Proprietário |");
+        jMenu11.setText("Proprietário");
 
         jMenuItem19.setText("Cadastro de Proprietários de Micros");
         jMenuItem19.addActionListener(new java.awt.event.ActionListener() {
@@ -574,7 +576,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu11);
 
-        jMenu14.setText("Sistema |");
+        jMenu14.setText("Sistema");
 
         jMenuItem26.setText("Cadastrar Sistema Operacional");
         jMenuItem26.addActionListener(new java.awt.event.ActionListener() {
@@ -633,6 +635,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenuRelatorio);
 
+        jMenu12.setText("Cadastrar Bens Móveis");
+        jMenuBar1.add(jMenu12);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -665,7 +670,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 350, Short.MAX_VALUE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 351, Short.MAX_VALUE)
                         .addGap(18, 18, 18))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
@@ -1014,6 +1019,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu10;
     private javax.swing.JMenu jMenu11;
+    private javax.swing.JMenu jMenu12;
     private javax.swing.JMenu jMenu14;
     private javax.swing.JMenu jMenu16;
     private javax.swing.JMenu jMenu2;
