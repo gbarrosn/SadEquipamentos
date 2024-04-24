@@ -110,7 +110,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 // Sempre vai permitir enquanto as credencieais estiverem fixas no codigo
     public void verificaPermissaoUsuario() {
-        if (logado.getAdm().equals("ALMOXARIFADO")) {
+        if (logado.getAdm().equals("ALMOXARIFADO") || logado.getAdm().equals("PATRIMONIO")) {
             jMenu1.setEnabled(false);
             jMenu2.setEnabled(false);
             jMenu3.setEnabled(false);
@@ -130,7 +130,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         }else if (!logado.getAdm().equals("ALMOXARIFADO") && !!logado.getAdm().equals("ADM")) {
            jButtonEquipamentos.setEnabled(true);
            jMenuEquipamentos.setEnabled(true);
-        }
+        } 
     }
 
     /**
