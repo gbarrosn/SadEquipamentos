@@ -1034,7 +1034,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem36ActionPerformed
         // TODO add your handling code here:
-        CadastrarBensMoveis cadastroBens = new CadastrarBensMoveis();
+        CadastrarBensMoveis cadastroBens = new CadastrarBensMoveis(logado);
         cadastroBens.setVisible(true);
         dispose();
     }//GEN-LAST:event_jMenuItem36ActionPerformed

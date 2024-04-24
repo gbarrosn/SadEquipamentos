@@ -4,6 +4,15 @@
  */
 package Patrimonio;
 
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+
+import Login.LoginUser;
+import Principal.TelaPrincipal;
+
 /**
  *
  * @author gbarrosn
@@ -17,6 +26,25 @@ public class CadastrarBensMoveis extends javax.swing.JFrame {
         initComponents();
     }
 
+    void icone() {
+        BufferedImage img = null;
+        try {
+            img = ImageIO.read(new File("resources\\favicon-cor.png"));
+            this.setIconImage(img);
+        } catch (IOException e) {
+        }
+    }
+
+    LoginUser logado = new LoginUser();
+
+    public CadastrarBensMoveis(LoginUser logado) {
+        this.logado = logado;
+
+        icone();
+        initComponents();
+        
+
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -102,6 +130,11 @@ public class CadastrarBensMoveis extends javax.swing.JFrame {
         );
 
         jButton1.setText("Tela Principal");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -141,6 +174,13 @@ public class CadastrarBensMoveis extends javax.swing.JFrame {
     private void jComboBoxTipoMovelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboBoxTipoMovelMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBoxTipoMovelMouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        TelaPrincipal telaPrincipal = new TelaPrincipal(logado);
+        telaPrincipal.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
