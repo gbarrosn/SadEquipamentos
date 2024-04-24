@@ -223,6 +223,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu12 = new javax.swing.JMenu();
         jMenuItem36 = new javax.swing.JMenuItem();
         jMenuItem37 = new javax.swing.JMenuItem();
+        jMenuItem38 = new javax.swing.JMenuItem();
+        jMenuItem39 = new javax.swing.JMenuItem();
 
         jMenu1.setText("jMenu1");
 
@@ -660,6 +662,17 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuItem37.setText("Listagem de Bens");
         jMenu12.add(jMenuItem37);
 
+        jMenuItem38.setText("Cadastrar tipo de móvel");
+        jMenuItem38.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem38ActionPerformed(evt);
+            }
+        });
+        jMenu12.add(jMenuItem38);
+
+        jMenuItem39.setText("Listar tipos de móvel");
+        jMenu12.add(jMenuItem39);
+
         jMenuBar1.add(jMenu12);
 
         setJMenuBar(jMenuBar1);
@@ -694,7 +707,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 351, Short.MAX_VALUE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 355, Short.MAX_VALUE)
                         .addGap(18, 18, 18))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
@@ -999,6 +1012,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButtonEquipamentosActionPerformed
 
+    private void jMenuItem38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem38ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem38ActionPerformed
+
 
     /**
      * @param args the command line arguments
@@ -1096,6 +1113,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem35;
     private javax.swing.JMenuItem jMenuItem36;
     private javax.swing.JMenuItem jMenuItem37;
+    private javax.swing.JMenuItem jMenuItem38;
+    private javax.swing.JMenuItem jMenuItem39;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;

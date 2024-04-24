@@ -50,6 +50,11 @@ public class CadastrarBensMoveis extends javax.swing.JFrame {
         jLabel3.setText("Tipo:");
 
         jComboBoxTipoMovel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxTipoMovel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jComboBoxTipoMovelMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -122,6 +127,10 @@ public class CadastrarBensMoveis extends javax.swing.JFrame {
     private void jTextFieldDescricaoBensMoveisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldDescricaoBensMoveisActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldDescricaoBensMoveisActionPerformed
+
+    private void jComboBoxTipoMovelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboBoxTipoMovelMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxTipoMovelMouseClicked
 
     /**
      * @param args the command line arguments
