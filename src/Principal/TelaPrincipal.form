@@ -504,11 +504,17 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Cadastro de Bens"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem36ActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem37">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Listagem de Bens"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem37ActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem38">
               <Properties>
@@ -522,6 +528,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Listar tipos de m&#xf3;vel"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem39ActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>

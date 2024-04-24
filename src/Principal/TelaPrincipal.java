@@ -30,6 +30,7 @@ import Monitor.ModeloMonitor.CadastrarModeloMonitor;
 import Monitor.ModeloMonitor.ListarModeloMonitor;
 import Monitor.ProprietarioMonitor.CadastrarProprietarioMonitor;
 import Monitor.ProprietarioMonitor.ListarProprietarioMonitor;
+import Patrimonio.CadastrarBensMoveis;
 import RelatoriosSAD.FormRelatorioCompleto;
 import RelatoriosSAD.FormRelatorios;
 import SADpe.Cargo.CadastrarCargo;
@@ -657,9 +658,19 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu12.setText("Cadastrar Bens Móveis");
 
         jMenuItem36.setText("Cadastro de Bens");
+        jMenuItem36.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem36ActionPerformed(evt);
+            }
+        });
         jMenu12.add(jMenuItem36);
 
         jMenuItem37.setText("Listagem de Bens");
+        jMenuItem37.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem37ActionPerformed(evt);
+            }
+        });
         jMenu12.add(jMenuItem37);
 
         jMenuItem38.setText("Cadastrar tipo de móvel");
@@ -671,6 +682,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu12.add(jMenuItem38);
 
         jMenuItem39.setText("Listar tipos de móvel");
+        jMenuItem39.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem39ActionPerformed(evt);
+            }
+        });
         jMenu12.add(jMenuItem39);
 
         jMenuBar1.add(jMenu12);
@@ -1013,8 +1029,23 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonEquipamentosActionPerformed
 
     private void jMenuItem38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem38ActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here: criar 
     }//GEN-LAST:event_jMenuItem38ActionPerformed
+
+    private void jMenuItem36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem36ActionPerformed
+        // TODO add your handling code here:
+        CadastrarBensMoveis cadastroBens = new CadastrarBensMoveis();
+        cadastroBens.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jMenuItem36ActionPerformed
+
+    private void jMenuItem37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem37ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem37ActionPerformed
+
+    private void jMenuItem39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem39ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem39ActionPerformed
 
 
     /**
