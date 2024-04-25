@@ -31,6 +31,7 @@ import Monitor.ModeloMonitor.ListarModeloMonitor;
 import Monitor.ProprietarioMonitor.CadastrarProprietarioMonitor;
 import Monitor.ProprietarioMonitor.ListarProprietarioMonitor;
 import Patrimonio.CadastrarBensMoveis;
+import Patrimonio.CadastrarMovel;
 import RelatoriosSAD.FormRelatorioCompleto;
 import RelatoriosSAD.FormRelatorios;
 import SADpe.Cargo.CadastrarCargo;
@@ -1030,6 +1031,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem38ActionPerformed
         // TODO add your handling code here: criar 
+        CadastrarMovel cadastrar = new CadastrarMovel(logado);
+        cadastrar.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jMenuItem38ActionPerformed
 
     private void jMenuItem36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem36ActionPerformed
